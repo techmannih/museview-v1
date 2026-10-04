@@ -24,7 +24,7 @@ bun run export:release
 
 The library/CLI is pinned to tscircuit 0.0.2687. Builds use selected supplier numbers, not automatic part substitution. `hardware-contract.json` is checked against the generated source netlist. `scripts/check-decoupling.mjs` measures actual local copper. Placement, routing diagnostics and a separate Gerber copper short check must pass before a release can be considered.
 
-Start the viewer with `bun run dev` (optionally `--port 3020`) after installing the locked dependencies. The launcher requires the local pinned CLI and refuses a missing or mismatched installation. A bare global `tsci dev` can load a different browser renderer and produce a stale-routing error followed by disconnected-port errors; see [viewer troubleshooting](docs/routing.md#viewer-troubleshooting).
+Start the viewer with `bun run dev` (optionally `--port 3020`) after installing the locked dependencies. The launcher requires the local pinned CLI and refuses a missing or mismatched installation. A bare global `tsci dev` can load a different browser renderer and produce a stale-routing error followed by disconnected-port errors; see [viewer troubleshooting](docs/routing.md#viewer-troubleshooting). The separately published website renderer is supported for its reviewed mounting-keepout representation; it still rejects other stale routing inputs.
 
 ## Design
 
