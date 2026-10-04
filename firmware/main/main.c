@@ -91,6 +91,8 @@ static void ask_task(void *arg) {
     }
 }
 void app_main(void) {
+    ESP_LOGI(TAG,"CAM_1V3 hardware target %d mV; verify TP7 %d–%d mV externally (not measured by firmware)",
+        MV_CAMERA_CORE_TARGET_MV, MV_CAMERA_CORE_MIN_MV, MV_CAMERA_CORE_MAX_MV);
     camera_lock = xSemaphoreCreateMutex();
     assert(camera_lock);
     gpio_config_t output = {.pin_bit_mask=(1ULL<<MV_LED)|(1ULL<<MV_RESET)|(1ULL<<MV_PWDN), .mode=GPIO_MODE_OUTPUT};

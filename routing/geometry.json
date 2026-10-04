@@ -57,7 +57,7 @@
   {
     "type": "source_net",
     "source_net_id": "source_net_5",
-    "name": "CAM_1V2",
+    "name": "CAM_1V3",
     "member_source_group_ids": [],
     "is_ground": false,
     "is_power": true,
@@ -356,7 +356,7 @@
         "C165948"
       ]
     },
-    "display_name": "J1 \u00b7 USB-C 5 V",
+    "display_name": "J1 · USB-C 5 V",
     "source_group_id": "source_group_0"
   },
   {
@@ -403,7 +403,7 @@
       ]
     },
     "resistance": 5100,
-    "display_resistance": "5.1k\u03a9",
+    "display_resistance": "5.1kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -451,7 +451,7 @@
       ]
     },
     "resistance": 5100,
-    "display_resistance": "5.1k\u03a9",
+    "display_resistance": "5.1kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -499,7 +499,7 @@
       ]
     },
     "resistance": 1000000,
-    "display_resistance": "1M\u03a9",
+    "display_resistance": "1MΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -546,7 +546,7 @@
         "C106076"
       ]
     },
-    "capacitance": 4.7e-09,
+    "capacitance": 4.7e-9,
     "max_voltage_rating": 2000,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "4.7nF",
@@ -709,7 +709,7 @@
         "C14663"
       ]
     },
-    "capacitance": 1e-07,
+    "capacitance": 1e-7,
     "max_voltage_rating": 50,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "100nF",
@@ -760,7 +760,7 @@
       ]
     },
     "resistance": 33,
-    "display_resistance": "33\u03a9",
+    "display_resistance": "33Ω",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -808,7 +808,7 @@
       ]
     },
     "resistance": 33,
-    "display_resistance": "33\u03a9",
+    "display_resistance": "33Ω",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -853,7 +853,7 @@
     "voltage_rating_volts": 6,
     "display_current_rating": "750mA",
     "display_voltage_rating": "6V",
-    "display_name": "F1 \u00b7 750 mA PTC",
+    "display_name": "F1 · 750 mA PTC",
     "source_group_id": "source_group_0"
   },
   {
@@ -896,7 +896,7 @@
       ]
     },
     "are_pins_interchangeable": false,
-    "display_name": "D1 \u00b7 SMF5.0A",
+    "display_name": "D1 · SMF5.0A",
     "source_group_id": "source_group_0"
   },
   {
@@ -1022,7 +1022,7 @@
     "name": "L1",
     "ftype": "simple_inductor",
     "inductance": "2.2uH",
-    "display_inductance": "2.2\u00b5H",
+    "display_inductance": "2.2µH",
     "supplier_part_numbers": {
       "jlcpcb": [
         "C98361"
@@ -1075,7 +1075,7 @@
         "C2857993"
       ]
     },
-    "capacitance": 4.7e-06,
+    "capacitance": 0.0000047,
     "max_voltage_rating": 10,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "4.7uF",
@@ -1125,7 +1125,7 @@
         "C14663"
       ]
     },
-    "capacitance": 1e-07,
+    "capacitance": 1e-7,
     "max_voltage_rating": 50,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "100nF",
@@ -1175,7 +1175,7 @@
         "C86038"
       ]
     },
-    "capacitance": 1e-05,
+    "capacitance": 0.00001,
     "max_voltage_rating": 10,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "10uF",
@@ -1226,7 +1226,7 @@
       ]
     },
     "resistance": 432000,
-    "display_resistance": "432k\u03a9",
+    "display_resistance": "432kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -1274,7 +1274,7 @@
       ]
     },
     "resistance": 100000,
-    "display_resistance": "100k\u03a9",
+    "display_resistance": "100kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -1428,7 +1428,7 @@
         "C113807"
       ]
     },
-    "capacitance": 1e-06,
+    "capacitance": 0.000001,
     "max_voltage_rating": 16,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "1uF",
@@ -1478,7 +1478,7 @@
         "C113807"
       ]
     },
-    "capacitance": 1e-06,
+    "capacitance": 0.000001,
     "max_voltage_rating": 16,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "1uF",
@@ -1613,7 +1613,7 @@
         "C113807"
       ]
     },
-    "capacitance": 1e-06,
+    "capacitance": 0.000001,
     "max_voltage_rating": 16,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "1uF",
@@ -1663,7 +1663,7 @@
         "C113807"
       ]
     },
-    "capacitance": 1e-06,
+    "capacitance": 0.000001,
     "max_voltage_rating": 16,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "1uF",
@@ -1707,14 +1707,14 @@
     "source_component_id": "source_component_25",
     "ftype": "simple_resistor",
     "name": "R8",
-    "manufacturer_part_number": "FRC0603F2052TS",
+    "manufacturer_part_number": "0603WAF2552T5E",
     "supplier_part_numbers": {
       "jlcpcb": [
-        "C2930074"
+        "C22920"
       ]
     },
-    "resistance": 20500,
-    "display_resistance": "20.5k\u03a9",
+    "resistance": 25500,
+    "display_resistance": "25.5kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -1762,7 +1762,7 @@
       ]
     },
     "resistance": 40200,
-    "display_resistance": "40.2k\u03a9",
+    "display_resistance": "40.2kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -2508,7 +2508,7 @@
         "C14663"
       ]
     },
-    "capacitance": 1e-07,
+    "capacitance": 1e-7,
     "max_voltage_rating": 50,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "100nF",
@@ -2558,7 +2558,7 @@
         "C86038"
       ]
     },
-    "capacitance": 1e-05,
+    "capacitance": 0.00001,
     "max_voltage_rating": 10,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "10uF",
@@ -2609,7 +2609,7 @@
       ]
     },
     "resistance": 10000,
-    "display_resistance": "10k\u03a9",
+    "display_resistance": "10kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -2656,7 +2656,7 @@
         "C113807"
       ]
     },
-    "capacitance": 1e-06,
+    "capacitance": 0.000001,
     "max_voltage_rating": 16,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "1uF",
@@ -2707,7 +2707,7 @@
       ]
     },
     "resistance": 10000,
-    "display_resistance": "10k\u03a9",
+    "display_resistance": "10kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -2755,7 +2755,7 @@
       ]
     },
     "resistance": 10000,
-    "display_resistance": "10k\u03a9",
+    "display_resistance": "10kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -2827,7 +2827,7 @@
     },
     "manufacturer_part_number": "TS-1187A-B-A-B",
     "are_pins_interchangeable": true,
-    "display_name": "SW1 \u00b7 RESET",
+    "display_name": "SW1 · RESET",
     "source_group_id": "source_group_0"
   },
   {
@@ -2898,7 +2898,7 @@
     },
     "manufacturer_part_number": "TS-1187A-B-A-B",
     "are_pins_interchangeable": true,
-    "display_name": "SW2 \u00b7 BOOT",
+    "display_name": "SW2 · BOOT",
     "source_group_id": "source_group_0"
   },
   {
@@ -2969,7 +2969,7 @@
     },
     "manufacturer_part_number": "TS-1187A-B-A-B",
     "are_pins_interchangeable": true,
-    "display_name": "SW3 \u00b7 ASK",
+    "display_name": "SW3 · ASK",
     "source_group_id": "source_group_0"
   },
   {
@@ -3016,7 +3016,7 @@
       ]
     },
     "resistance": 1000,
-    "display_resistance": "1k\u03a9",
+    "display_resistance": "1kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -3519,7 +3519,7 @@
         "C262669"
       ]
     },
-    "display_name": "J2 \u00b7 M0031",
+    "display_name": "J2 · M0031",
     "source_group_id": "source_group_0"
   },
   {
@@ -3566,7 +3566,7 @@
       ]
     },
     "resistance": 4700,
-    "display_resistance": "4.7k\u03a9",
+    "display_resistance": "4.7kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -3614,7 +3614,7 @@
       ]
     },
     "resistance": 4700,
-    "display_resistance": "4.7k\u03a9",
+    "display_resistance": "4.7kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -3662,7 +3662,7 @@
       ]
     },
     "resistance": 10000,
-    "display_resistance": "10k\u03a9",
+    "display_resistance": "10kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -3710,7 +3710,7 @@
       ]
     },
     "resistance": 10000,
-    "display_resistance": "10k\u03a9",
+    "display_resistance": "10kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -3757,7 +3757,7 @@
         "C14663"
       ]
     },
-    "capacitance": 1e-07,
+    "capacitance": 1e-7,
     "max_voltage_rating": 50,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "100nF",
@@ -3807,7 +3807,7 @@
         "C14663"
       ]
     },
-    "capacitance": 1e-07,
+    "capacitance": 1e-7,
     "max_voltage_rating": 50,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "100nF",
@@ -3857,7 +3857,7 @@
         "C14663"
       ]
     },
-    "capacitance": 1e-07,
+    "capacitance": 1e-7,
     "max_voltage_rating": 50,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "100nF",
@@ -3907,7 +3907,7 @@
         "C2857993"
       ]
     },
-    "capacitance": 4.7e-06,
+    "capacitance": 0.0000047,
     "max_voltage_rating": 10,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "4.7uF",
@@ -3957,7 +3957,7 @@
         "C2857993"
       ]
     },
-    "capacitance": 4.7e-06,
+    "capacitance": 0.0000047,
     "max_voltage_rating": 10,
     "max_decoupling_trace_length": 80,
     "display_capacitance": "4.7uF",
@@ -6245,7 +6245,7 @@
       "source_net_5"
     ],
     "subcircuit_id": "subcircuit_source_group_0",
-    "display_name": ".U5 > .OUT to net.CAM_1V2",
+    "display_name": ".U5 > .OUT to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -6300,7 +6300,7 @@
     ],
     "subcircuit_id": "subcircuit_source_group_0",
     "max_length": 80,
-    "display_name": ".C9 > .pin1 to net.CAM_1V2",
+    "display_name": ".C9 > .pin1 to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -6327,7 +6327,7 @@
       "source_net_5"
     ],
     "subcircuit_id": "subcircuit_source_group_0",
-    "display_name": ".R8 > .pin1 to net.CAM_1V2",
+    "display_name": ".R8 > .pin1 to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -7269,7 +7269,7 @@
       "source_net_5"
     ],
     "subcircuit_id": "subcircuit_source_group_0",
-    "display_name": ".J2 > .pin10 to net.CAM_1V2",
+    "display_name": ".J2 > .pin10 to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -7597,7 +7597,7 @@
     ],
     "subcircuit_id": "subcircuit_source_group_0",
     "max_length": 80,
-    "display_name": ".C14 > .pin1 to net.CAM_1V2",
+    "display_name": ".C14 > .pin1 to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -7681,7 +7681,7 @@
     ],
     "subcircuit_id": "subcircuit_source_group_0",
     "max_length": 80,
-    "display_name": ".C17 > .pin1 to net.CAM_1V2",
+    "display_name": ".C17 > .pin1 to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -7786,7 +7786,7 @@
       "source_net_5"
     ],
     "subcircuit_id": "subcircuit_source_group_0",
-    "display_name": ".TP7 > .pin1 to net.CAM_1V2",
+    "display_name": ".TP7 > .pin1 to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {

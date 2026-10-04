@@ -10,12 +10,16 @@ Checked 2026-10-04. JLC evidence includes exact fetch timestamps and URLs in `so
 - XC6206: https://product.torexsemi.com/system/files/series/xc6206.pdf
 - SGM2059: https://www.sg-micro.com/rect/assets/c90e4805-a9a9-4001-be72-fb96737d867e/SGM2059.pdf
 - USBLC6-2: https://www.st.com/resource/en/datasheet/usblc6-2.pdf
-- OV2640 manufacturer datasheet v1.6, hosted by UCTRONICS: https://www.uctronics.com/download/cam_module/OV2640DS.pdf
+- OV2640 manufacturer datasheet v2.2, table 6, hosted by Robu: https://robu.in/wp-content/uploads/2024/09/OV2640_DS.pdf
+- Exact Arducam M0031 product/core/mating connector: https://www.arducam.com/arducam-ov2640-camera-module-2mp-mini-ccm-compact-camera-modules-compatible-with-arduino_m0031esp32-esp8266-development-board-with-dvp-24-pin-interface_.html
+- Amphenol F32R recommended mate: https://www.amphenol-cs.com/product/f32r1a7h111024.html
+- Amphenol F32R bottom-contact/0.30 mm interface: https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/datasheet/flex/ffc_fpc_050mm_f32r_f32q.pdf
+- JUSHUO AFC01 drawing/specification, C262669: https://datasheet.lcsc.com/datasheet/pdf/97e3ba016a78286ffa6cfbc591e2beb6.pdf
 - M0031/pinout: https://blog.arducam.com/ov2640-vs-ov7670-detailed-comparisons-and-resources/
 - JLCSearch: https://jlcsearch.tscircuit.com/
 
 Native resistors/capacitors use explicit JLC numbers rather than an automatic parts engine. Other parts and local STEP/OBJ bodies were obtained through tscircuit's JLC import flow. Supplier CAD/symbol data remain subject to their original terms; no blanket relicensing of vendor assets is asserted.
 
-The design changes relative to the supplied USB5V package are intentional: common 3.192 V MCU/camera I/O, 1.197 V camera core, 0.1% main feedback resistors, 5 V analog-LDO input, controllable camera reset/powerdown, explicit camera I/O decoupling and local ESD-supply bypass. No PD circuitry is included.
+The design changes relative to the supplied USB5V package are intentional: common 3.192 V MCU/camera I/O, 1.296 V camera core, 0.1% main feedback resistors, 5 V analog-LDO input, controllable camera reset/powerdown, explicit camera I/O decoupling and local ESD-supply bypass. No PD circuitry is included.
 
 Supplier STEP entity terminators were normalized from `) ;` to `);` for the pinned exporter’s parser. Geometry/entity arguments were not changed. `bun run normalize:step` reproduces this formatting operation after a fresh import. Assembled STEP export then completes without omitted-model warnings.

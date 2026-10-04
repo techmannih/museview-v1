@@ -1,0 +1,41 @@
+{
+  "module": "Arducam M0031",
+  "net": "CAM_1V3",
+  "nominalV": 1.2960223880597017,
+  "initialWorstCaseV": {
+    "min": 1.2536262006797694,
+    "max": 1.339127317955676
+  },
+  "withResistorTcrWorstCaseV": {
+    "min": 1.2483674206515427,
+    "max": 1.3449476323309808
+  },
+  "temperatureRangeC": {
+    "min": -30,
+    "max": 70
+  },
+  "moduleLimitsV": {
+    "min": 1.235,
+    "max": 1.365
+  },
+  "designLimitsV": {
+    "min": 1.24,
+    "max": 1.36
+  },
+  "resistors": {
+    "R8": {
+      "ohms": 25500,
+      "lcsc": "C22920",
+      "tolerance": 0.01,
+      "tcrPpmPerC": 100
+    },
+    "R9": {
+      "ohms": 40200,
+      "lcsc": "C2933218",
+      "tolerance": 0.01,
+      "tcrPpmPerC": 100
+    }
+  },
+  "errors": [],
+  "scope": "Calculated DC bounds only; verify ripple, transient and measurement margin on hardware. Firmware has no rail ADC."
+}

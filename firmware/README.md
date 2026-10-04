@@ -15,3 +15,5 @@ Set a unique local Wi-Fi password in the MuseView menu (at least 8 characters). 
 The application checks PSRAM, initializes the OV2640 in JPEG SVGA mode, and serializes camera access between HTTP and the debounced ASK task. Captured frames are copied to PSRAM-backed memory before returning the driver's frame buffer. HTTP returns an error when no frame is available. Maximum cached JPEG is 1 MiB. There is no SD card or persistent image storage.
 
 Native USB ROM recovery remains available by holding BOOT during RESET. This firmware provides USB Serial/JTAG console, not UVC webcam firmware. Electrical operation and images are untested until the physical board is assembled.
+
+The corrected camera core is CAM_1V3, 1.296 V nominal from the hardware divider. The generated header carries a 1296 mV target and 1240–1360 mV acceptance limits; the boot log reports these as external measurement requirements. There is no ADC connection to this rail, so firmware neither programs nor validates its voltage. GPIO assignments remain unchanged.

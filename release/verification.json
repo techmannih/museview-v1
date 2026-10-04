@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-04T05:47:30.543Z",
-  "circuitSha256": "e4f9fb6b7e7e7a68fc2fd42b666260786b79df50b9de1b6c8d4612c64820af2f",
-  "routingFingerprint": "520ed0ba-5c2a22b2-1058073",
+  "generatedAt": "2026-10-04T06:15:43.847Z",
+  "circuitSha256": "a07b59c236dd42245723ca17f0b6670f90b2023eef8886456346df62840c0f46",
+  "routingFingerprint": "5fb9f9e8-257a7e94-1060810",
   "tscircuitVersion": "0.0.2687",
   "circuitErrors": 0,
   "retainedNativeWidthWarnings": 6,
@@ -25,10 +25,19 @@
   "localVerification": {
     "command": "bun run verify",
     "result": "passed",
-    "regressionTestsPassed": 12,
+    "regressionTestsPassed": 16,
     "gerberShorts": 0,
     "snapshots2d": "matched",
     "snapshots3d": "matched"
   },
+  "cameraSupply": {
+    "net": "CAM_1V3",
+    "nominalV": 1.2960223880597017,
+    "dcBoundsWithTcrV": {
+      "min": 1.2483674206515427,
+      "max": 1.3449476323309808
+    }
+  },
+  "orderStatus": "hold: exact M0031 flex sample/drawing qualification and physical bring-up remain open",
   "hardwareValidation": "Not performed; prototype bring-up and JLC rotation/stackup review remain open"
 }

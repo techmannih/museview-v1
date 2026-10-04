@@ -4,7 +4,7 @@ ESP32-S3-WROOM-1-N16R8 camera controller, standard USB-C **5 V only**, Arducam M
 
 ![Assembled MuseView PCB](__snapshots__/index.circuit-3d.snap.png)
 
-Engineering prototype with complete routed copper and reproducible checks. Manufacturing files are in [`release/`](release/); the external camera is installed separately. Physical bring-up and JLC placement preview remain required.
+Engineering prototype with complete routed copper and reproducible checks. **Order hold: exact M0031 flex qualification and physical bring-up remain open; do not order from the superseded 1.197 V revision.** Manufacturing files are in [`release/`](release/); the external camera is installed separately. Physical bring-up and JLC placement preview remain required.
 
 This repository follows the organization of [techmannih/trellis-core](https://github.com/techmannih/trellis-core): one explicit JSX board entrypoint, local component imports and CAD assets, Bun lockfile, circuit checks under `scripts/`, schematic/PCB/3D snapshots, assembly and bring-up documents. The electrical design is independently implemented for this board; Trellis Core's circuit and physical placement are not interchangeable with this camera board.
 
@@ -31,7 +31,7 @@ The library/CLI is pinned to tscircuit 0.0.2687. Builds use selected supplier nu
 - USB-C USB 2.0 device: independent 5.1 kΩ CC pull-downs, USBLC6-2SC6, 33 Ω data resistors, 750 mA PTC, SMF5.0A input TVS.
 - TLV62569: **3.192 V nominal** shared ESP32/camera I/O, using 432 kΩ/100 kΩ, both **0.1%**.
 - XC6206P282MR: camera analog 2.8 V, supplied from protected USB 5 V to avoid marginal dropout headroom.
-- SGM2059: camera core **1.197 V nominal**, using 20.5 kΩ/40.2 kΩ, both 1%.
+- SGM2059: camera core **1.296 V nominal**, using 25.5 kΩ/40.2 kΩ, both 1%. Net: **CAM_1V3**, TP7 acceptance **1.24–1.36 V**.
 - Native USB ROM recovery, UART0/JTAG pads, BOOT, RESET, ASK GPIO16 and LED GPIO17.
 - Camera RESET GPIO18 defaults low and PWDN GPIO8 defaults high. Firmware must actively release them.
 

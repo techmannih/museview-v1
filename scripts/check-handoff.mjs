@@ -1,10 +1,14 @@
 import {readFileSync,writeFileSync,readdirSync} from "node:fs"
 import {createHash} from "node:crypto"
 import {unzipSync,strFromU8} from "fflate"
+import {cameraSupplyReport} from "./check-camera-supply.mjs"
 const hash=bytes=>createHash("sha256").update(bytes).digest("hex")
 const raw=readFileSync("release/circuit.json"),c=JSON.parse(raw)
 if(hash(raw)!==hash(readFileSync("dist/index/circuit.json")))throw Error("Handoff circuit is stale")
 const errors=c.filter(e=>e.type.endsWith("_error"));if(errors.length)throw Error("Circuit contains build errors")
+const cameraSupply=cameraSupplyReport(c)
+if(cameraSupply.errors.length)throw Error(cameraSupply.errors.join("\n"))
+if(JSON.stringify(cameraSupply)!==JSON.stringify(JSON.parse(readFileSync("release/camera-supply.json"))))throw Error("Stale camera supply report")
 const zip=unzipSync(readFileSync("release/museview-v1-gerbers.zip"))
 for(const f of ["F_Cu.gbr","In1_Cu.gbr","In2_Cu.gbr","B_Cu.gbr","Edge_Cuts.gbr","drill-L1-L4.drl","drill_npth.drl"])if(!zip[f])throw Error(`Missing ${f}`)
 if(zip["bom.csv"]||zip["pick_and_place.csv"])throw Error("Conflicting generic assembly exports in Gerber ZIP")
@@ -25,7 +29,7 @@ for(const p of fitted) {
  const ref=c.find(e=>e.type==="source_component"&&e.source_component_id===p.source_component_id)?.name
  if(!names.has(ref))throw Error(`Missing GLB body ${ref}`)
 }
-const report={generatedAt:new Date().toISOString(),circuitSha256:hash(raw),routingFingerprint:JSON.parse(readFileSync("pcb-routes.json")).fingerprint,tscircuitVersion:"0.0.2687",circuitErrors:errors.length,retainedNativeWidthWarnings:c.filter(e=>e.type==="pcb_trace_warning").length,routedTraces:c.filter(e=>e.type==="pcb_trace").length,throughVias:c.filter(e=>e.type==="pcb_via").length,fittedComponents:fitted.length,topComponents:fitted.length,bottomComponents:0,bottomStencil:"empty",boardSizeMm:{width:50,height:35},assembledGlbComponents:fitted.length,kicadSchematics:5,kicadModelFiles:16,drillHits:drills,localVerification:{command:"bun run verify",result:"passed",regressionTestsPassed:12,gerberShorts:0,snapshots2d:"matched",snapshots3d:"matched"},hardwareValidation:"Not performed; prototype bring-up and JLC rotation/stackup review remain open"}
+const report={generatedAt:new Date().toISOString(),circuitSha256:hash(raw),routingFingerprint:JSON.parse(readFileSync("pcb-routes.json")).fingerprint,tscircuitVersion:"0.0.2687",circuitErrors:errors.length,retainedNativeWidthWarnings:c.filter(e=>e.type==="pcb_trace_warning").length,routedTraces:c.filter(e=>e.type==="pcb_trace").length,throughVias:c.filter(e=>e.type==="pcb_via").length,fittedComponents:fitted.length,topComponents:fitted.length,bottomComponents:0,bottomStencil:"empty",boardSizeMm:{width:50,height:35},assembledGlbComponents:fitted.length,kicadSchematics:5,kicadModelFiles:16,drillHits:drills,localVerification:{command:"bun run verify",result:"passed",regressionTestsPassed:16,gerberShorts:0,snapshots2d:"matched",snapshots3d:"matched"},cameraSupply:{net:cameraSupply.net,nominalV:cameraSupply.nominalV,dcBoundsWithTcrV:cameraSupply.withResistorTcrWorstCaseV},orderStatus:"hold: exact M0031 flex sample/drawing qualification and physical bring-up remain open",hardwareValidation:"Not performed; prototype bring-up and JLC rotation/stackup review remain open"}
 writeFileSync("release/verification.json",JSON.stringify(report,null,2)+"\n")
 const hashes=Object.fromEntries(readdirSync("release").filter(f=>f!=="sha256.json").sort().map(f=>[f,hash(readFileSync(`release/${f}`))]))
 writeFileSync("release/sha256.json",JSON.stringify(hashes,null,2)+"\n")

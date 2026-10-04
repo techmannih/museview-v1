@@ -8,3 +8,7 @@ it("routing replay rejects geometry and connectivity changes",()=>{
  expect(routeFingerprint(rewired)).not.toBe(routeFingerprint(input))
  expect(routeFingerprint({...input,display_name:"new label"})).toBe(routeFingerprint(input))
 })
+it("routing replay rejects supply contract changes even with identical geometry",()=>{
+ const input={obstacles:[],connections:[]}
+ expect(routeFingerprint(input,{rails:{CAM_1V3:1.296},resistors:{R8:25500}})).not.toBe(routeFingerprint(input,{rails:{CAM_1V2:1.197},resistors:{R8:20500}}))
+})

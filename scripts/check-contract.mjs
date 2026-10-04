@@ -10,7 +10,7 @@ export function checkContract(circuit) {
   const p=m.port("U1",`IO${pin}`)
   if (p && m.of("source_trace").some(t=>t.connected_source_port_ids?.includes(p.source_port_id))) errors.push(`PSRAM GPIO${pin} must remain unused`)
  }
- for (const [a,b] of [["GND","VDD_IO"],["CAM_2V8","VDD_IO"],["CAM_1V2","VDD_IO"],["USB_RAW_5V","VBUS_5V"],["CC1","CC2"]]) {
+ for (const [a,b] of [["GND","VDD_IO"],["CAM_2V8","VDD_IO"],["CAM_1V3","VDD_IO"],["USB_RAW_5V","VBUS_5V"],["CC1","CC2"]]) {
   if (m.net(a) && m.net(b) && m.find(m.net(a).source_net_id)===m.find(m.net(b).source_net_id)) errors.push(`${a}/${b}: unintended source-net merge`)
  }
  if (m.of("schematic_sheet").length!==4) errors.push("Expected four schematic sheets")

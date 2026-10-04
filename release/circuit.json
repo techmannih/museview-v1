@@ -121,7 +121,7 @@
   {
     "type": "source_net",
     "source_net_id": "source_net_5",
-    "name": "CAM_1V2",
+    "name": "CAM_1V3",
     "member_source_group_ids": [],
     "is_ground": false,
     "is_power": true,
@@ -1771,14 +1771,14 @@
     "source_component_id": "source_component_25",
     "ftype": "simple_resistor",
     "name": "R8",
-    "manufacturer_part_number": "FRC0603F2052TS",
+    "manufacturer_part_number": "0603WAF2552T5E",
     "supplier_part_numbers": {
       "jlcpcb": [
-        "C2930074"
+        "C22920"
       ]
     },
-    "resistance": 20500,
-    "display_resistance": "20.5kΩ",
+    "resistance": 25500,
+    "display_resistance": "25.5kΩ",
     "are_pins_interchangeable": true,
     "source_group_id": "source_group_0"
   },
@@ -6625,7 +6625,7 @@
       "source_net_5"
     ],
     "subcircuit_id": "subcircuit_source_group_0",
-    "display_name": ".U5 > .OUT to net.CAM_1V2",
+    "display_name": ".U5 > .OUT to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -6680,7 +6680,7 @@
     ],
     "subcircuit_id": "subcircuit_source_group_0",
     "max_length": 80,
-    "display_name": ".C9 > .pin1 to net.CAM_1V2",
+    "display_name": ".C9 > .pin1 to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -6707,7 +6707,7 @@
       "source_net_5"
     ],
     "subcircuit_id": "subcircuit_source_group_0",
-    "display_name": ".R8 > .pin1 to net.CAM_1V2",
+    "display_name": ".R8 > .pin1 to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -7649,7 +7649,7 @@
       "source_net_5"
     ],
     "subcircuit_id": "subcircuit_source_group_0",
-    "display_name": ".J2 > .pin10 to net.CAM_1V2",
+    "display_name": ".J2 > .pin10 to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -7977,7 +7977,7 @@
     ],
     "subcircuit_id": "subcircuit_source_group_0",
     "max_length": 80,
-    "display_name": ".C14 > .pin1 to net.CAM_1V2",
+    "display_name": ".C14 > .pin1 to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -8061,7 +8061,7 @@
     ],
     "subcircuit_id": "subcircuit_source_group_0",
     "max_length": 80,
-    "display_name": ".C17 > .pin1 to net.CAM_1V2",
+    "display_name": ".C17 > .pin1 to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -8166,7 +8166,7 @@
       "source_net_5"
     ],
     "subcircuit_id": "subcircuit_source_group_0",
-    "display_name": ".TP7 > .pin1 to net.CAM_1V2",
+    "display_name": ".TP7 > .pin1 to net.CAM_1V3",
     "subcircuit_connectivity_map_key": "MUSEVIEW_V1_connectivity_net16"
   },
   {
@@ -9703,7 +9703,7 @@
     "is_box_with_pins": true,
     "symbol_name": "boxresistor_down",
     "schematic_sheet_id": "schematic_sheet_1",
-    "symbol_display_value": "20.5kΩ",
+    "symbol_display_value": "25.5kΩ",
     "schematic_group_id": "schematic_group_0"
   },
   {
@@ -13898,7 +13898,7 @@
     "type": "schematic_text",
     "schematic_text_id": "schematic_text_21",
     "anchor": "center",
-    "text": "U5: 0.793 × (1 + 20.5k / 40.2k) = 1.197 V",
+    "text": "U5: 0.793 × (1 + 25.5k / 40.2k) = 1.296 V",
     "font_size": 0.28,
     "color": "#000000",
     "position": {
@@ -16438,7 +16438,7 @@
   {
     "type": "schematic_net_label",
     "schematic_net_label_id": "schematic_net_label_32",
-    "text": "CAM_1V2",
+    "text": "CAM_1V3",
     "source_net_id": "source_net_5",
     "anchor_position": {
       "x": 12,
@@ -16455,7 +16455,7 @@
   {
     "type": "schematic_net_label",
     "schematic_net_label_id": "schematic_net_label_33",
-    "text": "CAM_1V2",
+    "text": "CAM_1V3",
     "source_net_id": "source_net_5",
     "anchor_position": {
       "x": 7,
@@ -19164,7 +19164,7 @@
   {
     "type": "schematic_trace",
     "schematic_trace_id": "schematic_trace_108",
-    "source_trace_id": "available-net-orientation-21-CAM_1V2",
+    "source_trace_id": "available-net-orientation-21-CAM_1V3",
     "edges": [
       {
         "from": {
@@ -19215,7 +19215,7 @@
   {
     "type": "schematic_trace",
     "schematic_trace_id": "schematic_trace_109",
-    "source_trace_id": "available-net-orientation-24-CAM_1V2",
+    "source_trace_id": "available-net-orientation-24-CAM_1V3",
     "edges": [
       {
         "from": {
@@ -19502,7 +19502,7 @@
   {
     "type": "schematic_net_label",
     "schematic_net_label_id": "schematic_net_label_62",
-    "text": "CAM_1V2",
+    "text": "CAM_1V3",
     "source_net_id": "source_net_5",
     "anchor_position": {
       "x": 1.5689999999999993,
@@ -19520,7 +19520,7 @@
   {
     "type": "schematic_net_label",
     "schematic_net_label_id": "schematic_net_label_63",
-    "text": "CAM_1V2",
+    "text": "CAM_1V3",
     "source_net_id": "source_net_5",
     "anchor_position": {
       "x": -10,
@@ -19538,7 +19538,7 @@
   {
     "type": "schematic_net_label",
     "schematic_net_label_id": "schematic_net_label_64",
-    "text": "CAM_1V2",
+    "text": "CAM_1V3",
     "source_net_id": "source_net_5",
     "anchor_position": {
       "x": -6,
@@ -19555,7 +19555,7 @@
   {
     "type": "schematic_net_label",
     "schematic_net_label_id": "schematic_net_label_65",
-    "text": "CAM_1V2",
+    "text": "CAM_1V3",
     "source_net_id": "source_net_5",
     "anchor_position": {
       "x": 11.319,
@@ -94899,6 +94899,6 @@
   },
   {
     "type": "source_project_metadata",
-    "source_filesystem_md5_hash": "c819caa4c3dc6b6036ede489f7df7711"
+    "source_filesystem_md5_hash": "d9aeb10119a96295f001d9d01ad580d9"
   }
 ]

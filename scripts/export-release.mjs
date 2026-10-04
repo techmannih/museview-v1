@@ -4,13 +4,17 @@ import {spawnSync} from "node:child_process"
 import {createHash} from "node:crypto"
 import {unzipSync,zipSync,strToU8} from "fflate"
 import {checkAssembly} from "./check-assembly.mjs"
+import {cameraSupplyReport} from "./check-camera-supply.mjs"
 
 // Run verify first. This exports the exact verified circuit without rerouting.
 const run=(args)=>{const r=spawnSync("bun",args,{stdio:"inherit"});if(r.status!==0)throw Error(`Failed: bun ${args.join(" ")}`)}
 const circuit=JSON.parse(readFileSync("dist/index/circuit.json","utf8"))
 const assemblyErrors=checkAssembly(circuit)
 if(assemblyErrors.length) throw Error(assemblyErrors.join("\n"))
+const cameraSupply=cameraSupplyReport(circuit)
+if(cameraSupply.errors.length) throw Error(cameraSupply.errors.join("\n"))
 mkdirSync("release",{recursive:true})
+writeFileSync("release/camera-supply.json",JSON.stringify(cameraSupply,null,2)+"\n")
 run(["run","export:assembly"])
 run(["run","render:sheets"])
 // Resolve imported CAD relative to the repository, not dist/index/.

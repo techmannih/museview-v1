@@ -8,17 +8,19 @@ A 750 mA resettable fuse is a thermal protective element, not an accurate curren
 
 ## Voltage domains
 
-The source brief used 453 kΩ/100 kΩ for 3.318 V and 25.5 kΩ/40.2 kΩ for 1.296 V. OV2640 DS v1.6 specifies core 1.14–1.26 V and I/O 1.71–3.3 V. ESP32-S3-WROOM-1 requires 3.0–3.6 V. The implementation uses:
+The exact Arducam M0031 product specifies a 1.3 V ±5% core supply. OmniVision OV2640 datasheet v2.2, table 6, narrows this to 1.24–1.36 V. The earlier v1.6-based 1.197 V design was incorrect for this module and is superseded. The selected SGM2059 divider is now R8 = 25.5 kΩ (C22920, 0603WAF2552T5E) and R9 = 40.2 kΩ (C2933218, FRC0603F4022TS), both 0603, 1%, 100 ppm/°C. Exact JLCSearch identities and positive quantities were refreshed on 2026-10-04. The implementation uses:
 
 | Rail | Equation | Nominal | DC tolerance estimate |
 |---|---|---:|---:|
 | MCU + camera DOVDD | 0.600 × (1 + 432k / 100k) | 3.192 V | 3.123–3.261 V, VFB ±2%, resistors ±0.1% |
-| Camera DVDD | 0.793 × (1 + 20.5k / 40.2k) | 1.197 V | 1.159–1.236 V, VFB 0.773–0.813 V, resistors ±1% |
+| Camera DVDD | 0.793 × (1 + 25.5k / 40.2k) | 1.296 V | 1.254–1.339 V, VFB 0.773–0.813 V, resistors ±1% |
 | Camera AVDD | XC6206P282MR | 2.800 V | ±2% initial, before line/load/temp effects |
+
+The camera divider produces 1.296022 V nominal. Using the SGM2059 full-temperature feedback limits 0.773–0.813 V and initial 1% resistor tolerances gives 1.253626–1.339127 V. Including independent worst-direction 100 ppm/°C drift over the sensor DC table’s −30 to +70°C range (55°C maximum excursion from 25°C) gives 1.248367–1.344948 V. This leaves approximately 8.37 mV of lower-bound and 15.05 mV of upper-bound margin before ripple, transients and measurement uncertainty. `check:camera-supply` computes these bounds from actual generated resistor values and exact stocked-part metadata. These temperature assumptions are a calculation boundary, not an assembled-board operating-temperature rating.
 
 The first two ranges are worst-case DC divider calculations, **not measured regulation guarantees** including ripple and transient droop. Both R6 and R7 need 0.1% tolerance; substituting the original 1% feedback parts defeats the I/O voltage margin. Camera SDA/SCL pull-ups, reset/power-down control and pixel data use the same nominal rail as the ESP32. Confirm actual sensor VOH/VIH and output loading on the purchased M0031 revision.
 
-U4's input is the protected 5 V rail. A 3.192 V input would leave too little worst-case dropout margin at 2.8 V. At 50 mA analog load U4 dissipates approximately (5−2.8) × 0.05 = 0.11 W. U5 is fed from VDD_IO; at 100 mA it dissipates approximately 0.20 W. These are load scenarios, not measured loads. Verify thermals and camera rail current; there is no established full-temperature operating rating for this assembled board.
+U4's input is the protected 5 V rail. A 3.192 V input would leave too little worst-case dropout margin at 2.8 V. At 50 mA analog load U4 dissipates approximately (5−2.8) × 0.05 = 0.11 W. U5 is fed from VDD_IO; at 100 mA it dissipates approximately 0.19 W. These are load scenarios, not measured loads. Verify thermals and camera rail current; there is no established full-temperature operating rating for this assembled board.
 
 ## Reset and startup
 

@@ -20,6 +20,7 @@ export function checkAssembly(circuit) {
  const pad=n=>pads.find(p=>p.port_hints?.includes(`pin${n}`))
  if (pads.length!==26) errors.push("FPC: expected 24 contacts plus two mounting pads")
  for(let n=2;n<=24;n++) if (!pad(n)||!pad(n-1)||Math.abs(Math.hypot(pad(n).x-pad(n-1).x,pad(n).y-pad(n-1).y)-0.5)>0.002) errors.push(`FPC pin ${n}: incorrect 0.5 mm pitch`)
+ if(!pad(1)||!pad(24)||pad(1).y>=pad(24).y||Math.abs(pad(1).x-pad(24).x)>.002) errors.push("FPC: pin 1 must be at the south end of the right-edge contact row")
  if (m.of("pcb_hole").filter(h=>!h.pcb_component_id && h.hole_diameter===2.7).length!==4) errors.push("Expected four nonplated mounting holes")
  const b=m.of("pcb_board")[0]
  if(b?.width!==50 || b?.height!==35) errors.push("Expected the independently placed 50 × 35 mm V1.1 board")

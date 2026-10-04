@@ -18,3 +18,7 @@
 #define MV_D5 14
 #define MV_D6 21
 #define MV_D7 47
+// Hardware divider values only; no ADC measurement is available.
+#define MV_CAMERA_CORE_TARGET_MV 1296
+#define MV_CAMERA_CORE_MIN_MV 1240
+#define MV_CAMERA_CORE_MAX_MV 1360

@@ -1,8 +1,8 @@
 # Release checks
 
-Status: **CAD verification complete; engineering prototype, physical validation open**. The machine-readable [`verification.json`](../release/verification.json) records the exact circuit hash and check outcomes. Manufacturing exports are versioned in `release/`, with SHA-256 hashes.
+Status: **Corrected engineering CAD; order hold pending exact-flex qualification and physical validation**. The machine-readable [`verification.json`](../release/verification.json) records the exact circuit hash and check outcomes. Manufacturing exports are versioned in `release/`, with SHA-256 hashes.
 
-Local verification completed on 2026-10-04: source netlist, schematic placement, PCB placement, routing difficulty, board build, electrical contract, actual copper continuity, local bypasses, assembly/stock checks and separate Gerber short analysis passed. Twelve regression tests passed. Native 2D and 3D snapshot regeneration/compare runs matched. The GitHub workflow repeats the circuit checks and 2D snapshots and compiles the matching ESP-IDF 5.4.2 firmware.
+Local verification completed on 2026-10-04: source netlist, schematic placement, PCB placement, routing difficulty, board build, electrical contract, actual copper continuity, local bypasses, exact M0031 supply bounds, assembly/stock checks and separate Gerber short analysis passed. Sixteen regression tests passed. Native 2D and 3D snapshot regeneration/compare runs matched. The GitHub workflow repeats the circuit checks and 2D snapshots and compiles the matching ESP-IDF 5.4.2 firmware.
 
 Exact trace/via counts are recorded in `verification.json`. There are zero build/routing errors and zero detected Gerber shorts. The retained native width warnings are explained in `electrical-review.md`; critical local widths are checked against their exact endpoints. All 28 selected assembly part numbers had positive JLCSearch stock in the dated evidence. This is availability evidence, not a PCBA order acceptance.
 
@@ -22,3 +22,5 @@ The handoff exporter verifies five KiCad schematic files (root plus four childre
 | Hardware | Rails, startup, thermal/current/USB/camera tests in `bring-up.md` |
 
 Physical validation is open: no PCB has been manufactured or electrically tested in this task. JLC assembly eligibility/rotation preview, external M0031 mating, source-current/inrush behavior, controlled impedance and the measured results above must be signed off before production. These checks are not replaced by software CI.
+
+The 1.197 V camera-core revision is superseded. R8 = 25.5 kΩ and CAM_1V3 are mandatory. See `camera-mating.md`: contact side and nominal thickness match the Arducam-specified mating interface, but no physical module lot has been measured or signed off.

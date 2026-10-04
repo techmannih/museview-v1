@@ -55,7 +55,7 @@
   },
   {
     "id": "C262669",
-    "checkedAt": "2026-10-04T03:55:04.698Z",
+    "checkedAt": "2026-10-04T06:08:20.951Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C262669",
     "httpStatus": 200,
     "part": {
@@ -352,7 +352,7 @@
   },
   {
     "id": "C2933218",
-    "checkedAt": "2026-10-04T03:55:07.254Z",
+    "checkedAt": "2026-10-04T06:08:20.662Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C2933218",
     "httpStatus": 200,
     "part": {
@@ -699,6 +699,24 @@
       "is_basic": false,
       "is_preferred": false,
       "attributes": "{\"Resistance\":\"100kΩ\",\"Power(Watts)\":\"100mW\",\"Type\":\"Thin Film Resistor\",\"Overload Voltage (Max)\":\"75V\",\"Operating Temperature Range\":\"-55℃~+155℃\",\"Tolerance\":\"±0.1%\",\"Temperature Coefficient\":\"±50ppm/℃\"}"
+    }
+  },
+  {
+    "id": "C22920",
+    "checkedAt": "2026-10-04T06:08:20.438Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C22920",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 22920,
+      "mfr": "0603WAF2552T5E",
+      "package": "0603",
+      "description": "-55℃~+155℃ 100mW 25.5kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "stock": 1636,
+      "price": "1-999:0.0018,1000-4999:0.0015,5000-9999:0.0013,10000-49999:0.0013,50000-50199:0.0012,50200-:0.0012",
+      "category": "Resistors",
+      "subcategory": "Chip Resistor - Surface Mount",
+      "is_basic": false,
+      "is_preferred": false
     }
   }
 ]

@@ -1,0 +1,15 @@
+# Exact M0031 camera mating review
+
+Reviewed 2026-10-04. **Specification match established for contact side, pin count, pitch and nominal thickness; exact supplied-flex qualification remains open. Ordering is on hold.**
+
+The [Arducam M0031 product page](https://www.arducam.com/arducam-ov2640-camera-module-2mp-mini-ccm-compact-camera-modules-compatible-with-arduino_m0031esp32-esp8266-development-board-with-dvp-24-pin-interface_.html) names **F32R-1A7H1-11024** as its mating connector. This is stronger evidence than assuming compatibility from a generic OV2640 photograph.
+
+[Amphenol's exact-part page](https://www.amphenol-cs.com/product/f32r1a7h111024.html) specifies 24 positions, 0.50 mm pitch and bottom contacts. Its [F32R/F32Q series specification](https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/datasheet/flex/ffc_fpc_050mm_f32r_f32q.pdf), page 1, specifies 0.30 mm cable thickness. This establishes the intended nominal M0031 mating interface through the camera manufacturer's named mate; it is not a measurement of the user's flex.
+
+The [JUSHUO AFC01 specification](https://datasheet.lcsc.com/datasheet/pdf/97e3ba016a78286ffa6cfbc591e2beb6.pdf), page 2 drawing dated 2024-05-18, identifies F as lower contact. The recommended flex is **0.30 ±0.01 mm** thick, with 0.50 mm pitch, 0.35 ±0.03 mm contact width and at least 3.0 mm exposed contact length. For 24 contacts the outer flex width is **12.50 ±0.05 mm**, and the first-to-last contact-center span is **11.50 ±0.03 mm**. The same document's mechanical test section uses a 0.3 mm mating FFC. AFC01 uses a flip latch; the named Amphenol mate uses a slider. They are not PCB-footprint substitutes.
+
+For this board, J2 remains AFC01-S24FCA-00 (C262669), on **top**, with its mouth facing the right/east edge. Insert the flex from the right with exposed gold contacts **down toward the PCB**, stiffener away from the contacts. JUSHUO's circuit-1 drawing and the imported pad numbering place board pin 1 at the **south/bottom end** after the 90° rotation; pin 24 is at the north/top end. Align the camera's numbered contact 1 to board pin 1. Lens-facing direction alone is not sufficient to determine this.
+
+[Arducam's 24-pin table](https://blog.arducam.com/ov2640-vs-ov7670-detailed-comparisons-and-resources/) identifies pin 2 as AGND, pin 4 as analog supply, pin 10 as core supply, pin 11 as I/O supply and pin 15 as DGND. The hardware contract checks these board-side connections, including pin 10 to CAM_1V3.
+
+Before ordering, obtain the actual M0031 revision/lot drawing or a physical sample and record: reinforced-tail thickness 0.29–0.31 mm; flex width/contact length within the AFC01 drawing; exposed-contact side and numbered pin-1 mapping; full insertion and latch retention without force; camera/flex bend and enclosure clearances. No exact M0031 tail drawing or sample measurement was available in this task, so full mechanical interchangeability is **not certified**. Keep the hold until these items are signed off. After assembly, verify rail limits and the camera capture tests in `bring-up.md` before production.

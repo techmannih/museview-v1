@@ -4,9 +4,14 @@ import { checkContract } from "./check-contract.mjs"
 import { checkAssembly } from "./check-assembly.mjs"
 import { checkDecoupling } from "./check-decoupling.mjs"
 import { checkRouting } from "./check-routing.mjs"
+import { checkCameraSupply } from "./check-camera-supply.mjs"
+import stock from "../sourcing/stock-snapshot.json" with {type:"json"}
 const original=readCircuit("dist/index/circuit.json")
 const clone=()=>structuredClone(original)
 describe("Generated hardware regressions",()=>{
+ it("rejects the obsolete 20.5k camera core divider",()=>{const c=clone();c.find(e=>e.type==='source_component'&&e.name==='R8').resistance=20500;expect(checkCameraSupply(c).some(e=>e.includes('1.30 V'))).toBe(true)})
+ it("rejects a legacy camera supply net name",()=>{const c=clone();c.find(e=>e.type==='source_net'&&e.name==='CAM_1V3').name='CAM_1V2';expect(checkCameraSupply(c).some(e=>e.includes('Legacy'))).toBe(true)})
+ it("rejects divider tolerance that exceeds the camera voltage budget",()=>{const catalog=structuredClone(stock);catalog.find(e=>e.id==='C22920').part.description=catalog.find(e=>e.id==='C22920').part.description.replace('±1%','±5%');expect(checkCameraSupply(original,catalog).some(e=>e.includes('worst-case'))).toBe(true)})
  it("matches the reviewed electrical and placement contract",()=>{expect(checkContract(original)).toEqual([]);expect(checkAssembly(original)).toEqual([])})
  it("catches a wrong precision divider part",()=>{const c=clone();c.find(e=>e.type==='source_component'&&e.name==='R6').resistance=453000;expect(checkContract(c).some(e=>e.includes('R6'))).toBe(true)})
  it("catches a camera RESET disconnection",()=>{const c=clone(),u=c.find(e=>e.type==='source_component'&&e.name==='U1');const p=c.find(e=>e.type==='source_port'&&e.source_component_id===u.source_component_id&&e.port_hints?.includes('IO18'));const modified=c.filter(e=>!(e.type==='source_trace'&&e.connected_source_port_ids?.includes(p.source_port_id)));expect(checkContract(modified).some(e=>e.includes('IO18'))).toBe(true)})
