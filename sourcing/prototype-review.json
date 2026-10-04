@@ -1,0 +1,23 @@
+{
+  "reviewedAt": "2026-10-04",
+  "reviewedBaseCommit": "6be1e2bc84674653e416f670b8f63c1af2881fc1",
+  "scope": "First prototype only; existing electrical design, placement and routing retained",
+  "blockers": [
+    {
+      "id": "M0031_J2_MATING",
+      "status": "open",
+      "detail": "Exact Arducam M0031 tail thickness/tolerance, contact-side pin-1 identification and full insertion/flip-latch fit with AFC01-S24FCA-00 are not qualified. Only nominal 24-pin, 0.5 mm, 0.30 mm bottom-contact interface compatibility is supported by the named Amphenol mate.",
+      "evidence": "docs/camera-mating.md",
+      "closure": "Exact module-revision drawing or sample inspection/fit record identifying tail dimensions, numbered contact side and AFC01 latch retention. The user confirmed no exact drawing or physical measurements are available."
+    },
+    {
+      "id": "JLC_PLACEMENT_PREVIEW",
+      "status": "open",
+      "detail": "JLC-specific rotations and centroids remain unapproved for U1, J1, J2, D1, LED1 and U2/U3/U4/U5. CAD rotations are not supplier calibration.",
+      "evidence": "docs/placement-review.md",
+      "closure": "Review the current BOM/CPL against JLC's assembly preview; record model/landmark alignment and any CPL-only corrections. Gerbers were accepted as 4 layers, 50 x 35 mm; the next step requires an authenticated account."
+    }
+  ],
+  "afterAssembly": "Rail/startup/ripple, USB enumeration, camera identity/JPEG capture and thermal/current tests belong to prototype bring-up, not prerequisites requiring an already-built board before the first prototype order.",
+  "orderPlaced": false
+}

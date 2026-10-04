@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-04T06:15:43.847Z",
-  "circuitSha256": "a07b59c236dd42245723ca17f0b6670f90b2023eef8886456346df62840c0f46",
+  "generatedAt": "2026-10-04T06:56:41.488Z",
+  "circuitSha256": "64fa5ca99f62fb940bc7bcafe059d039ef0d37521c45068a4f623154d5b78436",
   "routingFingerprint": "5fb9f9e8-257a7e94-1060810",
   "tscircuitVersion": "0.0.2687",
   "circuitErrors": 0,
@@ -38,6 +38,22 @@
       "max": 1.3449476323309808
     }
   },
-  "orderStatus": "hold: exact M0031 flex sample/drawing qualification and physical bring-up remain open",
-  "hardwareValidation": "Not performed; prototype bring-up and JLC rotation/stackup review remain open"
+  "orderStatus": "NOT READY",
+  "firstPrototypeBlockers": [
+    {
+      "id": "M0031_J2_MATING",
+      "status": "open",
+      "detail": "Exact Arducam M0031 tail thickness/tolerance, contact-side pin-1 identification and full insertion/flip-latch fit with AFC01-S24FCA-00 are not qualified. Only nominal 24-pin, 0.5 mm, 0.30 mm bottom-contact interface compatibility is supported by the named Amphenol mate.",
+      "evidence": "docs/camera-mating.md",
+      "closure": "Exact module-revision drawing or sample inspection/fit record identifying tail dimensions, numbered contact side and AFC01 latch retention. The user confirmed no exact drawing or physical measurements are available."
+    },
+    {
+      "id": "JLC_PLACEMENT_PREVIEW",
+      "status": "open",
+      "detail": "JLC-specific rotations and centroids remain unapproved for U1, J1, J2, D1, LED1 and U2/U3/U4/U5. CAD rotations are not supplier calibration.",
+      "evidence": "docs/placement-review.md",
+      "closure": "Review the current BOM/CPL against JLC's assembly preview; record model/landmark alignment and any CPL-only corrections. Gerbers were accepted as 4 layers, 50 x 35 mm; the next step requires an authenticated account."
+    }
+  ],
+  "hardwareValidation": "Rail/startup/ripple, USB enumeration, camera identity/JPEG capture and thermal/current tests belong to prototype bring-up, not prerequisites requiring an already-built board before the first prototype order."
 }

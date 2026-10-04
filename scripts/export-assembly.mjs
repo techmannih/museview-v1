@@ -1,5 +1,6 @@
 import { mkdirSync,writeFileSync,readFileSync } from "node:fs"
 import { model,readCircuit } from "./circuit.mjs"
+import { placementReview } from "./placement-review.mjs"
 const m=model(readCircuit()),stock=JSON.parse(readFileSync("sourcing/stock-snapshot.json","utf8"))
 const rows=new Map(),placements=[];const b=m.of("pcb_board")[0]
 const quote=s=>`"${String(s??"").replaceAll('"','""')}"`
@@ -20,4 +21,5 @@ writeFileSync("release/jlc-cpl.csv",csv([["Designator","Mid X","Mid Y","Layer","
 writeFileSync("sourcing/bom-with-stock.csv",csv([["LCSC","Manufacturer part","References","Quantity per board","Stock snapshot","Checked UTC","Evidence"],...groups.map(g=>[g.id,g.mpn,g.refs.join(" "),g.refs.length,g.stock?.part?.stock,g.stock?.checkedAt,g.stock?.url])]))
 const summary={fittedComponents:placements.length,uniqueParts:groups.length,topComponents:placements.length,bottomComponents:0,boardSizeMm:{width:b.width,height:b.height},probePads:m.of("source_component").filter(c=>c.name.startsWith("TP")).length,stockUnavailable:groups.filter(g=>!(g.stock?.part?.stock>0)).map(g=>g.id),cplOrigin:"board center; same unshifted origin as Gerber/drill exports",rotationStatus:"Footprint rotation; JLC preview still requires physical orientation review"}
 writeFileSync("release/assembly-summary.json",JSON.stringify(summary,null,2)+"\n")
+writeFileSync("release/placement-review.json",JSON.stringify(placementReview(readFileSync("dist/index/circuit.json")),null,2)+"\n")
 console.log(summary)

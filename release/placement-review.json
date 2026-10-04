@@ -1,0 +1,443 @@
+{
+  "circuitSha256": "64fa5ca99f62fb940bc7bcafe059d039ef0d37521c45068a4f623154d5b78436",
+  "cplSha256": "cfe2052b694abdf84171229b4aab8be2fd9b3af1adfe06a9c2f676d45324aa2d",
+  "view": "top; +X east/right, +Y north/up; millimetres; board-centre origin",
+  "status": "Board-side pin/polarity landmarks recorded. JLC rotation and centroid calibration are NOT approved.",
+  "parts": [
+    {
+      "ref": "U1",
+      "jlcPart": "C2913202",
+      "footprintRotationDeg": 0,
+      "cplCenterMm": {
+        "x": 4.5,
+        "y": 0.4999999999999991
+      },
+      "landmarks": [
+        {
+          "pin": "pin1",
+          "sourceName": "GND1",
+          "positionMm": {
+            "x": -4.250045999999999,
+            "y": 9.5449527
+          },
+          "nets": [
+            "GND"
+          ]
+        },
+        {
+          "pin": "pin2",
+          "sourceName": "3V3",
+          "positionMm": {
+            "x": -4.250045999999999,
+            "y": 8.2749527
+          },
+          "nets": [
+            "VDD_IO"
+          ]
+        },
+        {
+          "pin": "pin40",
+          "sourceName": "GND2",
+          "positionMm": {
+            "x": 13.250046,
+            "y": 9.5449527
+          },
+          "nets": [
+            "GND"
+          ]
+        }
+      ],
+      "jlcPreviewStatus": "pending"
+    },
+    {
+      "ref": "J1",
+      "jlcPart": "C165948",
+      "footprintRotationDeg": 270,
+      "cplCenterMm": {
+        "x": -21.27504355,
+        "y": 3
+      },
+      "landmarks": [
+        {
+          "pin": "CC1",
+          "sourceName": "CC1",
+          "positionMm": {
+            "x": -18.6759568,
+            "y": 4.2499340000000005
+          },
+          "nets": [
+            "CC1"
+          ]
+        },
+        {
+          "pin": "CC2",
+          "sourceName": "CC2",
+          "positionMm": {
+            "x": -18.6759568,
+            "y": 1.2499400000000003
+          },
+          "nets": [
+            "CC2"
+          ]
+        },
+        {
+          "pin": "GND1",
+          "sourceName": "GND1",
+          "positionMm": {
+            "x": -18.6759568,
+            "y": 6.1999555
+          },
+          "nets": [
+            "GND"
+          ]
+        },
+        {
+          "pin": "GND2",
+          "sourceName": "GND2",
+          "positionMm": {
+            "x": -18.6758552,
+            "y": -0.20000630000000008
+          },
+          "nets": [
+            "GND"
+          ]
+        }
+      ],
+      "jlcPreviewStatus": "pending"
+    },
+    {
+      "ref": "J2",
+      "jlcPart": "C262669",
+      "footprintRotationDeg": 90,
+      "cplCenterMm": {
+        "x": 22.6,
+        "y": -1.4999999999999996
+      },
+      "landmarks": [
+        {
+          "pin": "pin1",
+          "sourceName": "STROBE_NC",
+          "positionMm": {
+            "x": 21.19988215,
+            "y": -7.249798
+          },
+          "nets": []
+        },
+        {
+          "pin": "pin2",
+          "sourceName": "AGND",
+          "positionMm": {
+            "x": 21.19988215,
+            "y": -6.749926
+          },
+          "nets": [
+            "GND"
+          ]
+        },
+        {
+          "pin": "pin10",
+          "sourceName": "DVDD",
+          "positionMm": {
+            "x": 21.19988215,
+            "y": -2.749934
+          },
+          "nets": [
+            "CAM_1V3"
+          ]
+        },
+        {
+          "pin": "pin11",
+          "sourceName": "DOVDD",
+          "positionMm": {
+            "x": 21.19988215,
+            "y": -2.249808
+          },
+          "nets": [
+            "VDD_IO"
+          ]
+        },
+        {
+          "pin": "pin24",
+          "sourceName": "D0_NC",
+          "positionMm": {
+            "x": 21.19988215,
+            "y": 4.250052
+          },
+          "nets": []
+        }
+      ],
+      "jlcPreviewStatus": "pending"
+    },
+    {
+      "ref": "D1",
+      "jlcPart": "C193402",
+      "footprintRotationDeg": 0,
+      "cplCenterMm": {
+        "x": -21,
+        "y": 9.7
+      },
+      "landmarks": [
+        {
+          "pin": "cathode",
+          "sourceName": "pin2",
+          "positionMm": {
+            "x": -22.634998,
+            "y": 9.7
+          },
+          "nets": [
+            "VBUS_5V"
+          ]
+        },
+        {
+          "pin": "anode",
+          "sourceName": "pin1",
+          "positionMm": {
+            "x": -19.365002,
+            "y": 9.7
+          },
+          "nets": [
+            "GND"
+          ]
+        }
+      ],
+      "jlcPreviewStatus": "pending"
+    },
+    {
+      "ref": "LED1",
+      "jlcPart": "C2286",
+      "footprintRotationDeg": 0,
+      "cplCenterMm": {
+        "x": -12.7,
+        "y": -13.8
+      },
+      "landmarks": [
+        {
+          "pin": "cathode",
+          "sourceName": "cathode",
+          "positionMm": {
+            "x": -13.450061999999999,
+            "y": -13.8
+          },
+          "nets": [
+            "GND"
+          ]
+        },
+        {
+          "pin": "anode",
+          "sourceName": "anode",
+          "positionMm": {
+            "x": -11.949938,
+            "y": -13.8
+          },
+          "nets": [
+            "LED_A"
+          ]
+        }
+      ],
+      "jlcPreviewStatus": "pending"
+    },
+    {
+      "ref": "U2",
+      "jlcPart": "C2687116",
+      "footprintRotationDeg": 270,
+      "cplCenterMm": {
+        "x": -15.699999999999942,
+        "y": 5.684341886080802e-14
+      },
+      "landmarks": [
+        {
+          "pin": "pin1",
+          "sourceName": "I1",
+          "positionMm": {
+            "x": -16.84909599999987,
+            "y": 0.949959999999919
+          },
+          "nets": [
+            "USB_DM_PORT",
+            "USB_DM_ESD"
+          ]
+        },
+        {
+          "pin": "GND",
+          "sourceName": "GND",
+          "positionMm": {
+            "x": -16.84909599999987,
+            "y": -7.036183691564352e-17
+          },
+          "nets": [
+            "GND"
+          ]
+        },
+        {
+          "pin": "VBUS",
+          "sourceName": "VBUS",
+          "positionMm": {
+            "x": -14.550904000000013,
+            "y": 7.036183691565048e-17
+          },
+          "nets": [
+            "VBUS_5V"
+          ]
+        }
+      ],
+      "jlcPreviewStatus": "pending"
+    },
+    {
+      "ref": "U3",
+      "jlcPart": "C141836",
+      "footprintRotationDeg": 90,
+      "cplCenterMm": {
+        "x": -11,
+        "y": -1.5
+      },
+      "landmarks": [
+        {
+          "pin": "pin1",
+          "sourceName": "EN",
+          "positionMm": {
+            "x": -10.05004,
+            "y": -0.1999010000000001
+          },
+          "nets": [
+            "VBUS_5V"
+          ]
+        },
+        {
+          "pin": "GND",
+          "sourceName": "GND",
+          "positionMm": {
+            "x": -11,
+            "y": -0.1999010000000001
+          },
+          "nets": [
+            "GND"
+          ]
+        },
+        {
+          "pin": "VIN",
+          "sourceName": "VIN",
+          "positionMm": {
+            "x": -11.94996,
+            "y": -2.800099
+          },
+          "nets": [
+            "VBUS_5V"
+          ]
+        },
+        {
+          "pin": "FB",
+          "sourceName": "FB",
+          "positionMm": {
+            "x": -10.05004,
+            "y": -2.800099
+          },
+          "nets": [
+            "BUCK_FB"
+          ]
+        }
+      ],
+      "jlcPreviewStatus": "pending"
+    },
+    {
+      "ref": "U4",
+      "jlcPart": "C347374",
+      "footprintRotationDeg": 0,
+      "cplCenterMm": {
+        "x": -20,
+        "y": -6.5
+      },
+      "landmarks": [
+        {
+          "pin": "pin1",
+          "sourceName": "VSS",
+          "positionMm": {
+            "x": -18.898656,
+            "y": -7.44996
+          },
+          "nets": [
+            "GND"
+          ]
+        },
+        {
+          "pin": "VOUT",
+          "sourceName": "VOUT",
+          "positionMm": {
+            "x": -18.898656,
+            "y": -5.55004
+          },
+          "nets": [
+            "CAM_2V8"
+          ]
+        },
+        {
+          "pin": "VIN",
+          "sourceName": "VIN",
+          "positionMm": {
+            "x": -21.101344,
+            "y": -6.5
+          },
+          "nets": [
+            "VBUS_5V"
+          ]
+        }
+      ],
+      "jlcPreviewStatus": "pending"
+    },
+    {
+      "ref": "U5",
+      "jlcPart": "C5152783",
+      "footprintRotationDeg": 0,
+      "cplCenterMm": {
+        "x": -18,
+        "y": -10.7
+      },
+      "landmarks": [
+        {
+          "pin": "pin1",
+          "sourceName": "IN",
+          "positionMm": {
+            "x": -16.899926,
+            "y": -11.649833
+          },
+          "nets": [
+            "VDD_IO"
+          ]
+        },
+        {
+          "pin": "GND",
+          "sourceName": "GND",
+          "positionMm": {
+            "x": -16.899926,
+            "y": -10.700127
+          },
+          "nets": [
+            "GND"
+          ]
+        },
+        {
+          "pin": "OUT",
+          "sourceName": "OUT",
+          "positionMm": {
+            "x": -19.100074,
+            "y": -11.650087
+          },
+          "nets": [
+            "CAM_1V3"
+          ]
+        },
+        {
+          "pin": "FB",
+          "sourceName": "FB",
+          "positionMm": {
+            "x": -19.100074,
+            "y": -9.749913
+          },
+          "nets": [
+            "CAM_FB"
+          ]
+        }
+      ],
+      "jlcPreviewStatus": "pending"
+    }
+  ]
+}

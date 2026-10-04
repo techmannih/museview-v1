@@ -4,7 +4,7 @@ ESP32-S3-WROOM-1-N16R8 camera controller, standard USB-C **5 V only**, Arducam M
 
 ![Assembled MuseView PCB](__snapshots__/index.circuit-3d.snap.png)
 
-Engineering prototype with complete routed copper and reproducible checks. **Order hold: exact M0031 flex qualification and physical bring-up remain open; do not order from the superseded 1.197 V revision.** Manufacturing files are in [`release/`](release/); the external camera is installed separately. Physical bring-up and JLC placement preview remain required.
+Engineering prototype with complete routed copper and reproducible checks. **NOT READY: exact M0031-to-AFC01 mating qualification and JLC placement-preview approval remain open.** Manufacturing files are in [`release/`](release/); the external camera is installed separately. See [first-prototype blockers](docs/release-checks.md). Rail, USB and camera measurements are performed after prototype assembly.
 
 This repository follows the organization of [techmannih/trellis-core](https://github.com/techmannih/trellis-core): one explicit JSX board entrypoint, local component imports and CAD assets, Bun lockfile, circuit checks under `scripts/`, schematic/PCB/3D snapshots, assembly and bring-up documents. The electrical design is independently implemented for this board; Trellis Core's circuit and physical placement are not interchangeable with this camera board.
 
@@ -35,7 +35,7 @@ The library/CLI is pinned to tscircuit 0.0.2687. Builds use selected supplier nu
 - Native USB ROM recovery, UART0/JTAG pads, BOOT, RESET, ASK GPIO16 and LED GPIO17.
 - Camera RESET GPIO18 defaults low and PWDN GPIO8 defaults high. Firmware must actively release them.
 
-These rail changes correct the source brief's 1.296 V camera core and avoid a marginal 2.8 V camera-to-3.318 V ESP32 I/O interface. See [electrical decisions](docs/electrical-review.md) and the [pin contract](hardware-contract.json).
+These rail choices retain the corrected 1.296 V camera core and avoid a marginal 2.8 V camera-to-3.318 V ESP32 I/O interface. See [electrical decisions](docs/electrical-review.md) and the [pin contract](hardware-contract.json).
 
 ## Repository
 

@@ -1,6 +1,6 @@
 # Release checks
 
-Status: **Corrected engineering CAD; order hold pending exact-flex qualification and physical validation**. The machine-readable [`verification.json`](../release/verification.json) records the exact circuit hash and check outcomes. Manufacturing exports are versioned in `release/`, with SHA-256 hashes.
+Status: **NOT READY** for the first prototype. Only the two pre-order items below remain open; post-assembly measurements are listed separately. The machine-readable [`verification.json`](../release/verification.json) records the exact circuit hash and check outcomes. Manufacturing exports are versioned in `release/`, with SHA-256 hashes.
 
 Local verification completed on 2026-10-04: source netlist, schematic placement, PCB placement, routing difficulty, board build, electrical contract, actual copper continuity, local bypasses, exact M0031 supply bounds, assembly/stock checks and separate Gerber short analysis passed. Sixteen regression tests passed. Native 2D and 3D snapshot regeneration/compare runs matched. The GitHub workflow repeats the circuit checks and 2D snapshots and compiles the matching ESP-IDF 5.4.2 firmware.
 
@@ -21,6 +21,11 @@ The handoff exporter verifies five KiCad schematic files (root plus four childre
 | Fabrication | Review Gerber/drill/stackup/impedance with manufacturer |
 | Hardware | Rails, startup, thermal/current/USB/camera tests in `bring-up.md` |
 
-Physical validation is open: no PCB has been manufactured or electrically tested in this task. JLC assembly eligibility/rotation preview, external M0031 mating, source-current/inrush behavior, controlled impedance and the measured results above must be signed off before production. These checks are not replaced by software CI.
+First-prototype blockers:
+
+1. **Exact M0031-to-J2 mating qualification** — public documents establish the nominal interface, but not the exact supplied tail tolerance, numbered contact side or AFC01 flip-latch fit. See `camera-mating.md`.
+2. **JLC assembly placement approval** — the exported rotations are CAD angles. Verify U1/J1/J2/D1/LED1/U2/U3/U4/U5 alignment and centroids in the authenticated JLC preview, using `placement-review.md` and the generated `release/placement-review.json`. The Gerber upload was recognized as 4 layers, 50 × 35 mm. No order/payment was submitted.
+
+After assembly: no physical PCB has been tested in this task. Source-current/inrush, rails/ripple/thermal behavior, USB enumeration and camera capture are prototype bring-up work before production. They are not circular prerequisites for ordering the first prototype. Manufacturing stackup and assembly eligibility must still match the actual quote; automated checks do not replace manufacturer review.
 
 The 1.197 V camera-core revision is superseded. R8 = 25.5 kΩ and CAM_1V3 are mandatory. See `camera-mating.md`: contact side and nominal thickness match the Arducam-specified mating interface, but no physical module lot has been measured or signed off.

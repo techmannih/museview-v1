@@ -13,3 +13,19 @@ For this board, J2 remains AFC01-S24FCA-00 (C262669), on **top**, with its mouth
 [Arducam's 24-pin table](https://blog.arducam.com/ov2640-vs-ov7670-detailed-comparisons-and-resources/) identifies pin 2 as AGND, pin 4 as analog supply, pin 10 as core supply, pin 11 as I/O supply and pin 15 as DGND. The hardware contract checks these board-side connections, including pin 10 to CAM_1V3.
 
 Before ordering, obtain the actual M0031 revision/lot drawing or a physical sample and record: reinforced-tail thickness 0.29–0.31 mm; flex width/contact length within the AFC01 drawing; exposed-contact side and numbered pin-1 mapping; full insertion and latch retention without force; camera/flex bend and enclosure clearances. No exact M0031 tail drawing or sample measurement was available in this task, so full mechanical interchangeability is **not certified**. Keep the hold until these items are signed off. After assembly, verify rail limits and the camera capture tests in `bring-up.md` before production.
+
+## First-prototype review clarification
+
+On 2026-10-04 the user confirmed that no exact M0031 revision drawing or physical tail measurements are available. Public documentation is the evidence boundary. Do not mark physical compatibility as verified from a product photograph, the overall 12.5 mm module width, or the shared nominal 0.30 mm cable specification. The 12.50 ±0.05 mm tail width and 0.29–0.31 mm thickness above are **AFC01 acceptance requirements**, not measured M0031 dimensions.
+
+| Item | Result | Evidence / outstanding qualification |
+|---|---|---|
+| 24 contacts | Supported | Exact M0031 product specification and exact J2 part |
+| 0.50 mm pitch | Nominal match supported | Arducam-named F32R-1A7H1-11024 and AFC01 drawings |
+| 0.30 mm reinforced tail | Nominal match only | Exact tail thickness/tolerance not published in the reviewed M0031 page |
+| Bottom contacts | Intended mating orientation supported | Both named F32R and J2 contact below the flex |
+| Board pin 1 | Checked | South end, (21.1999, −7.2498) mm; pin 24 north; camera contact 1 identification on the exact flex remains open |
+| Insertion | Board-side instruction established | From east/right toward west/left, gold contacts toward PCB; confirm actual insertion depth on sample |
+| Latch fit / retention | **Not verified** | AFC01 flip latch differs from the named F32R slider; exact tail and sample fit record required |
+
+Use the complete J2 signal map in `hardware-contract.json`; do not reverse the flex to make a lens point in a preferred direction. Pins 1, 23 and 24 are intentionally unconnected; grounds are 2 and 15, analog is 4, core is 10, and I/O supply is 11. Camera pin numbers come from Arducam's published interface table; correlating those numbers to a particular exposed tail edge remains part of the mechanical qualification.

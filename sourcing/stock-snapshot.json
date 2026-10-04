@@ -1,7 +1,7 @@
 [
   {
     "id": "C2913202",
-    "checkedAt": "2026-10-04T03:55:04.446Z",
+    "checkedAt": "2026-10-04T06:48:42.124Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C2913202",
     "httpStatus": 200,
     "part": {
@@ -19,7 +19,7 @@
   },
   {
     "id": "C165948",
-    "checkedAt": "2026-10-04T03:55:04.662Z",
+    "checkedAt": "2026-10-04T06:48:39.691Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C165948",
     "httpStatus": 200,
     "part": {
@@ -37,7 +37,7 @@
   },
   {
     "id": "C2687116",
-    "checkedAt": "2026-10-04T03:55:04.695Z",
+    "checkedAt": "2026-10-04T06:48:39.958Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C2687116",
     "httpStatus": 200,
     "part": {
@@ -55,7 +55,7 @@
   },
   {
     "id": "C262669",
-    "checkedAt": "2026-10-04T06:08:20.951Z",
+    "checkedAt": "2026-10-04T06:48:42.759Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C262669",
     "httpStatus": 200,
     "part": {
@@ -73,7 +73,7 @@
   },
   {
     "id": "C98361",
-    "checkedAt": "2026-10-04T03:55:05.010Z",
+    "checkedAt": "2026-10-04T06:48:40.485Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C98361",
     "httpStatus": 200,
     "part": {
@@ -91,7 +91,7 @@
   },
   {
     "id": "C141836",
-    "checkedAt": "2026-10-04T03:55:05.014Z",
+    "checkedAt": "2026-10-04T06:48:40.489Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C141836",
     "httpStatus": 200,
     "part": {
@@ -109,7 +109,7 @@
   },
   {
     "id": "C193402",
-    "checkedAt": "2026-10-04T03:55:05.019Z",
+    "checkedAt": "2026-10-04T06:48:40.236Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C193402",
     "httpStatus": 200,
     "part": {
@@ -127,7 +127,7 @@
   },
   {
     "id": "C914092",
-    "checkedAt": "2026-10-04T03:55:05.675Z",
+    "checkedAt": "2026-10-04T06:48:40.237Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C914092",
     "httpStatus": 200,
     "part": {
@@ -145,7 +145,7 @@
   },
   {
     "id": "C5152783",
-    "checkedAt": "2026-10-04T03:55:05.960Z",
+    "checkedAt": "2026-10-04T06:48:41.838Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C5152783",
     "httpStatus": 200,
     "part": {
@@ -163,7 +163,7 @@
   },
   {
     "id": "C318884",
-    "checkedAt": "2026-10-04T03:55:05.964Z",
+    "checkedAt": "2026-10-04T06:48:42.135Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C318884",
     "httpStatus": 200,
     "part": {
@@ -181,7 +181,7 @@
   },
   {
     "id": "C2286",
-    "checkedAt": "2026-10-04T03:55:05.978Z",
+    "checkedAt": "2026-10-04T06:48:42.760Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C2286",
     "httpStatus": 200,
     "part": {
@@ -199,7 +199,7 @@
   },
   {
     "id": "C347374",
-    "checkedAt": "2026-10-04T03:55:06.634Z",
+    "checkedAt": "2026-10-04T06:48:41.384Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C347374",
     "httpStatus": 200,
     "part": {
@@ -217,9 +217,9 @@
   },
   {
     "id": "C25804",
-    "checkedAt": "2026-10-04T04:03:08.862Z",
     "url": "https://jlcsearch.tscircuit.com/resistors/list.json?resistance=10000&package=0603",
     "httpStatus": 200,
+    "checkedAt": "2026-10-04T06:50:33.006Z",
     "part": {
       "lcsc": 25804,
       "mfr": "0603WAF1002T5E",
@@ -244,7 +244,7 @@
   },
   {
     "id": "C23186",
-    "checkedAt": "2026-10-04T03:55:06.917Z",
+    "checkedAt": "2026-10-04T06:48:39.649Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C23186",
     "httpStatus": 200,
     "part": {
@@ -262,7 +262,7 @@
   },
   {
     "id": "C23140",
-    "checkedAt": "2026-10-04T03:55:06.918Z",
+    "checkedAt": "2026-10-04T06:48:40.223Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C23140",
     "httpStatus": 200,
     "part": {
@@ -280,7 +280,7 @@
   },
   {
     "id": "C23162",
-    "checkedAt": "2026-10-04T03:55:06.921Z",
+    "checkedAt": "2026-10-04T06:48:43.167Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C23162",
     "httpStatus": 200,
     "part": {
@@ -298,7 +298,7 @@
   },
   {
     "id": "C22935",
-    "checkedAt": "2026-10-04T03:55:07.180Z",
+    "checkedAt": "2026-10-04T06:48:39.658Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C22935",
     "httpStatus": 200,
     "part": {
@@ -352,7 +352,7 @@
   },
   {
     "id": "C2933218",
-    "checkedAt": "2026-10-04T06:08:20.662Z",
+    "checkedAt": "2026-10-04T06:48:41.837Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C2933218",
     "httpStatus": 200,
     "part": {
@@ -370,7 +370,7 @@
   },
   {
     "id": "C21190",
-    "checkedAt": "2026-10-04T03:55:07.522Z",
+    "checkedAt": "2026-10-04T06:48:42.760Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C21190",
     "httpStatus": 200,
     "part": {
@@ -388,7 +388,7 @@
   },
   {
     "id": "C1679",
-    "checkedAt": "2026-10-04T03:55:07.537Z",
+    "checkedAt": "2026-10-04T06:48:41.388Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C1679",
     "httpStatus": 200,
     "part": {
@@ -424,7 +424,7 @@
   },
   {
     "id": "C106076",
-    "checkedAt": "2026-10-04T03:55:07.539Z",
+    "checkedAt": "2026-10-04T06:48:39.958Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C106076",
     "httpStatus": 200,
     "part": {
@@ -442,7 +442,7 @@
   },
   {
     "id": "C113807",
-    "checkedAt": "2026-10-04T03:55:07.863Z",
+    "checkedAt": "2026-10-04T06:48:41.384Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C113807",
     "httpStatus": 200,
     "part": {
@@ -460,7 +460,7 @@
   },
   {
     "id": "C86038",
-    "checkedAt": "2026-10-04T03:55:07.863Z",
+    "checkedAt": "2026-10-04T06:48:40.840Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C86038",
     "httpStatus": 200,
     "part": {
@@ -478,7 +478,7 @@
   },
   {
     "id": "C14663",
-    "checkedAt": "2026-10-04T03:55:07.863Z",
+    "checkedAt": "2026-10-04T06:48:39.956Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C14663",
     "httpStatus": 200,
     "part": {
@@ -496,7 +496,7 @@
   },
   {
     "id": "C2857993",
-    "checkedAt": "2026-10-04T03:55:08.634Z",
+    "checkedAt": "2026-10-04T06:48:40.507Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C2857993",
     "httpStatus": 200,
     "part": {
@@ -568,9 +568,9 @@
   },
   {
     "id": "C861402",
-    "checkedAt": "2026-10-04T04:03:08.868Z",
     "url": "https://jlcsearch.tscircuit.com/resistors/list.json?resistance=432000&package=0603",
     "httpStatus": 200,
+    "checkedAt": "2026-10-04T06:50:32.754Z",
     "part": {
       "lcsc": 861402,
       "mfr": "RT0603BRD07432KL",
@@ -649,29 +649,20 @@
   },
   {
     "id": "C335088",
-    "checkedAt": "2026-10-04T04:03:08.869Z",
-    "url": "https://jlcsearch.tscircuit.com/resistors/list.json?resistance=100000&package=0603",
+    "checkedAt": "2026-10-04T06:48:40.840Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C335088",
     "httpStatus": 200,
     "part": {
       "lcsc": 335088,
       "mfr": "ARG03BTC1003",
-      "description": "",
-      "stock": 178619,
-      "price1": 0.018,
-      "in_stock": true,
-      "resistance": 100000,
-      "tolerance_fraction": 0.001,
-      "power_watts": 100,
       "package": "0603",
-      "max_overload_voltage": 75,
-      "number_of_resistors": null,
-      "number_of_pins": null,
-      "is_potentiometer": false,
-      "is_surface_mount": true,
-      "is_multi_resistor_chip": false,
+      "description": "-55℃~+155℃ 100kΩ 100mW 75V Thin Film Resistor ±0.1% ±25ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "stock": 204014,
+      "price": "1-199:0.0243,200-599:0.0194,600-4999:0.0168,5000-9999:0.0141,10000-19999:0.0127,20000-:0.012",
+      "category": "Resistors",
+      "subcategory": "Chip Resistor - Surface Mount",
       "is_basic": false,
-      "is_preferred": false,
-      "attributes": "{\"Resistance\":\"100kΩ\",\"Power(Watts)\":\"100mW\",\"Type\":\"Thin Film Resistor\",\"Overload Voltage (Max)\":\"75V\",\"Operating Temperature Range\":\"-55℃~+155℃\",\"Tolerance\":\"±0.1%\",\"Temperature Coefficient\":\"±25ppm/℃\"}"
+      "is_preferred": false
     }
   },
   {
@@ -703,7 +694,7 @@
   },
   {
     "id": "C22920",
-    "checkedAt": "2026-10-04T06:08:20.438Z",
+    "checkedAt": "2026-10-04T06:48:41.837Z",
     "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C22920",
     "httpStatus": 200,
     "part": {
