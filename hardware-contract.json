@@ -57,6 +57,8 @@
       "pin2": "VBUS_5V"
     },
     "D1": {
+      "pin1": "VBUS_5V",
+      "pin2": "GND",
       "cathode": "VBUS_5V",
       "anode": "GND"
     },

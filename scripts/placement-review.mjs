@@ -2,13 +2,13 @@ import {readFileSync} from "node:fs"
 import {createHash} from "node:crypto"
 import {model} from "./circuit.mjs"
 
-// Board-space landmarks, not supplier feeder-angle corrections. Keep semantic
-// diode polarity: tscircuit's diode pin numbers are not the supplier's numbers.
+// Board-space landmarks, not supplier feeder-angle corrections. Record both
+// supplier pin numbers and semantic polarity for the TVS.
 const landmarks = {
  U1: ["pin1", "pin2", "pin40"],
  J1: ["CC1", "CC2", "GND1", "GND2"],
  J2: ["pin1", "pin2", "pin10", "pin11", "pin24"],
- D1: ["cathode", "anode"],
+ D1: ["pin1", "cathode", "pin2", "anode"],
  LED1: ["cathode", "anode"],
  U2: ["pin1", "GND", "VBUS"],
  U3: ["pin1", "GND", "VIN", "FB"],

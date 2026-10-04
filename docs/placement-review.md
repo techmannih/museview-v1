@@ -11,7 +11,7 @@ The table uses the top view: north is +Y, east is +X, and all coordinates are in
 | U1 ESP32-S3-WROOM-1-N16R8 / C2913202 | 0° | Antenna north. Pin 1 GND northwest at (−4.2500, 9.5450); pin 2 VDD_IO immediately south. Pin 40 GND northeast. |
 | J1 TYPE-C-31-M-12 / C165948 | 270° | USB mouth west/left, SMT signal row east. CC1 at (−18.6760, 4.2499), CC2 at (−18.6760, 1.2499). Use connector pad names, not the imported shell-tab `pin1`, as the orientation reference. |
 | J2 AFC01-S24FCA-00 / C262669 | 90° | Mouth east/right, flex contacts down. Pin 1 south at (21.1999, −7.2498), pin 24 north at (21.1999, 4.2501). Signal row west of the body; mounting tabs east. |
-| D1 SMF5.0A / C193402 | 0° | Cathode/bar west at (−22.6350, 9.7000), connected to VBUS_5V. Anode east at (−19.3650, 9.7000), GND. Do not equate tscircuit's native diode pin numbers to the supplier's pad numbering. |
+| D1 SMF5.0A / C193402 | 0° | Pin 1 cathode/bar west at (−22.6350, 9.7000), connected to VBUS_5V. Pin 2 anode east at (−19.3650, 9.7000), GND. Explicit supplier pin numbering is enforced by the hardware contract. |
 | LED1 KT-0603R / C2286 | 0° | Cathode west at (−13.4501, −13.8000), GND. Anode east at (−11.9499, −13.8000), driven through R13. Confirm the actual supplier polarity mark against these nets. |
 | U2 USBLC6-2SC6 / C2687116 | 270° | Pin 1 northwest at (−16.8491, 0.9500). Pin 2 GND west-centre, pin 5 VBUS east-centre. |
 | U3 TLV62569DBVR / C141836 | 90° | Pin 1 EN northeast at (−10.0500, −0.1999); pin 2 GND north-centre; pin 3 SW northwest; pin 4 VIN southwest; pin 5 FB southeast. |

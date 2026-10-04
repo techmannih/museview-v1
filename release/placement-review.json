@@ -1,5 +1,5 @@
 {
-  "circuitSha256": "64fa5ca99f62fb940bc7bcafe059d039ef0d37521c45068a4f623154d5b78436",
+  "circuitSha256": "90815e80d8f1eff21f1a1160cf4fe1acfde2e443f64589a5e178e44331e68be0",
   "cplSha256": "cfe2052b694abdf84171229b4aab8be2fd9b3af1adfe06a9c2f676d45324aa2d",
   "view": "top; +X east/right, +Y north/up; millimetres; board-centre origin",
   "status": "Board-side pin/polarity landmarks recorded. JLC rotation and centroid calibration are NOT approved.",
@@ -178,8 +178,8 @@
       },
       "landmarks": [
         {
-          "pin": "cathode",
-          "sourceName": "pin2",
+          "pin": "pin1",
+          "sourceName": "cathode",
           "positionMm": {
             "x": -22.634998,
             "y": 9.7
@@ -189,8 +189,30 @@
           ]
         },
         {
+          "pin": "cathode",
+          "sourceName": "cathode",
+          "positionMm": {
+            "x": -22.634998,
+            "y": 9.7
+          },
+          "nets": [
+            "VBUS_5V"
+          ]
+        },
+        {
+          "pin": "pin2",
+          "sourceName": "anode",
+          "positionMm": {
+            "x": -19.365002,
+            "y": 9.7
+          },
+          "nets": [
+            "GND"
+          ]
+        },
+        {
           "pin": "anode",
-          "sourceName": "pin1",
+          "sourceName": "anode",
           "positionMm": {
             "x": -19.365002,
             "y": 9.7

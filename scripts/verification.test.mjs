@@ -1,5 +1,5 @@
 import { describe,it,expect } from "bun:test"
-import { readCircuit } from "./circuit.mjs"
+import { model, readCircuit } from "./circuit.mjs"
 import { checkContract } from "./check-contract.mjs"
 import { checkAssembly } from "./check-assembly.mjs"
 import { checkDecoupling } from "./check-decoupling.mjs"
@@ -9,6 +9,7 @@ import stock from "../sourcing/stock-snapshot.json" with {type:"json"}
 const original=readCircuit("dist/index/circuit.json")
 const clone=()=>structuredClone(original)
 describe("Generated hardware regressions",()=>{
+ it("rejects TVS supplier pin polarity mismatch even if semantic nets match",()=>{const c=clone(),d=c.find(e=>e.type==='source_component'&&e.name==='D1');for(const p of c.filter(e=>e.type==='source_port'&&e.source_component_id===d.source_component_id))p.pin_number=3-p.pin_number;expect(checkContract(c).some(e=>e.includes('C193402 requires pin'))).toBe(true);const reversed=clone(),m=model(reversed),a=reversed.find(e=>e.type==='schematic_port'&&e.source_port_id===m.port('D1','anode').source_port_id),k=reversed.find(e=>e.type==='schematic_port'&&e.source_port_id===m.port('D1','cathode').source_port_id);[a.center,k.center]=[k.center,a.center];expect(checkContract(reversed).some(e=>e.includes('schematic cathode'))).toBe(true)})
  it("rejects the obsolete 20.5k camera core divider",()=>{const c=clone();c.find(e=>e.type==='source_component'&&e.name==='R8').resistance=20500;expect(checkCameraSupply(c).some(e=>e.includes('1.30 V'))).toBe(true)})
  it("rejects a legacy camera supply net name",()=>{const c=clone();c.find(e=>e.type==='source_net'&&e.name==='CAM_1V3').name='CAM_1V2';expect(checkCameraSupply(c).some(e=>e.includes('Legacy'))).toBe(true)})
  it("rejects divider tolerance that exceeds the camera voltage budget",()=>{const catalog=structuredClone(stock);catalog.find(e=>e.id==='C22920').part.description=catalog.find(e=>e.id==='C22920').part.description.replace('±1%','±5%');expect(checkCameraSupply(original,catalog).some(e=>e.includes('worst-case'))).toBe(true)})

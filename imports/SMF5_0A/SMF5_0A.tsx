@@ -3,14 +3,18 @@ import stepPath from "./SMF5_0A.step"
 import type { DiodeProps } from "@tscircuit/props"
 
 const pinLabels = {
-  pin1: ["C"],
-  pin2: ["A"]
+  pin1: ["cathode", "C", "neg"],
+  pin2: ["anode", "A", "pos"]
 } as const
 
 export const SMF5_0A = (props: DiodeProps) => {
   return (
     <diode
       variant="avalanche"
+      // The pinned full-size avalanche glyph reverses pos/neg aliases. Its
+      // native small glyph has correct semantic anode/cathode port labels.
+      schSize="sm"
+      pinLabels={pinLabels}
       supplierPartNumbers={{
   "jlcpcb": [
     "C193402"
@@ -18,8 +22,8 @@ export const SMF5_0A = (props: DiodeProps) => {
 }}
       manufacturerPartNumber="SMF5.0A"
       footprint={<footprint>
-        <smtpad portHints={["anode"]} pcbX="1.634998mm" pcbY="0mm" width="1.1999976mm" height="1.1999976mm" shape="rect" />
-<smtpad portHints={["cathode"]} pcbX="-1.634998mm" pcbY="0mm" width="1.1999976mm" height="1.1999976mm" shape="rect" />
+        <smtpad portHints={["pin2", "anode"]} pcbX="1.634998mm" pcbY="0mm" width="1.1999976mm" height="1.1999976mm" shape="rect" />
+<smtpad portHints={["pin1", "cathode"]} pcbX="-1.634998mm" pcbY="0mm" width="1.1999976mm" height="1.1999976mm" shape="rect" />
 <silkscreenpath route={[{"x":-0.7167625999999245,"y":0.8762238000001616},{"x":-0.7167625999999245,"y":-0.876223800000048}]} />
 <silkscreenpath route={[{"x":-1.3762228000000505,"y":-0.9262363999999934},{"x":1.3762227999999368,"y":-0.9262363999999934}]} />
 <silkscreenpath route={[{"x":-1.3762228000000505,"y":0.9262364000001071},{"x":1.3762227999999368,"y":0.9262364000001071}]} />

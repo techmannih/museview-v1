@@ -5,8 +5,8 @@
   "description": "MuseView V1 ESP32-S3 camera board with standard 5 V USB-C power",
   "main": "index.circuit.tsx",
   "scripts": {
-    "dev": "tsci dev index.circuit.tsx",
-    "start": "tsci dev index.circuit.tsx",
+    "dev": "bun scripts/dev.mjs",
+    "start": "bun scripts/dev.mjs",
     "typecheck": "tsc --noEmit",
     "build": "tsci build index.circuit.tsx --disable-parts-engine --autorouter-timeout 600s",
     "build:preview": "tsci build index.circuit.tsx --pcb-png --schematic-png --3d-png --svgs --autorouter-timeout 600s --disable-parts-engine",
