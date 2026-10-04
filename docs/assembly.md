@@ -1,6 +1,6 @@
 # Assembly
 
-All 49 fitted components are on the top side. Probe pads are bare copper features and must not enter the assembly BOM. BOM and placement CSVs are generated from the final circuit JSON, with exact JLC numbers. Quantities must be regenerated after circuit changes. Copper origin is board center; exported JLC centroid coordinates are translated to lower-left origin. Rotation is the tscircuit footprint rotation, so check every polarized part in the JLC placement preview.
+All 49 fitted components are on the top side. Probe pads are bare copper features and must not enter the assembly BOM. BOM and placement CSVs are generated from the final circuit JSON, with exact JLC numbers. Quantities must be regenerated after circuit changes. Copper, drill and JLC centroid coordinates share the board-center origin; negative coordinates are intentional. Do not offset the CPL independently of the Gerbers. Rotation is the tscircuit footprint rotation, so check every polarized part in the JLC placement preview.
 
 - U1: ESP32-S3-WROOM-1-N16R8, not MINI/1U or another memory variant. PCB antenna points toward the north edge. Do not place copper, metal fasteners, battery or enclosure metal in the marked RF keepout. Exposed ground lands need the specified solder paste and solder-mask-covered ground island.
 - J1: TYPE-C-31-M-12, facing west. Receptacle mouth intentionally overhangs the board. Verify plated mounting slots and locating holes in the fabrication preview.

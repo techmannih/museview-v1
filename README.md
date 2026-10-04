@@ -2,6 +2,10 @@
 
 ESP32-S3-WROOM-1-N16R8 camera controller, standard USB-C **5 V only**, Arducam M0031 24-pin OV2640 camera, ASK/CAPTURE button and status LED. No USB Power Delivery controller, voltage request, battery charger or 9 V input.
 
+![Assembled MuseView PCB](__snapshots__/index.circuit-3d.snap.png)
+
+Engineering prototype with complete routed copper and reproducible checks. Manufacturing files are in [`release/`](release/); the external camera is installed separately. Physical bring-up and JLC placement preview remain required.
+
 This repository follows the organization of [techmannih/trellis-core](https://github.com/techmannih/trellis-core): one explicit JSX board entrypoint, local component imports and CAD assets, Bun lockfile, circuit checks under `scripts/`, schematic/PCB/3D snapshots, assembly and bring-up documents. The electrical design is independently implemented for this board; Trellis Core's circuit and physical placement are not interchangeable with this camera board.
 
 ## Use
@@ -13,6 +17,9 @@ bun run dev
 bun run build:preview
 bun run build:handoff
 bun run export:assembly
+bun run snapshot
+bun run snapshot:3d
+bun run export:release
 ```
 
 The library/CLI is pinned to tscircuit 0.0.2687. Builds use selected supplier numbers, not automatic part substitution. `hardware-contract.json` is checked against the generated source netlist. `scripts/check-decoupling.mjs` measures actual local copper. Placement, routing diagnostics and a separate Gerber copper short check must pass before a release can be considered.
@@ -34,6 +41,7 @@ These rail changes correct the source brief's 1.296 V camera core and avoid a ma
 
 ```text
 index.circuit.tsx             board, four schematic sheets, placement and copper
+pcb-routes.json               reviewed routes, guarded by geometry/net fingerprint
 imports/                     JLC-imported ICs/connectors/CAD; native passives
 scripts/                     verification, mutation tests and exports
 sourcing/                    timestamped JLCSearch evidence and alternatives
@@ -50,3 +58,5 @@ release/                     published, versioned handoff files
 The external Arducam M0031 camera, USB cable and enclosure are not JLCPCB assembly components. JLCSearch quantities are cached catalogue evidence, not reserved stock or a confirmed assembly quotation. Recheck the selected BOM in JLC's assembly portal immediately before ordering. FPC mating, prototype rail/transient measurements, USB signal integrity and camera capture require hardware validation; successful software checks do not establish those results.
 
 Component import/stock provenance and datasheets: [sources](docs/sources.md). Current validation and open physical checks: [release checks](docs/release-checks.md).
+
+View the four schematic sheets: [USB](release/schematic-usb.svg), [power](release/schematic-power.svg), [MCU](release/schematic-mcu.svg), [camera](release/schematic-camera.svg). Board views: [top](release/pcb-top.svg), [bottom](release/pcb-bottom.svg). Editable manufacturing/CAD exports: [Gerbers](release/museview-v1-gerbers.zip), [KiCad](release/museview-v1-kicad.zip), [STEP](release/museview-v1.step), [GLB](release/museview-v1.glb). See [routing workflow](docs/routing.md) before changing placement or nets.

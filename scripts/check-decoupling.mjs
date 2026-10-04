@@ -26,6 +26,28 @@ export function checkDecoupling(circuit) {
   if(!m.on(cap,"pin2","GND")) errors.push(`${cap}: return is not GND`)
  }
  check("BUCK_SWITCH",3);check("BUCK_OUTPUT",3)
+ // Connector-local HF bypasses: check the actual endpoint pair, not every
+ // distribution branch on the rail (the upstream checker groups by net).
+ const pcbPort=(ref,pin)=>m.of("pcb_port").find(p=>p.source_port_id===m.port(ref,pin)?.source_port_id)
+ for(const [cap,pin,maxVias] of [["C13","pin4",2],["C14","pin10",0]]) {
+  const a=pcbPort(cap,"pin1"),b=pcbPort("J2",pin)
+  const routes=m.of("pcb_trace").filter(t=>{
+   const ids=[t.route[0]?.start_pcb_port_id,t.route.at(-1)?.end_pcb_port_id]
+   return ids.includes(a?.pcb_port_id)&&ids.includes(b?.pcb_port_id)
+  })
+  if(routes.length!==1) {errors.push(`${cap}: missing dedicated camera supply bypass`);continue}
+  const r=routes[0].route
+  if(wireLength(r)>5.1 || r.filter(p=>p.route_type==="via").length>maxVias || r.some(p=>p.route_type==="wire"&&p.width<.149)) errors.push(`${cap}: camera bypass exceeds length/via/width budget`)
+ }
+ // DOVDD and C15 connect to the uninterrupted common I/O plane via short
+ // local spurs. Native copper/connectivity checks cover the plane itself.
+ for(const [ref,pin] of [["C15","pin1"],["J2","pin11"]]) {
+  const p=pcbPort(ref,pin)
+  const spur=m.of("pcb_trace").find(t=>{
+   const r=t.route;return (r[0]?.start_pcb_port_id===p?.pcb_port_id || r.at(-1)?.end_pcb_port_id===p?.pcb_port_id) && r.some(q=>q.route_type==="via"&&(q.to_layer==="inner2"||q.from_layer==="inner2")) && wireLength(r)<=1.6
+  })
+  if(!spur) errors.push(`${ref}.${pin}: missing short DOVDD plane connection`)
+ }
  return errors
 }
 if(import.meta.url===pathToFileURL(process.argv[1]).href) finish("Local bypass routing",checkDecoupling(readCircuit()))

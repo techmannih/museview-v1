@@ -3,6 +3,6 @@
   "uniqueParts": 28,
   "probePads": 11,
   "stockUnavailable": [],
-  "cplOrigin": "lower-left; translations from circuit board center",
+  "cplOrigin": "board center; same unshifted origin as Gerber/drill exports",
   "rotationStatus": "Footprint rotation; JLC preview still requires physical orientation review"
 }

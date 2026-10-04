@@ -6,4 +6,3 @@ for(const sheet of circuit.filter(e=>e.type==="schematic_sheet")) {
  const svg=convertCircuitJsonToSchematicSvg(circuit,{schematicSheetId:sheet.schematic_sheet_id,width:1800,height:1200})
  writeFileSync(`__snapshots__/index.circuit-schematic-${sheet.name}.snap.svg`,svg)
 }
-writeFileSync("__snapshots__/index.circuit-pcb.snap.svg",convertCircuitJsonToPcbSvg(circuit,{width:1800,height:1200}))

@@ -9,8 +9,8 @@
     "start": "tsci dev index.circuit.tsx",
     "typecheck": "tsc --noEmit",
     "build": "tsci build index.circuit.tsx --disable-parts-engine --autorouter-timeout 600s",
-    "build:preview": "tsci build index.circuit.tsx --pcb-png --schematic-png --3d-png --svgs --autorouter-timeout 600s",
-    "build:handoff": "tsci build index.circuit.tsx --kicad-project-zip --step --glbs --autorouter-timeout 600s",
+    "build:preview": "tsci build index.circuit.tsx --pcb-png --schematic-png --3d-png --svgs --autorouter-timeout 600s --disable-parts-engine",
+    "build:handoff": "tsci build index.circuit.tsx --kicad-project-zip --step --glbs --autorouter-timeout 600s --disable-parts-engine",
     "snapshot": "tsci snapshot index.circuit.tsx --disable-parts-engine",
     "snapshot:update": "tsci snapshot index.circuit.tsx --update --disable-parts-engine",
     "snapshot:3d": "tsci snapshot index.circuit.tsx --3d --camera-preset top-left-corner --disable-parts-engine",
@@ -24,10 +24,14 @@
     "verify": "bun run typecheck && bun run check:firmware-pins && bunx tsci check netlist && bunx tsci check schematic-placement && bunx tsci check placement && bunx tsci check routing-difficulty && bun run build && bun run check:contract && bun run check:routing && bun run check:decoupling && bun run check:assembly && bun test scripts/*.test.mjs && bunx tsci check shorts dist/index/circuit.json",
     "check": "bun run verify",
     "generate:firmware-pins": "bun scripts/generate-firmware-pins.mjs",
-    "check:firmware-pins": "bun scripts/generate-firmware-pins.mjs --check"
+    "check:firmware-pins": "bun scripts/generate-firmware-pins.mjs --check",
+    "export:release": "bun scripts/export-release.mjs",
+    "normalize:step": "bun scripts/normalize-step.mjs"
   },
   "devDependencies": {
     "@types/react": "19.2.18",
+    "circuit-json-to-kicad": "0.0.230",
+    "polygon-clipping": "0.15.7",
     "tscircuit": "0.0.2687",
     "typescript": "5.9.3"
   }

@@ -1,4 +1,5 @@
 import "tscircuit"
+import { boardRouter } from "./scripts/board-router"
 import { Fragment } from "react"
 import { ESP32_S3_WROOM_1_N16R8 } from "./imports/ESP32_S3_WROOM_1_N16R8/ESP32_S3_WROOM_1_N16R8"
 import { TYPE_C_31_M_12 } from "./imports/TYPE_C_31_M_12/TYPE_C_31_M_12"
@@ -25,24 +26,32 @@ export const MuseViewV1 = () => (
     solderMaskColor="#245f2b" minTraceWidth="0.15mm" defaultTraceWidth="0.2mm"
     minViaHoleDiameter="0.2mm" minViaPadDiameter="0.45mm" minViaEdgeToPadEdgeClearance="0.15mm" minBoardEdgeClearance="0.25mm" minTraceToHoleEdgeClearance="0.23mm"
     pcbStyle={{ viaPadDiameter: 0.45, viaHoleDiameter: 0.2 }}
-    autorouterVersion="beta_pipeline7" autorouter={{local:true,allowViaInPad:false,traceClearance:0.18}} autorouterEffortLevel="5x"
+    autorouterVersion="beta_pipeline7" autorouter={{local:true,allowViaInPad:false,traceClearance:0.18,algorithmFn:boardRouter}} autorouterEffortLevel="5x"
     schAutoLayoutEnabled schTraceAutoLabelEnabled schMaxTraceDistance="1.2mm">
 
-    <schematicsheet name="usb" displayName="USB-C input and protection" sheetIndex={1} sheetSize="ANSI_B">
-      <schematictext schX={-12} schY={-10} fontSize={0.25} anchor="top_left"
-        text={"5 V ONLY · Independent 5.1k CC pull-downs\nNative USB: GPIO19 D− / GPIO20 D+\n33R source termination. No Power Delivery negotiation."} />
+    <schematicsheet name="usb" displayName="USB-C input and protection" sheetIndex={1} sheetSize="ANSI_B" sheetWidth="360mm" sheetHeight="280mm">
+      <schematictext schX={0} schY={12} fontSize={0.5} text={"01 \u00b7 USB-C INPUT / PROTECTION"} />
+      <schematictext schX={0} schY={-10} fontSize={0.28} anchor="center" text={"5 V ONLY · Independent 5.1k CC pull-downs"} />
+      <schematictext schX={0} schY={-10.45} fontSize={0.28} anchor="center" text={"Native USB: GPIO19 D− / GPIO20 D+"} />
+      <schematictext schX={0} schY={-10.9} fontSize={0.28} anchor="center" text={"33R source termination. No Power Delivery negotiation."} />
     </schematicsheet>
-    <schematicsheet name="power" displayName="Main and camera power" sheetIndex={2} sheetSize="ANSI_B">
-      <schematictext schX={-12} schY={10} fontSize={0.25} anchor="top_left"
-        text={"U3: 0.6 × (1 + 432k / 100k) = 3.192 V\nR6/R7 must be 0.1%. Shared MCU/camera I/O supply.\nU5: 0.793 × (1 + 20.5k / 40.2k) = 1.197 V"} />
+    <schematicsheet name="power" displayName="Main and camera power" sheetIndex={2} sheetSize="ANSI_B" sheetWidth="360mm" sheetHeight="280mm">
+      <schematictext schX={0} schY={12} fontSize={0.5} text={"02 \u00b7 POWER SUPPLIES"} />
+      <schematictext schX={0} schY={10} fontSize={0.28} anchor="center" text={"U3: 0.6 × (1 + 432k / 100k) = 3.192 V"} />
+      <schematictext schX={0} schY={9.55} fontSize={0.28} anchor="center" text={"R6/R7 must be 0.1%. Shared MCU/camera I/O supply."} />
+      <schematictext schX={0} schY={9.1} fontSize={0.28} anchor="center" text={"U5: 0.793 × (1 + 20.5k / 40.2k) = 1.197 V"} />
     </schematicsheet>
-    <schematicsheet name="mcu" displayName="ESP32, controls and recovery" sheetIndex={3} sheetSize="ANSI_B">
-      <schematictext schX={-11} schY={-11} fontSize={0.25} anchor="top_left"
-        text={"N16R8: internal flash, PSRAM and 2.4 GHz Wi-Fi\nGPIO35/36/37 reserved for octal PSRAM: unconnected\nHold BOOT, tap RESET, release BOOT for ROM recovery."} />
+    <schematicsheet name="mcu" displayName="ESP32, controls and recovery" sheetIndex={3} sheetSize="ANSI_B" sheetWidth="360mm" sheetHeight="280mm">
+      <schematictext schX={0} schY={12} fontSize={0.5} text={"03 \u00b7 ESP32 / CONTROLS"} />
+      <schematictext schX={0} schY={-11} fontSize={0.28} anchor="center" text={"N16R8: internal flash, PSRAM and 2.4 GHz Wi-Fi"} />
+      <schematictext schX={0} schY={-11.45} fontSize={0.28} anchor="center" text={"GPIO35/36/37 reserved for octal PSRAM: unconnected"} />
+      <schematictext schX={0} schY={-11.9} fontSize={0.28} anchor="center" text={"Hold BOOT, tap RESET, release BOOT for ROM recovery."} />
     </schematicsheet>
-    <schematicsheet name="camera" displayName="M0031 DVP camera interface" sheetIndex={4} sheetSize="ANSI_B">
-      <schematictext schX={-12} schY={10} fontSize={0.25} anchor="top_left"
-        text={"External Arducam M0031 · 24 contacts · 0.5 mm pitch\nCamera is fitted by hand after PCBA. Contacts toward PCB.\nDriver D0–D7 = sensor D2–D9. STROBE/D0/D1 unused."} />
+    <schematicsheet name="camera" displayName="M0031 DVP camera interface" sheetIndex={4} sheetSize="ANSI_B" sheetWidth="360mm" sheetHeight="280mm">
+      <schematictext schX={0} schY={12} fontSize={0.5} text={"04 \u00b7 M0031 CAMERA INTERFACE"} />
+      <schematictext schX={0} schY={10} fontSize={0.28} anchor="center" text={"External Arducam M0031 · 24 contacts · 0.5 mm pitch"} />
+      <schematictext schX={0} schY={9.55} fontSize={0.28} anchor="center" text={"Camera is fitted by hand after PCBA. Contacts toward PCB."} />
+      <schematictext schX={0} schY={9.1} fontSize={0.28} anchor="center" text={"Driver D0–D7 = sensor D2–D9. STROBE/D0/D1 unused."} />
     </schematicsheet>
 
     <schematicsection name="usb-port" displayName="USB-C device and shield" />
@@ -79,8 +88,8 @@ export const MuseViewV1 = () => (
 
     <TYPE_C_31_M_12 name="J1" displayName="J1 · USB-C 5 V" layer="top" noConnect={["SBU1", "SBU2"]}
       pcbX={-28.6} pcbY={-2.5} pcbRotation={-90}
-      schX={-10} schY={2} schWidth={2.05} schHeight={4.5} schSheetName="usb" schSectionName="usb-port"
-      schPinSpacing={0.5} connections={{ EH1:"net.USB_SHIELD", EH2:"net.USB_SHIELD", EH3:"net.USB_SHIELD", EH4:"net.USB_SHIELD",
+      schX={-10} schY={2} schWidth={2.05} schHeight={1.8} schSheetName="usb" schSectionName="usb-port"
+      connections={{ EH1:"net.USB_SHIELD", EH2:"net.USB_SHIELD", EH3:"net.USB_SHIELD", EH4:"net.USB_SHIELD",
         CC1:"net.CC1", CC2:"net.CC2", DN1:"net.USB_DM_PORT", DN2:"net.USB_DM_PORT", DP1:"net.USB_DP_PORT", DP2:"net.USB_DP_PORT",
         GND1:"net.GND", GND2:"net.GND", VBUS1:"net.USB_RAW_5V", VBUS2:"net.USB_RAW_5V" }} />
     <R name="R1" part="r5k1" pcbX={-21} pcbY={1} pcbRotation={90}
@@ -96,8 +105,8 @@ export const MuseViewV1 = () => (
       schX={-6.5} schY={-7} schOrientation="vertical" schSheetName="usb" schSectionName="usb-port"
       connections={{pin1:"net.USB_SHIELD",pin2:"net.GND"}} />
     <USBLC6_2SC6 name="U2" layer="top" pcbX={-22} pcbY={-2.5} pcbRotation={-90}
-      schX={-2} schY={2} schWidth={1.8} schHeight={2} schSheetName="usb" schSectionName="usb-data"
-      schPinSpacing={0.5} connections={{pin1:"net.USB_DM_PORT",pin2:"net.GND",pin3:"net.USB_DP_PORT",pin4:"net.USB_DP_ESD",pin5:"net.VBUS_5V",pin6:"net.USB_DM_ESD"}} />
+      schX={-2} schY={2} schWidth={1.8} schHeight={0.8} schSheetName="usb" schSectionName="usb-data"
+      connections={{pin1:"net.USB_DM_PORT",pin2:"net.GND",pin3:"net.USB_DP_PORT",pin4:"net.USB_DP_ESD",pin5:"net.VBUS_5V",pin6:"net.USB_DM_ESD"}} />
     <C name="C18" part="c100n" pcbX={-18.3} pcbY={-2.5}
       schX={3} schY={7} schOrientation="vertical" schSheetName="usb" schSectionName="usb-data"
       connections={{pin1:"net.VBUS_5V",pin2:"net.GND"}} />
@@ -116,7 +125,7 @@ export const MuseViewV1 = () => (
 
     <TLV62569DBVR name="U3" pcbX={-20.2} pcbY={9.2} layer="top"
       schX={-7} schY={5} schWidth={1.7} schHeight={2} schSheetName="power" schSectionName="buck"
-      schPinSpacing={0.5} schPinArrangement={{leftSide:{pins:["VIN","EN"],direction:"top-to-bottom"},rightSide:{pins:["SW","FB"],direction:"top-to-bottom"},bottomSide:{pins:["GND"],direction:"left-to-right"}}} connections={{VIN:"net.VBUS_5V",EN:"net.VBUS_5V",GND:"net.GND",SW:"net.BUCK_SW",FB:"net.BUCK_FB"}} />
+      schPinArrangement={{leftSide:{pins:["VIN","EN"],direction:"top-to-bottom"},rightSide:{pins:["SW","FB"],direction:"top-to-bottom"},bottomSide:{pins:["GND"],direction:"left-to-right"}}} connections={{VIN:"net.VBUS_5V",EN:"net.VBUS_5V",GND:"net.GND",SW:"net.BUCK_SW",FB:"net.BUCK_FB"}} />
     <WPN4020H2R2MT name="L1" pcbX={-15.1} pcbY={10.15}
       schX={-2} schY={6} schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.BUCK_SW",pin2:"net.VDD_IO"}} />
@@ -129,7 +138,7 @@ export const MuseViewV1 = () => (
     <C name="C4" part="c10u" pcbX={-10.4} pcbY={9.9}
       schX={6} schY={5} schOrientation="vertical" schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.VDD_IO",pin2:"net.GND"}} />
-    <R name="R6" part="r432k" pcbX={-22.8} pcbY={6} pcbRotation={180}
+    <R name="R6" part="r432k" pcbX={-22.8} pcbY={6} pcbRotation={0}
       schX={0} schY={2.5} schOrientation="vertical" schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.VDD_IO",pin2:"net.BUCK_FB"}} />
     <R name="R7" part="r100k" pcbX={-18.8} pcbY={6} pcbRotation={180}
@@ -141,7 +150,7 @@ export const MuseViewV1 = () => (
 
     <XC6206P282MR name="U4" pcbX={19} pcbY={-12} layer="top"
       schX={-8} schY={-6} schWidth={1.8} schHeight={1.5} schSheetName="power" schSectionName="camera-regulators"
-      schPinSpacing={0.5} schPinArrangement={{leftSide:{pins:["VIN"],direction:"top-to-bottom"},rightSide:{pins:["VOUT"],direction:"top-to-bottom"},bottomSide:{pins:["VSS"],direction:"left-to-right"}}} connections={{VSS:"net.GND",VIN:"net.VBUS_5V",VOUT:"net.CAM_2V8"}} />
+      schPinArrangement={{leftSide:{pins:["VIN"],direction:"top-to-bottom"},rightSide:{pins:["VOUT"],direction:"top-to-bottom"},bottomSide:{pins:["VSS"],direction:"left-to-right"}}} connections={{VSS:"net.GND",VIN:"net.VBUS_5V",VOUT:"net.CAM_2V8"}} />
     <C name="C6" part="c1u" pcbX={15.6} pcbY={-12} pcbRotation={180}
       schX={-12} schY={-6} schOrientation="vertical" schSheetName="power" schSectionName="camera-regulators"
       connections={{pin1:"net.VBUS_5V",pin2:"net.GND"}} />
@@ -150,7 +159,7 @@ export const MuseViewV1 = () => (
       connections={{pin1:"net.CAM_2V8",pin2:"net.GND"}} />
     <SGM2059_ADJXN5G_TR name="U5" pcbX={27} pcbY={-12} layer="top"
       schX={7} schY={-6} schWidth={1.7} schHeight={2} schSheetName="power" schSectionName="camera-regulators"
-      schPinSpacing={0.5} schPinArrangement={{leftSide:{pins:["IN","EN"],direction:"top-to-bottom"},rightSide:{pins:["OUT","FB"],direction:"top-to-bottom"},bottomSide:{pins:["GND"],direction:"left-to-right"}}} connections={{IN:"net.VDD_IO",EN:"net.VDD_IO",GND:"net.GND",OUT:"net.CAM_1V2",FB:"net.CAM_FB"}} />
+      schPinArrangement={{leftSide:{pins:["IN","EN"],direction:"top-to-bottom"},rightSide:{pins:["OUT","FB"],direction:"top-to-bottom"},bottomSide:{pins:["GND"],direction:"left-to-right"}}} connections={{IN:"net.VDD_IO",EN:"net.VDD_IO",GND:"net.GND",OUT:"net.CAM_1V2",FB:"net.CAM_FB"}} />
     <C name="C8" part="c1u" pcbX={30.6} pcbY={-12}
       schX={3} schY={-6} schOrientation="vertical" schSheetName="power" schSectionName="camera-regulators"
       connections={{pin1:"net.VDD_IO",pin2:"net.GND"}} />
@@ -165,8 +174,8 @@ export const MuseViewV1 = () => (
       schOrientation="vertical" connections={{pin1:"net.CAM_FB",pin2:"net.GND"}} />
 
     <ESP32_S3_WROOM_1_N16R8 name="U1" layer="top" pcbX={4} pcbY={4.3}
-      schX={-3} schY={0} schWidth={1.96} schHeight={9} schSheetName="mcu" schSectionName="processor"
-      schPinSpacing={0.4} connections={{GND1:"net.GND",GND2:"net.GND",GND3:"net.GND","3V3":"net.VDD_IO",EN:"net.ESP_EN",IO0:"net.BOOT",
+      schX={-3} schY={0} schWidth={1.96} schHeight={4.4} schSheetName="mcu" schSectionName="processor"
+      connections={{GND1:"net.GND",GND2:"net.GND",GND3:"net.GND","3V3":"net.VDD_IO",EN:"net.ESP_EN",IO0:"net.BOOT",
         IO4:"net.CAM_SDA",IO5:"net.CAM_SCL",IO6:"net.CAM_VSYNC",IO7:"net.CAM_HREF",IO15:"net.CAM_XCLK",
         IO9:"net.CAM_D2",IO10:"net.CAM_D3",IO11:"net.CAM_D4",IO12:"net.CAM_D5",IO13:"net.CAM_D6",IO14:"net.CAM_D7",IO21:"net.CAM_D8",IO47:"net.CAM_D9",IO48:"net.CAM_PCLK",
         IO16:"net.ASK",IO17:"net.LED_DRIVE",IO18:"net.CAM_RESET",IO8:"net.CAM_PWDN",IO19:"net.USB_DM_MCU",IO20:"net.USB_DP_MCU",
@@ -215,8 +224,8 @@ export const MuseViewV1 = () => (
     ))}
 
     <AFC01_S24FCA_00 name="J2" displayName="J2 · M0031" pcbX={4} pcbY={-16.8} layer="top" noConnect={["pin1", "pin23", "pin24"]}
-      schX={5} schY={0} schWidth={2.5} schHeight={5.6} schSheetName="camera" schSectionName="camera-interface"
-      schPinSpacing={0.4} connections={{pin2:"net.GND",pin3:"net.CAM_SDA",pin4:"net.CAM_2V8",pin5:"net.CAM_SCL",pin6:"net.CAM_RESET",pin7:"net.CAM_VSYNC",pin8:"net.CAM_PWDN",pin9:"net.CAM_HREF",pin10:"net.CAM_1V2",pin11:"net.VDD_IO",pin12:"net.CAM_D9",pin13:"net.CAM_XCLK",pin14:"net.CAM_D8",pin15:"net.GND",pin16:"net.CAM_D7",pin17:"net.CAM_PCLK",pin18:"net.CAM_D6",pin19:"net.CAM_D2",pin20:"net.CAM_D5",pin21:"net.CAM_D3",pin22:"net.CAM_D4",pin25:"net.GND",pin26:"net.GND"}} />
+      schX={5} schY={0} schWidth={2.5} schHeight={2.8} schSheetName="camera" schSectionName="camera-interface"
+      connections={{pin2:"net.GND",pin3:"net.CAM_SDA",pin4:"net.CAM_2V8",pin5:"net.CAM_SCL",pin6:"net.CAM_RESET",pin7:"net.CAM_VSYNC",pin8:"net.CAM_PWDN",pin9:"net.CAM_HREF",pin10:"net.CAM_1V2",pin11:"net.VDD_IO",pin12:"net.CAM_D9",pin13:"net.CAM_XCLK",pin14:"net.CAM_D8",pin15:"net.GND",pin16:"net.CAM_D7",pin17:"net.CAM_PCLK",pin18:"net.CAM_D6",pin19:"net.CAM_D2",pin20:"net.CAM_D5",pin21:"net.CAM_D3",pin22:"net.CAM_D4",pin25:"net.GND",pin26:"net.GND"}} />
     <R name="R14" part="r4k7" pcbX={-7.5} pcbY={-10.5}
       schX={-10} schY={-6} schOrientation="vertical" schSheetName="camera" schSectionName="camera-interface"
       connections={{pin1:"net.VDD_IO",pin2:"net.CAM_SDA"}} />

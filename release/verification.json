@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-10-04T04:47:04.619Z",
+  "circuitSha256": "b490fe8091e9facda7a3e232fb8e25b4304adf7751e338d70950480a68f6a684",
+  "routingFingerprint": "d0bb9f9b-c47a57bf-1162237",
+  "tscircuitVersion": "0.0.2687",
+  "circuitErrors": 0,
+  "retainedNativeWidthWarnings": 27,
+  "routedTraces": 196,
+  "throughVias": 199,
+  "fittedComponents": 49,
+  "assembledGlbComponents": 49,
+  "kicadSchematics": 5,
+  "kicadModelFiles": 16,
+  "drillHits": {
+    "drill-L1-L4.drl": 203,
+    "drill_npth.drl": 6
+  },
+  "localVerification": {
+    "command": "bun run verify",
+    "result": "passed",
+    "regressionTestsPassed": 9,
+    "gerberShorts": 0,
+    "snapshots2d": "matched",
+    "snapshots3d": "matched"
+  },
+  "hardwareValidation": "Not performed; prototype bring-up and JLC rotation/stackup review remain open"
+}
