@@ -2,10 +2,14 @@ import {mkdirSync,readFileSync,writeFileSync,copyFileSync,readdirSync,unlinkSync
 import {resolve} from "node:path"
 import {spawnSync} from "node:child_process"
 import {createHash} from "node:crypto"
-import {unzipSync,zipSync} from "fflate"
+import {unzipSync,zipSync,strToU8} from "fflate"
+import {checkAssembly} from "./check-assembly.mjs"
 
 // Run verify first. This exports the exact verified circuit without rerouting.
 const run=(args)=>{const r=spawnSync("bun",args,{stdio:"inherit"});if(r.status!==0)throw Error(`Failed: bun ${args.join(" ")}`)}
+const circuit=JSON.parse(readFileSync("dist/index/circuit.json","utf8"))
+const assemblyErrors=checkAssembly(circuit)
+if(assemblyErrors.length) throw Error(assemblyErrors.join("\n"))
 mkdirSync("release",{recursive:true})
 run(["run","export:assembly"])
 run(["run","render:sheets"])
@@ -24,6 +28,10 @@ run(["scripts/export-cad.mjs"])
 // assembly pair with DNP filtering and the same origin as the copper files.
 const path="release/museview-v1-gerbers.zip",entries=unzipSync(readFileSync(path))
 delete entries["bom.csv"];delete entries["pick_and_place.csv"]
+// The pinned converter flashes USB plated shell tabs into both paste layers.
+// This board is top-assembled: retain all bottom copper/mask/drill geometry,
+// but deliberately provide an empty bottom stencil after top-only validation.
+entries["B_Paste.gbr"]=strToU8("G04 MuseView V1.1 - empty bottom stencil; top assembly only*\n%TF.FileFunction,Paste,Bot*%\n%TF.FilePolarity,Positive*%\n%FSLAX46Y46*%\n%MOMM*%\n%LPD*%\nM02*\n")
 writeFileSync(path,zipSync(entries))
 copyFileSync("dist/index/circuit.json","release/circuit.json")
 for(const name of ["usb","power","mcu","camera"]) copyFileSync(`__snapshots__/index.circuit-schematic-${name}.snap.svg`,`release/schematic-${name}.svg`)

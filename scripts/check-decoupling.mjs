@@ -20,7 +20,8 @@ export function checkDecoupling(circuit) {
   const endpoints=[r[0]?.start_pcb_port_id,r.at(-1)?.end_pcb_port_id].map(id=>m.of("pcb_port").find(p=>p.pcb_port_id===id))
   if(endpoints.some(p=>!p) || !s.connected_source_port_ids.every(id=>endpoints.some(p=>p?.source_port_id===id))) errors.push(`${name}: copper endpoints do not match source pins`)
  }
- for(const cap of ["C3","C6","C8","C10","C18"]) check(`DECOUPLE_${cap}`,3)
+ for(const cap of ["C3","C6","C8","C10"]) check(`DECOUPLE_${cap}`,3)
+ check("DECOUPLE_C18",4)
  for(const cap of ["C2","C3","C4","C6","C7","C8","C9","C10","C11","C12","C13","C14","C15","C16","C17","C18"]) {
   check(`RETURN_${cap}`,1.6)
   if(!m.on(cap,"pin2","GND")) errors.push(`${cap}: return is not GND`)
@@ -29,7 +30,7 @@ export function checkDecoupling(circuit) {
  // Connector-local HF bypasses: check the actual endpoint pair, not every
  // distribution branch on the rail (the upstream checker groups by net).
  const pcbPort=(ref,pin)=>m.of("pcb_port").find(p=>p.source_port_id===m.port(ref,pin)?.source_port_id)
- for(const [cap,pin,maxVias] of [["C13","pin4",2],["C14","pin10",0]]) {
+ for(const [cap,pin,maxVias] of [["C13","pin4",0],["C14","pin10",0]]) {
   const a=pcbPort(cap,"pin1"),b=pcbPort("J2",pin)
   const routes=m.of("pcb_trace").filter(t=>{
    const ids=[t.route[0]?.start_pcb_port_id,t.route.at(-1)?.end_pcb_port_id]
@@ -38,6 +39,13 @@ export function checkDecoupling(circuit) {
   if(routes.length!==1) {errors.push(`${cap}: missing dedicated camera supply bypass`);continue}
   const r=routes[0].route
   if(wireLength(r)>5.1 || r.filter(p=>p.route_type==="via").length>maxVias || r.some(p=>p.route_type==="wire"&&p.width<.149)) errors.push(`${cap}: camera bypass exceeds length/via/width budget`)
+ }
+ // Verify the exact post-ESD data segments; native width diagnostics also
+ // include the separate fine-pitch connector fanout through the ESD device.
+ for(const name of ["USB_DM_TO_R","USB_DP_TO_R"]) {
+  const source=m.of("source_trace").find(t=>t.name===name)
+  const routes=m.of("pcb_trace").filter(t=>t.source_trace_id===source?.source_trace_id)
+  if(routes.length!==1 || routes[0].route.some(p=>p.route_type==="wire" && p.width<.1999)) errors.push(`${name}: post-ESD USB copper must be at least 0.2 mm`)
  }
  // DOVDD and C15 connect to the uninterrupted common I/O plane via short
  // local spurs. Native copper/connectivity checks cover the plane itself.

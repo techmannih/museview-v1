@@ -1,6 +1,12 @@
 {
   "fittedComponents": 49,
   "uniqueParts": 28,
+  "topComponents": 49,
+  "bottomComponents": 0,
+  "boardSizeMm": {
+    "width": 50,
+    "height": 35
+  },
   "probePads": 11,
   "stockUnavailable": [],
   "cplOrigin": "board center; same unshifted origin as Gerber/drill exports",

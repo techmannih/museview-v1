@@ -8,6 +8,8 @@ const errors=c.filter(e=>e.type.endsWith("_error"));if(errors.length)throw Error
 const zip=unzipSync(readFileSync("release/museview-v1-gerbers.zip"))
 for(const f of ["F_Cu.gbr","In1_Cu.gbr","In2_Cu.gbr","B_Cu.gbr","Edge_Cuts.gbr","drill-L1-L4.drl","drill_npth.drl"])if(!zip[f])throw Error(`Missing ${f}`)
 if(zip["bom.csv"]||zip["pick_and_place.csv"])throw Error("Conflicting generic assembly exports in Gerber ZIP")
+if(!zip["B_Paste.gbr"] || /D0[13]\*/.test(strFromU8(zip["B_Paste.gbr"]))) throw Error("Bottom stencil must be empty for top-only assembly")
+if(c.some(e=>e.type==="pcb_smtpad" && e.layer!=="top")) throw Error("Bottom SMT pad in handoff")
 const drills={}
 for(const f of ["drill-L1-L4.drl","drill_npth.drl"]) {
  const hits=strFromU8(zip[f]).split("\n").filter(s=>s.startsWith("X"))
@@ -19,10 +21,11 @@ if(cadNames.filter(f=>f.endsWith(".kicad_sch")).length!==5 || cadNames.filter(f=
 const glb=readFileSync("release/museview-v1.glb"),scene=JSON.parse(glb.subarray(20,20+glb.readUInt32LE(12)).toString()),names=new Set(scene.nodes.map(n=>n.name))
 const fitted=c.filter(e=>e.type==="pcb_component"&&!e.do_not_place&&c.some(s=>s.type==="source_component"&&s.source_component_id===e.source_component_id))
 for(const p of fitted) {
+ if(p.layer!=="top") throw Error("Bottom component in handoff")
  const ref=c.find(e=>e.type==="source_component"&&e.source_component_id===p.source_component_id)?.name
  if(!names.has(ref))throw Error(`Missing GLB body ${ref}`)
 }
-const report={generatedAt:new Date().toISOString(),circuitSha256:hash(raw),routingFingerprint:JSON.parse(readFileSync("pcb-routes.json")).fingerprint,tscircuitVersion:"0.0.2687",circuitErrors:errors.length,retainedNativeWidthWarnings:c.filter(e=>e.type==="pcb_trace_warning").length,routedTraces:c.filter(e=>e.type==="pcb_trace").length,throughVias:c.filter(e=>e.type==="pcb_via").length,fittedComponents:fitted.length,assembledGlbComponents:fitted.length,kicadSchematics:5,kicadModelFiles:16,drillHits:drills,localVerification:{command:"bun run verify",result:"passed",regressionTestsPassed:9,gerberShorts:0,snapshots2d:"matched",snapshots3d:"matched"},hardwareValidation:"Not performed; prototype bring-up and JLC rotation/stackup review remain open"}
+const report={generatedAt:new Date().toISOString(),circuitSha256:hash(raw),routingFingerprint:JSON.parse(readFileSync("pcb-routes.json")).fingerprint,tscircuitVersion:"0.0.2687",circuitErrors:errors.length,retainedNativeWidthWarnings:c.filter(e=>e.type==="pcb_trace_warning").length,routedTraces:c.filter(e=>e.type==="pcb_trace").length,throughVias:c.filter(e=>e.type==="pcb_via").length,fittedComponents:fitted.length,topComponents:fitted.length,bottomComponents:0,bottomStencil:"empty",boardSizeMm:{width:50,height:35},assembledGlbComponents:fitted.length,kicadSchematics:5,kicadModelFiles:16,drillHits:drills,localVerification:{command:"bun run verify",result:"passed",regressionTestsPassed:12,gerberShorts:0,snapshots2d:"matched",snapshots3d:"matched"},hardwareValidation:"Not performed; prototype bring-up and JLC rotation/stackup review remain open"}
 writeFileSync("release/verification.json",JSON.stringify(report,null,2)+"\n")
 const hashes=Object.fromEntries(readdirSync("release").filter(f=>f!=="sha256.json").sort().map(f=>[f,hash(readFileSync(`release/${f}`))]))
 writeFileSync("release/sha256.json",JSON.stringify(hashes,null,2)+"\n")

@@ -1,7 +1,7 @@
 # MuseView V1 manufacturing handoff
 
 - `museview-v1-gerbers.zip`: four copper layers, solder masks/paste, silkscreen, outline, plated L1–L4 drills and nonplated drills. Generic exporter BOM/CPL are removed to avoid competing assembly files.
-- `jlc-bom.csv` and `jlc-cpl.csv`: the authoritative 49-component assembly pair. Board-center origin matches the Gerbers. Validate polarized-part rotations in JLC's placement preview.
+- `jlc-bom.csv` and `jlc-cpl.csv`: the authoritative 49-component **top-only** assembly pair. No bottom-side components. Board-center origin matches the Gerbers. Validate polarized-part rotations in JLC's placement preview.
 - `schematic-usb.svg`, `schematic-power.svg`, `schematic-mcu.svg`, `schematic-camera.svg`: four readable vector schematic sheets.
 - `pcb-top.svg`, `pcb-bottom.svg`, `pcb-top.png`: copper/placement views.
 - `museview-v1-kicad.zip`: PCB, project, root plus four schematic sheets and 16 model files. Extract the whole archive; retain its `3dmodels/` tree.

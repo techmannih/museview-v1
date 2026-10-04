@@ -26,7 +26,8 @@
     "generate:firmware-pins": "bun scripts/generate-firmware-pins.mjs",
     "check:firmware-pins": "bun scripts/generate-firmware-pins.mjs --check",
     "export:release": "bun scripts/export-release.mjs",
-    "normalize:step": "bun scripts/normalize-step.mjs"
+    "normalize:step": "bun scripts/normalize-step.mjs",
+    "regenerate:routing": "bun scripts/regenerate-routing.mjs"
   },
   "devDependencies": {
     "@types/react": "19.2.18",

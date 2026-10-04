@@ -37,3 +37,7 @@ firmware/build/
 firmware/managed_components/
 firmware/sdkconfig
 firmware/sdkconfig.old
+
+# Optional local routing-generation environment
+.venv/
+__pycache__/

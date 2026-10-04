@@ -10,7 +10,8 @@ export function checkRouting(circuit) {
  if(b?.num_layers!==4 && b?.layers?.length!==4) errors.push("Expected four copper layers")
  for(const t of traces) for(const p of t.route??[]) {
   if(!Number.isFinite(p.x)||!Number.isFinite(p.y)) errors.push(`${t.pcb_trace_id}: invalid coordinates`)
-  if(p.x>-20 && p.x<28 && p.y>14.85) errors.push(`${t.pcb_trace_id}: copper in antenna keepout`)
+  if(p.x>-19.5 && p.x<25 && p.y>11.05) errors.push(`${t.pcb_trace_id}: copper in antenna keepout`)
+  if(p.route_type==="wire" && ["inner1","inner2"].includes(p.layer) && t.connection_name!==m.net(p.layer==="inner1"?"GND":"VDD_IO")?.source_net_id) errors.push(`${t.pcb_trace_id}: signal copper splits the dedicated ${p.layer} plane`)
   if(p.route_type==="wire" && p.width<0.1499) errors.push(`${t.pcb_trace_id}: track below 0.15 mm`)
  }
  for(const [layer,net] of [["inner1","GND"],["inner2","VDD_IO"]]) if(!m.of("pcb_copper_pour").some(p=>p.layer===layer && p.source_net_id===m.net(net)?.source_net_id)) errors.push(`Missing ${layer} ${net} plane`)

@@ -26,7 +26,7 @@ The library/CLI is pinned to tscircuit 0.0.2687. Builds use selected supplier nu
 
 ## Design
 
-- 65.5 × 42.5 mm, 1.6 mm FR4, four copper layers, top-side assembly.
+- 50 × 35 mm, 1.6 mm FR4, four copper layers, black solder mask, **all 49 fitted components on top; no bottom assembly**.
 - L1 components/signals, L2 ground reference, L3 common MCU/camera I/O power, L4 signals. Antenna keepout on all copper layers.
 - USB-C USB 2.0 device: independent 5.1 kΩ CC pull-downs, USBLC6-2SC6, 33 Ω data resistors, 750 mA PTC, SMF5.0A input TVS.
 - TLV62569: **3.192 V nominal** shared ESP32/camera I/O, using 432 kΩ/100 kΩ, both **0.1%**.
@@ -42,6 +42,7 @@ These rail changes correct the source brief's 1.296 V camera core and avoid a ma
 ```text
 index.circuit.tsx             board, four schematic sheets, placement and copper
 pcb-routes.json               reviewed routes, guarded by geometry/net fingerprint
+routing/                     native geometry and pinned routing-generation inputs
 imports/                     JLC-imported ICs/connectors/CAD; native passives
 scripts/                     verification, mutation tests and exports
 sourcing/                    timestamped JLCSearch evidence and alternatives
@@ -52,6 +53,8 @@ firmware/                    matching ESP-IDF camera bring-up application
 dist/                        generated CAD/manufacturing output (ignored)
 release/                     published, versioned handoff files
 ```
+
+The V1.1 placement follows the supplied visual brief: USB-C on the left, camera flex at the right, antenna toward the top and ASK / RESET / BOOT along the bottom edge. It is independently placed and freshly routed. The 35 mm board height provides room for the actual ESP32 module courtyard and button row; the concept image's 30 mm height is not used. Copper on the bottom is routing only, with no fitted parts.
 
 ## Assembly boundary
 
