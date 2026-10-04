@@ -1,0 +1,52 @@
+# MuseView V1
+
+ESP32-S3-WROOM-1-N16R8 camera controller, standard USB-C **5 V only**, Arducam M0031 24-pin OV2640 camera, ASK/CAPTURE button and status LED. No USB Power Delivery controller, voltage request, battery charger or 9 V input.
+
+This repository follows the organization of [techmannih/trellis-core](https://github.com/techmannih/trellis-core): one explicit JSX board entrypoint, local component imports and CAD assets, Bun lockfile, circuit checks under `scripts/`, schematic/PCB/3D snapshots, assembly and bring-up documents. The electrical design is independently implemented for this board; Trellis Core's circuit and physical placement are not interchangeable with this camera board.
+
+## Use
+
+```sh
+bun install --frozen-lockfile
+bun run verify
+bun run dev
+bun run build:preview
+bun run build:handoff
+bun run export:assembly
+```
+
+The library/CLI is pinned to tscircuit 0.0.2687. Builds use selected supplier numbers, not automatic part substitution. `hardware-contract.json` is checked against the generated source netlist. `scripts/check-decoupling.mjs` measures actual local copper. Placement, routing diagnostics and a separate Gerber copper short check must pass before a release can be considered.
+
+## Design
+
+- 65.5 × 42.5 mm, 1.6 mm FR4, four copper layers, top-side assembly.
+- L1 components/signals, L2 ground reference, L3 common MCU/camera I/O power, L4 signals. Antenna keepout on all copper layers.
+- USB-C USB 2.0 device: independent 5.1 kΩ CC pull-downs, USBLC6-2SC6, 33 Ω data resistors, 750 mA PTC, SMF5.0A input TVS.
+- TLV62569: **3.192 V nominal** shared ESP32/camera I/O, using 432 kΩ/100 kΩ, both **0.1%**.
+- XC6206P282MR: camera analog 2.8 V, supplied from protected USB 5 V to avoid marginal dropout headroom.
+- SGM2059: camera core **1.197 V nominal**, using 20.5 kΩ/40.2 kΩ, both 1%.
+- Native USB ROM recovery, UART0/JTAG pads, BOOT, RESET, ASK GPIO16 and LED GPIO17.
+- Camera RESET GPIO18 defaults low and PWDN GPIO8 defaults high. Firmware must actively release them.
+
+These rail changes correct the source brief's 1.296 V camera core and avoid a marginal 2.8 V camera-to-3.318 V ESP32 I/O interface. See [electrical decisions](docs/electrical-review.md) and the [pin contract](hardware-contract.json).
+
+## Repository
+
+```text
+index.circuit.tsx             board, four schematic sheets, placement and copper
+imports/                     JLC-imported ICs/connectors/CAD; native passives
+scripts/                     verification, mutation tests and exports
+sourcing/                    timestamped JLCSearch evidence and alternatives
+__snapshots__/               reviewed schematic, PCB and 3D renders
+docs/                        assembly, electrical review, bring-up, release checks
+firmware/                    matching ESP-IDF camera bring-up application
+.github/workflows/           automated build/check pipeline
+dist/                        generated CAD/manufacturing output (ignored)
+release/                     published, versioned handoff files
+```
+
+## Assembly boundary
+
+The external Arducam M0031 camera, USB cable and enclosure are not JLCPCB assembly components. JLCSearch quantities are cached catalogue evidence, not reserved stock or a confirmed assembly quotation. Recheck the selected BOM in JLC's assembly portal immediately before ordering. FPC mating, prototype rail/transient measurements, USB signal integrity and camera capture require hardware validation; successful software checks do not establish those results.
+
+Component import/stock provenance and datasheets: [sources](docs/sources.md). Current validation and open physical checks: [release checks](docs/release-checks.md).

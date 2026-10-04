@@ -1,0 +1,16 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/npm/@tscircuit/cli/types/tscircuit.config.schema.json",
+  "mainEntrypoint": "index.circuit.tsx",
+  "includeBoardFiles": [
+    "index.circuit.tsx"
+  ],
+  "ignoredFiles": [
+    "checks/**",
+    "dist/**",
+    "build/**",
+    "*.log"
+  ],
+  "build": {
+    "workerTimeoutMs": 1200000
+  }
+}

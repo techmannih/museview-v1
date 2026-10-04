@@ -1,0 +1,704 @@
+[
+  {
+    "id": "C2913202",
+    "checkedAt": "2026-10-04T03:55:04.446Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C2913202",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 2913202,
+      "mfr": "ESP32-S3-WROOM-1-N16R8",
+      "package": "SMD,25.5x18mm",
+      "description": "-103.5dBm -40℃~+65℃ 2.4GHz 20.5dBm 355mA 3V~3.6V 95mA ESP32-S3R8 On-board PCB Antenna UART、SPI、I2C、GPIO、I2S、USB SMD,25.5x18mm WiFi Modules ROHS",
+      "stock": 32101,
+      "price": "1-9:5.1409,10-29:4.5179,30-99:4.0298,100-649:3.6036,650-1299:3.4506,1300-:3.3839",
+      "category": "IoT/Communication Modules",
+      "subcategory": "WiFi Modules",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C165948",
+    "checkedAt": "2026-10-04T03:55:04.662Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C165948",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 165948,
+      "mfr": "TYPE-C-31-M-12",
+      "package": "SMD",
+      "description": "-30℃~+80℃ 1 10,000 cycles 16P 20V 5A 7.35mm Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS",
+      "stock": 89797,
+      "price": "1-49:0.1858,50-149:0.1468,150-999:0.1276,1000-1999:0.1035,2000-4999:0.0988,5000-:0.096",
+      "category": "Connectors",
+      "subcategory": "USB Connectors",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C2687116",
+    "checkedAt": "2026-10-04T03:55:04.695Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C2687116",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 2687116,
+      "mfr": "USBLC6-2SC6",
+      "package": "SOT-23-6",
+      "description": "0.35pF、0.8pF 100nA 150W@8/20us 15V 2 5V 6A@8/20us 6V ESD SOT-23-6 ESD and Surge Protection (TVS/ESD) ROHS",
+      "stock": 150192,
+      "price": "1-99:0.0476,100-299:0.0383,300-2999:0.0336,3000-5999:0.0243,6000-8999:0.023,9000-:0.022",
+      "category": "Circuit Protection",
+      "subcategory": "ESD And Surge Protection (TVS/ESD)",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C262669",
+    "checkedAt": "2026-10-04T03:55:04.698Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C262669",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 262669,
+      "mfr": "AFC01-S24FCA-00",
+      "package": "SMD,P=0.5mm,卧贴",
+      "description": "-45℃~+85℃ 0.3mm 0.5mm 24P 2mm 500mA 50V Bottom Contact Copper alloy Hinged Lid Surface Mount, Right Angle Tin SMD,P=0.5mm,卧贴 FFC, FPC (Flat Flexible) Connector Assemblies ROHS",
+      "stock": 56931,
+      "price": "1-49:0.1201,50-149:0.0975,150-499:0.0863,500-1999:0.0777,2000-3999:0.0619,4000-:0.0585",
+      "category": "Connectors",
+      "subcategory": "FFC, FPC (Flat Flexible) Connector Assemblies",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C98361",
+    "checkedAt": "2026-10-04T03:55:05.010Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C98361",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 98361,
+      "mfr": "WPN4020H2R2MT",
+      "package": "SMD,4x4mm",
+      "description": "2.2uH 4.3A 48mΩ 7.6A ±20% SMD,4x4mm Power Inductors ROHS",
+      "stock": 51123,
+      "price": "1-19:0.1304,20-59:0.1151,60-199:0.1071,200-999:0.1006,1000-2999:0.0983,3000-:0.0968",
+      "category": "Inductors, Coils, Chokes",
+      "subcategory": "Power Inductors",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C141836",
+    "checkedAt": "2026-10-04T03:55:05.014Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C141836",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 141836,
+      "mfr": "TLV62569DBVR",
+      "package": "SOT-23-5",
+      "description": "-40℃~+125℃@(TJ) 1 1.5MHz 2.5V~5.5V 2A 600mV~5.5V Adjustable Buck Buck Built-in Yes SOT-23-5 DC-DC Converters ROHS",
+      "stock": 108275,
+      "price": "1-99:0.0733,100-299:0.0602,300-2999:0.0536,3000-5999:0.0484,6000-8999:0.0464,9000-:0.0451",
+      "category": "Power Management (PMIC)",
+      "subcategory": "DC-DC Converters",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C193402",
+    "checkedAt": "2026-10-04T03:55:05.019Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C193402",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 193402,
+      "mfr": "SMF5.0A",
+      "package": "SOD-123FL",
+      "description": "-55℃~+150℃ 200W@10/1000us 21.7A@10/1000us 400uA 5V 7V 9.2V TVS Unidirectional SOD-123FL ESD and Surge Protection (TVS/ESD) ROHS",
+      "stock": 402983,
+      "price": "1-199:0.0277,200-599:0.0215,600-2999:0.0188,3000-8999:0.0157,9000-20999:0.0149,21000-:0.0144",
+      "category": "Circuit Protection",
+      "subcategory": "ESD And Surge Protection (TVS/ESD)",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C914092",
+    "checkedAt": "2026-10-04T03:55:05.675Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C914092",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 914092,
+      "mfr": "BSMD0603-075-6V",
+      "package": "0603",
+      "description": "-40℃~+85℃ 1.05mm 1.15mm 1.5A 1.85mm 100ms 40A 450mΩ 500mW 60mΩ 6V 750mA 0603 Resettable Fuses ROHS",
+      "stock": 96542,
+      "price": "1-99:0.0671,100-299:0.0519,300-999:0.0443,1000-3999:0.0386,4000-7999:0.0341,8000-:0.0318",
+      "category": "Circuit Protection",
+      "subcategory": "Resettable Fuses",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C5152783",
+    "checkedAt": "2026-10-04T03:55:05.960Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C5152783",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 5152783,
+      "mfr": "SGM2059-ADJXN5G/TR",
+      "package": "SOT-23-5",
+      "description": "-40℃~+125℃ 1 13uA 300mA 5.5V 72mV@(300mA) 793mV~5V 9.5uVrms 92dB@(1kHz) Adjustable Over Current Protection、Over Temperature Protection、Enable Positive SOT-23-5 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS",
+      "stock": 3781,
+      "price": "1-49:0.3279,50-149:0.2455,150-499:0.21,500-2999:0.1648,3000-5999:0.1648,6000-:0.1648",
+      "category": "Power Management (PMIC)",
+      "subcategory": "Voltage Regulators - Linear, Low Drop Out (LDO) Regulators",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C318884",
+    "checkedAt": "2026-10-04T03:55:05.964Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C318884",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 318884,
+      "mfr": "TS-1187A-B-A-B",
+      "package": "SMD-4P,5.1x5.1mm",
+      "description": "-30℃~+85℃ 1.5mm 1.6N 100,000 cycles 12V 5.1mm 5.1mm 50mA Gold No Round Button SPST Surface Mount,Vertical Without Bracket SMD-4P,5.1x5.1mm Tactile Switches ROHS",
+      "stock": 1683297,
+      "price": "1-199:0.0197,200-599:0.0152,600-3999:0.0131,4000-7999:0.0116,8000-19999:0.011,20000-:0.0106",
+      "category": "Switches",
+      "subcategory": "Tactile Switches",
+      "is_basic": true,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C2286",
+    "checkedAt": "2026-10-04T03:55:05.978Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C2286",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 2286,
+      "mfr": "KT-0603R",
+      "package": "0603",
+      "description": "-40℃~+85℃ 1.8V~2.4V 120° 20mA 300mcd 40mW 615nm~630nm 645nm Discrete Diode Red Water Clear 0603 LED Indication - Discrete ROHS",
+      "stock": 8154450,
+      "price": "1-999:0.0073,1000-3999:0.0056,4000-7999:0.0044,8000-47999:0.0038,48000-99999:0.0036,100000-:0.0034",
+      "category": "Optoelectronics",
+      "subcategory": "LED Indication - Discrete",
+      "is_basic": true,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C347374",
+    "checkedAt": "2026-10-04T03:55:06.634Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C347374",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 347374,
+      "mfr": "XC6206P282MR",
+      "package": "SOT-23",
+      "description": "-25℃~+80℃ 1 2.8V 240mV@(50mA) 250mA 40dB@(1kHz) 7uA 8V Fixed Over Current Protection、Short Circuit Protection Positive SOT-23 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS",
+      "stock": 169833,
+      "price": "1-499:0.0176,500-2999:0.0136,3000-5999:0.0111,6000-23999:0.0098,24000-50999:0.0086,51000-:0.008",
+      "category": "Power Management (PMIC)",
+      "subcategory": "Voltage Regulators - Linear, Low Drop Out (LDO) Regulators",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C25804",
+    "checkedAt": "2026-10-04T04:03:08.862Z",
+    "url": "https://jlcsearch.tscircuit.com/resistors/list.json?resistance=10000&package=0603",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 25804,
+      "mfr": "0603WAF1002T5E",
+      "description": "",
+      "stock": 37165617,
+      "price1": 0.000842857,
+      "in_stock": true,
+      "resistance": 10000,
+      "tolerance_fraction": 0.01,
+      "power_watts": 100,
+      "package": "0603",
+      "max_overload_voltage": 75,
+      "number_of_resistors": null,
+      "number_of_pins": null,
+      "is_potentiometer": false,
+      "is_surface_mount": true,
+      "is_multi_resistor_chip": false,
+      "is_basic": true,
+      "is_preferred": false,
+      "attributes": "{\"Resistance\":\"10kΩ\",\"Power(Watts)\":\"100mW\",\"Type\":\"Thick Film Resistors\",\"Overload Voltage (Max)\":\"75V\",\"Operating Temperature Range\":\"-55℃~+155℃\",\"Tolerance\":\"±1%\",\"Temperature Coefficient\":\"±100ppm/℃\"}"
+    }
+  },
+  {
+    "id": "C23186",
+    "checkedAt": "2026-10-04T03:55:06.917Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C23186",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 23186,
+      "mfr": "0603WAF5101T5E",
+      "package": "0603",
+      "description": "-55℃~+155℃ 100mW 5.1kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "stock": 3775920,
+      "price": "1-999:0.0019,1000-4999:0.0016,5000-9999:0.0014,10000-49999:0.0013,50000-50199:0.0013,50200-:0.0013",
+      "category": "Resistors",
+      "subcategory": "Chip Resistor - Surface Mount",
+      "is_basic": true,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C23140",
+    "checkedAt": "2026-10-04T03:55:06.918Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C23140",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 23140,
+      "mfr": "0603WAF330JT5E",
+      "package": "0603",
+      "description": "-55℃~+155℃ 100mW 33Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "stock": 1772784,
+      "price": "1-999:0.0013,1000-4999:0.001,5000-9999:0.0009,10000-49999:0.0008,50000-50199:0.0007,50200-:0.0007",
+      "category": "Resistors",
+      "subcategory": "Chip Resistor - Surface Mount",
+      "is_basic": true,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C23162",
+    "checkedAt": "2026-10-04T03:55:06.921Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C23162",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 23162,
+      "mfr": "0603WAF4701T5E",
+      "package": "0603",
+      "description": "-55℃~+155℃ 100mW 4.7kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "stock": 7433362,
+      "price": "1-999:0.0015,1000-4999:0.0012,5000-9999:0.0011,10000-49999:0.0009,50000-50199:0.0009,50200-:0.0009",
+      "category": "Resistors",
+      "subcategory": "Chip Resistor - Surface Mount",
+      "is_basic": true,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C22935",
+    "checkedAt": "2026-10-04T03:55:07.180Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C22935",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 22935,
+      "mfr": "0603WAF1004T5E",
+      "package": "0603",
+      "description": "-55℃~+155℃ 100mW 1MΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "stock": 2601258,
+      "price": "1-999:0.0019,1000-4999:0.0016,5000-9999:0.0014,10000-49999:0.0013,50000-50199:0.0012,50200-:0.0012",
+      "category": "Resistors",
+      "subcategory": "Chip Resistor - Surface Mount",
+      "is_basic": true,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C3013202",
+    "checkedAt": "2026-10-04T03:55:07.192Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C3013202",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 3013202,
+      "mfr": "FRC0603F4533TS",
+      "package": "0603",
+      "description": "-55℃~+155℃ 100mW 453kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "stock": 22543,
+      "price": "1-999:0.0012,1000-4999:0.001,5000-9999:0.0008,10000-49999:0.0007,50000-50199:0.0006,50200-:0.0006",
+      "category": "Resistors",
+      "subcategory": "Chip Resistor - Surface Mount",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C25803",
+    "checkedAt": "2026-10-04T03:55:07.254Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C25803",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 25803,
+      "mfr": "0603WAF1003T5E",
+      "package": "0603",
+      "description": "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "stock": 7990119,
+      "price": "1-999:0.0016,1000-4999:0.0014,5000-9999:0.0012,10000-49999:0.0011,50000-50199:0.001,50200-:0.001",
+      "category": "Resistors",
+      "subcategory": "Chip Resistor - Surface Mount",
+      "is_basic": true,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C2933218",
+    "checkedAt": "2026-10-04T03:55:07.254Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C2933218",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 2933218,
+      "mfr": "FRC0603F4022TS",
+      "package": "0603",
+      "description": "-55℃~+155℃ 100mW 40.2kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "stock": 804693,
+      "price": "1-999:0.0011,1000-4999:0.0009,5000-9999:0.0007,10000-49999:0.0006,50000-50199:0.0006,50200-:0.0006",
+      "category": "Resistors",
+      "subcategory": "Chip Resistor - Surface Mount",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C21190",
+    "checkedAt": "2026-10-04T03:55:07.522Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C21190",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 21190,
+      "mfr": "0603WAF1001T5E",
+      "package": "0603",
+      "description": "-55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "stock": 8013731,
+      "price": "1-999:0.0039,1000-4999:0.0034,5000-9999:0.0031,10000-49999:0.0027,50000-50199:0.0026,50200-:0.0026",
+      "category": "Resistors",
+      "subcategory": "Chip Resistor - Surface Mount",
+      "is_basic": true,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C1679",
+    "checkedAt": "2026-10-04T03:55:07.537Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C1679",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 1679,
+      "mfr": "0603CG6R8C500NT",
+      "package": "0603",
+      "description": "50V 6.8pF C0G 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "stock": 93931,
+      "price": "1-9:0.0037,10-29:0.0034,30-99:0.0031,100-499:0.003,500-501:0.0029,502-:0.0029",
+      "category": "Capacitors",
+      "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+      "is_basic": false,
+      "is_preferred": true
+    }
+  },
+  {
+    "id": "C2998160",
+    "checkedAt": "2026-10-04T03:55:07.537Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C2998160",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 2998160,
+      "mfr": "FRC0402F2552TS",
+      "package": "0402",
+      "description": "-55℃~+155℃ 25.5kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+      "stock": 51971,
+      "price": "1-999:0.0006,1000-2999:0.0005,3000-9999:0.0004,10000-49999:0.0004,50000-50199:0.0003,50200-:0.0003",
+      "category": "Resistors",
+      "subcategory": "Chip Resistor - Surface Mount",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C106076",
+    "checkedAt": "2026-10-04T03:55:07.539Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C106076",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 106076,
+      "mfr": "C1206X472K202T",
+      "package": "1206",
+      "description": "2kV 4.7nF X7R ±10% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "stock": 49109,
+      "price": "1-9:0.1025,10-29:0.0881,30-99:0.0807,100-499:0.0754,500-999:0.071,1000-:0.0689",
+      "category": "Capacitors",
+      "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C113807",
+    "checkedAt": "2026-10-04T03:55:07.863Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C113807",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 113807,
+      "mfr": "CC0603KRX7R6BB105",
+      "package": "0603",
+      "description": "10V 1uF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "stock": 131015,
+      "price": "1-499:0.0139,500-1499:0.0121,1500-3999:0.0111,4000-23999:0.0102,24000-47999:0.0096,48000-:0.0094",
+      "category": "Capacitors",
+      "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C86038",
+    "checkedAt": "2026-10-04T03:55:07.863Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C86038",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 86038,
+      "mfr": "GRM21BR71A106KE51L",
+      "package": "0805",
+      "description": "10V 10uF X7R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "stock": 10453,
+      "price": "1-199:0.0594,200-599:0.0518,600-2999:0.0477,3000-8999:0.0451,9000-20999:0.043,21000-:0.0419",
+      "category": "Capacitors",
+      "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C14663",
+    "checkedAt": "2026-10-04T03:55:07.863Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C14663",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 14663,
+      "mfr": "CC0603KRX7R9BB104",
+      "package": "0603",
+      "description": "100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "stock": 12618106,
+      "price": "1-499:0.0106,500-1999:0.0098,2000-3999:0.0094,4000-23999:0.0092,24000-24099:0.009,24100-:0.009",
+      "category": "Capacitors",
+      "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+      "is_basic": true,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C2857993",
+    "checkedAt": "2026-10-04T03:55:08.634Z",
+    "url": "https://jlcsearch.tscircuit.com/components/list.json?search=C2857993",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 2857993,
+      "mfr": "0805B475K100NT",
+      "package": "0805",
+      "description": "10V 4.7uF X7R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "stock": 9551,
+      "price": "1-199:0.0402,200-599:0.0331,600-1999:0.0292,2000-9999:0.0249,10000-19999:0.023,20000-:0.0218",
+      "category": "Capacitors",
+      "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+      "is_basic": false,
+      "is_preferred": false
+    }
+  },
+  {
+    "id": "C2906982",
+    "checkedAt": "2026-10-04T04:03:08.868Z",
+    "url": "https://jlcsearch.tscircuit.com/resistors/list.json?resistance=10000&package=0603",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 2906982,
+      "mfr": "FRC0603F1002TS",
+      "description": "",
+      "stock": 8273747,
+      "price1": 0.000757143,
+      "in_stock": true,
+      "resistance": 10000,
+      "tolerance_fraction": 0.01,
+      "power_watts": 100,
+      "package": "0603",
+      "max_overload_voltage": 75,
+      "number_of_resistors": null,
+      "number_of_pins": null,
+      "is_potentiometer": false,
+      "is_surface_mount": true,
+      "is_multi_resistor_chip": false,
+      "is_basic": false,
+      "is_preferred": false,
+      "attributes": "{\"Resistance\":\"10kΩ\",\"Power(Watts)\":\"100mW\",\"Type\":\"Thick Film Resistors\",\"Overload Voltage (Max)\":\"75V\",\"Operating Temperature Range\":\"-55℃~+155℃\",\"Tolerance\":\"±1%\",\"Temperature Coefficient\":\"±100ppm/℃\"}"
+    }
+  },
+  {
+    "id": "C98220",
+    "checkedAt": "2026-10-04T04:03:08.868Z",
+    "url": "https://jlcsearch.tscircuit.com/resistors/list.json?resistance=10000&package=0603",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 98220,
+      "mfr": "RC0603FR-0710KL",
+      "description": "",
+      "stock": 5570515,
+      "price1": 0.000957143,
+      "in_stock": true,
+      "resistance": 10000,
+      "tolerance_fraction": 0.01,
+      "power_watts": 100,
+      "package": "0603",
+      "max_overload_voltage": 75,
+      "number_of_resistors": null,
+      "number_of_pins": null,
+      "is_potentiometer": false,
+      "is_surface_mount": true,
+      "is_multi_resistor_chip": false,
+      "is_basic": false,
+      "is_preferred": false,
+      "attributes": "{\"Resistance\":\"10kΩ\",\"Power(Watts)\":\"100mW\",\"Type\":\"Thick Film Resistors\",\"Overload Voltage (Max)\":\"75V\",\"Operating Temperature Range\":\"-55℃~+155℃\",\"Tolerance\":\"±1%\",\"Temperature Coefficient\":\"±100ppm/℃\"}"
+    }
+  },
+  {
+    "id": "C861402",
+    "checkedAt": "2026-10-04T04:03:08.868Z",
+    "url": "https://jlcsearch.tscircuit.com/resistors/list.json?resistance=432000&package=0603",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 861402,
+      "mfr": "RT0603BRD07432KL",
+      "description": "",
+      "stock": 5000,
+      "price1": 0.028571429,
+      "in_stock": true,
+      "resistance": 432000,
+      "tolerance_fraction": 0.001,
+      "power_watts": 100,
+      "package": "0603",
+      "max_overload_voltage": null,
+      "number_of_resistors": null,
+      "number_of_pins": null,
+      "is_potentiometer": false,
+      "is_surface_mount": true,
+      "is_multi_resistor_chip": false,
+      "is_basic": false,
+      "is_preferred": false,
+      "attributes": "{\"Resistance\":\"432kΩ\",\"Power(Watts)\":\"100mW\",\"Type\":\"Thin Film Resistor\",\"Operating Temperature Range\":\"-55℃~+155℃\",\"Tolerance\":\"±0.1%\",\"Temperature Coefficient\":\"±25ppm/℃\"}"
+    }
+  },
+  {
+    "id": "C2930074",
+    "checkedAt": "2026-10-04T04:03:08.868Z",
+    "url": "https://jlcsearch.tscircuit.com/resistors/list.json?resistance=20500&package=0603",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 2930074,
+      "mfr": "FRC0603F2052TS",
+      "description": "-55℃~+155℃ 100mW 20.5kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "stock": 46526,
+      "price1": 0.0024,
+      "in_stock": true,
+      "resistance": 20500,
+      "tolerance_fraction": 0.01,
+      "power_watts": 100,
+      "package": "0603",
+      "max_overload_voltage": 75,
+      "number_of_resistors": null,
+      "number_of_pins": null,
+      "is_potentiometer": false,
+      "is_surface_mount": true,
+      "is_multi_resistor_chip": false,
+      "is_basic": false,
+      "is_preferred": false,
+      "attributes": "{\"Operating Temperature\":\"-55℃~+155℃\",\"Power(Watts)\":\"100mW\",\"Resistance\":\"20.5kΩ\",\"Temperature Coefficient\":\"±100ppm/℃\",\"Tolerance\":\"±1%\",\"Type\":\"Thick Film Resistors\",\"Voltage-Supply(Max)\":\"75V\",\"Operating Temperature Range\":\"-55℃~+155℃\",\"Overload Voltage (Max)\":\"75V\"}"
+    }
+  },
+  {
+    "id": "C22910",
+    "checkedAt": "2026-10-04T04:03:08.868Z",
+    "url": "https://jlcsearch.tscircuit.com/resistors/list.json?resistance=20500&package=0603",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 22910,
+      "mfr": "0603WAF2052T5E",
+      "description": "-55℃~+155℃ 100mW 20.5kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+      "stock": 30915,
+      "price1": 0.0019,
+      "in_stock": true,
+      "resistance": 20500,
+      "tolerance_fraction": 0.01,
+      "power_watts": 100,
+      "package": "0603",
+      "max_overload_voltage": 75,
+      "number_of_resistors": null,
+      "number_of_pins": null,
+      "is_potentiometer": false,
+      "is_surface_mount": true,
+      "is_multi_resistor_chip": false,
+      "is_basic": false,
+      "is_preferred": false,
+      "attributes": "{\"Operating Temperature\":\"-55℃~+155℃\",\"Power(Watts)\":\"100mW\",\"Resistance\":\"20.5kΩ\",\"Temperature Coefficient\":\"±100ppm/℃\",\"Tolerance\":\"±1%\",\"Type\":\"Thick Film Resistors\",\"Voltage-Supply(Max)\":\"75V\",\"Operating Temperature Range\":\"-55℃~+155℃\",\"Overload Voltage (Max)\":\"75V\"}"
+    }
+  },
+  {
+    "id": "C335088",
+    "checkedAt": "2026-10-04T04:03:08.869Z",
+    "url": "https://jlcsearch.tscircuit.com/resistors/list.json?resistance=100000&package=0603",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 335088,
+      "mfr": "ARG03BTC1003",
+      "description": "",
+      "stock": 178619,
+      "price1": 0.018,
+      "in_stock": true,
+      "resistance": 100000,
+      "tolerance_fraction": 0.001,
+      "power_watts": 100,
+      "package": "0603",
+      "max_overload_voltage": 75,
+      "number_of_resistors": null,
+      "number_of_pins": null,
+      "is_potentiometer": false,
+      "is_surface_mount": true,
+      "is_multi_resistor_chip": false,
+      "is_basic": false,
+      "is_preferred": false,
+      "attributes": "{\"Resistance\":\"100kΩ\",\"Power(Watts)\":\"100mW\",\"Type\":\"Thin Film Resistor\",\"Overload Voltage (Max)\":\"75V\",\"Operating Temperature Range\":\"-55℃~+155℃\",\"Tolerance\":\"±0.1%\",\"Temperature Coefficient\":\"±25ppm/℃\"}"
+    }
+  },
+  {
+    "id": "C326758",
+    "checkedAt": "2026-10-04T04:03:08.869Z",
+    "url": "https://jlcsearch.tscircuit.com/resistors/list.json?resistance=100000&package=0603",
+    "httpStatus": 200,
+    "part": {
+      "lcsc": 326758,
+      "mfr": "RT0603BRE07100KL",
+      "description": "",
+      "stock": 57339,
+      "price1": 0.022428571,
+      "in_stock": true,
+      "resistance": 100000,
+      "tolerance_fraction": 0.001,
+      "power_watts": 100,
+      "package": "0603",
+      "max_overload_voltage": 75,
+      "number_of_resistors": null,
+      "number_of_pins": null,
+      "is_potentiometer": false,
+      "is_surface_mount": true,
+      "is_multi_resistor_chip": false,
+      "is_basic": false,
+      "is_preferred": false,
+      "attributes": "{\"Resistance\":\"100kΩ\",\"Power(Watts)\":\"100mW\",\"Type\":\"Thin Film Resistor\",\"Overload Voltage (Max)\":\"75V\",\"Operating Temperature Range\":\"-55℃~+155℃\",\"Tolerance\":\"±0.1%\",\"Temperature Coefficient\":\"±50ppm/℃\"}"
+    }
+  }
+]

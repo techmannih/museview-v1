@@ -1,0 +1,156 @@
+{
+  "board": "MuseView V1",
+  "usb": "5 V only; no PD",
+  "rails": {
+    "VDD_IO": 3.192,
+    "CAM_2V8": 2.8,
+    "CAM_1V2": 1.1973905472636817
+  },
+  "resistors": {
+    "R1": 5100,
+    "R2": 5100,
+    "R3": 33,
+    "R4": 33,
+    "R6": 432000,
+    "R7": 100000,
+    "R8": 20500,
+    "R9": 40200,
+    "R14": 4700,
+    "R15": 4700
+  },
+  "fixedParts": {
+    "U1": "C2913202",
+    "J1": "C165948",
+    "J2": "C262669",
+    "U2": "C2687116",
+    "U3": "C141836",
+    "U4": "C347374",
+    "U5": "C5152783",
+    "R6": "C861402",
+    "R7": "C335088",
+    "R8": "C2930074"
+  },
+  "nets": {
+    "J1": {
+      "CC1": "CC1",
+      "CC2": "CC2",
+      "VBUS1": "USB_RAW_5V",
+      "VBUS2": "USB_RAW_5V",
+      "GND1": "GND",
+      "GND2": "GND",
+      "DP1": "USB_DP_PORT",
+      "DP2": "USB_DP_PORT",
+      "DN1": "USB_DM_PORT",
+      "DN2": "USB_DM_PORT"
+    },
+    "R1": {
+      "pin1": "CC1",
+      "pin2": "GND"
+    },
+    "R2": {
+      "pin1": "CC2",
+      "pin2": "GND"
+    },
+    "F1": {
+      "pin1": "USB_RAW_5V",
+      "pin2": "VBUS_5V"
+    },
+    "D1": {
+      "cathode": "VBUS_5V",
+      "anode": "GND"
+    },
+    "U3": {
+      "VIN": "VBUS_5V",
+      "EN": "VBUS_5V",
+      "GND": "GND",
+      "FB": "BUCK_FB",
+      "SW": "BUCK_SW"
+    },
+    "L1": {
+      "pin1": "BUCK_SW",
+      "pin2": "VDD_IO"
+    },
+    "R6": {
+      "pin1": "VDD_IO",
+      "pin2": "BUCK_FB"
+    },
+    "R7": {
+      "pin1": "BUCK_FB",
+      "pin2": "GND"
+    },
+    "R8": {
+      "pin1": "CAM_1V2",
+      "pin2": "CAM_FB"
+    },
+    "R9": {
+      "pin1": "CAM_FB",
+      "pin2": "GND"
+    },
+    "U4": {
+      "VIN": "VBUS_5V",
+      "VOUT": "CAM_2V8",
+      "VSS": "GND"
+    },
+    "U5": {
+      "IN": "VDD_IO",
+      "EN": "VDD_IO",
+      "OUT": "CAM_1V2",
+      "GND": "GND",
+      "FB": "CAM_FB"
+    },
+    "U1": {
+      "3V3": "VDD_IO",
+      "EN": "ESP_EN",
+      "IO0": "BOOT",
+      "IO19": "USB_DM_MCU",
+      "IO20": "USB_DP_MCU",
+      "IO16": "ASK",
+      "IO17": "LED_DRIVE",
+      "IO4": "CAM_SDA",
+      "IO5": "CAM_SCL",
+      "IO6": "CAM_VSYNC",
+      "IO7": "CAM_HREF",
+      "IO8": "CAM_PWDN",
+      "IO18": "CAM_RESET",
+      "IO15": "CAM_XCLK",
+      "IO9": "CAM_D2",
+      "IO10": "CAM_D3",
+      "IO11": "CAM_D4",
+      "IO12": "CAM_D5",
+      "IO13": "CAM_D6",
+      "IO14": "CAM_D7",
+      "IO21": "CAM_D8",
+      "IO47": "CAM_D9",
+      "IO48": "CAM_PCLK"
+    },
+    "J2": {
+      "pin2": "GND",
+      "pin3": "CAM_SDA",
+      "pin4": "CAM_2V8",
+      "pin5": "CAM_SCL",
+      "pin6": "CAM_RESET",
+      "pin7": "CAM_VSYNC",
+      "pin8": "CAM_PWDN",
+      "pin9": "CAM_HREF",
+      "pin10": "CAM_1V2",
+      "pin11": "VDD_IO",
+      "pin12": "CAM_D9",
+      "pin13": "CAM_XCLK",
+      "pin14": "CAM_D8",
+      "pin15": "GND",
+      "pin16": "CAM_D7",
+      "pin17": "CAM_PCLK",
+      "pin18": "CAM_D6",
+      "pin19": "CAM_D2",
+      "pin20": "CAM_D5",
+      "pin21": "CAM_D3",
+      "pin22": "CAM_D4",
+      "pin25": "GND",
+      "pin26": "GND"
+    },
+    "C6": {
+      "pin1": "VBUS_5V",
+      "pin2": "GND"
+    }
+  }
+}

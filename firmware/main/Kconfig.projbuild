@@ -1,0 +1,5 @@
+menu "MuseView bring-up"
+config MUSEVIEW_AP_PASSWORD
+    string "Local setup Wi-Fi password (at least 8 characters)"
+    default "museview-setup"
+endmenu

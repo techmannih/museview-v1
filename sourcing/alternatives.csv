@@ -1,0 +1,5 @@
+primary_lcsc,alternate_lcsc,value,package,qualification,status
+C25804,C2906982,10k 1%,0603,Same nominal value tolerance and package; verify height and JLC placement,stock verified; not substituted
+C25804,C98220,10k 1%,0603,Same nominal value tolerance and package; verify height and JLC placement,stock verified; not substituted
+C335088,C326758,100k 0.1%,0603,Must retain 0.1% tolerance for common IO rail,stock verified; not substituted
+C2930074,C22910,20.5k 1%,0603,Same divider value and tolerance,stock verified; not substituted

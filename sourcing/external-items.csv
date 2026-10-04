@@ -1,0 +1,5 @@
+item,quantity,assembly,status
+Arducam M0031 OV2640 24-pin DVP camera,1,hand fit after PCBA,external purchase; JLC availability not claimed
+Regulated USB-C 5 V source at least 1 A,1,external,bring-up supply
+USB data cable,1,external,must carry USB2 data
+M2.5 mounting hardware and enclosure,1 set,mechanical,verify head and antenna clearance
