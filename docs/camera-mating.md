@@ -1,31 +1,46 @@
 # Exact M0031 camera mating review
 
-Reviewed 2026-10-04. **Specification match established for contact side, pin count, pitch and nominal thickness; exact supplied-flex qualification remains open. Ordering is on hold.**
+Reviewed 2026-10-04 against both manufacturer drawings and the user-supplied numbered-tail photograph. **NOT READY: nominal interface compatibility is supported, but full AFC01 equivalence and the camera-to-board numbering are not qualified.**
 
-The [Arducam M0031 product page](https://www.arducam.com/arducam-ov2640-camera-module-2mp-mini-ccm-compact-camera-modules-compatible-with-arduino_m0031esp32-esp8266-development-board-with-dvp-24-pin-interface_.html) names **F32R-1A7H1-11024** as its mating connector. This is stronger evidence than assuming compatibility from a generic OV2640 photograph.
+The [Arducam M0031 product page](https://www.arducam.com/arducam-ov2640-camera-module-2mp-mini-ccm-compact-camera-modules-compatible-with-arduino_m0031esp32-esp8266-development-board-with-dvp-24-pin-interface_.html) explicitly names **F32R-1A7H1-11024** as its mating connector. It specifies a 24-contact goldenfinger interface and 21 × 12.5 × 5.85 mm overall module size. Overall module dimensions are not a dimensioned or toleranced tail drawing.
 
-[Amphenol's exact-part page](https://www.amphenol-cs.com/product/f32r1a7h111024.html) specifies 24 positions, 0.50 mm pitch and bottom contacts. Its [F32R/F32Q series specification](https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/datasheet/flex/ffc_fpc_050mm_f32r_f32q.pdf), page 1, specifies 0.30 mm cable thickness. This establishes the intended nominal M0031 mating interface through the camera manufacturer's named mate; it is not a measurement of the user's flex.
+## Manufacturer drawing comparison
 
-The [JUSHUO AFC01 specification](https://datasheet.lcsc.com/datasheet/pdf/97e3ba016a78286ffa6cfbc591e2beb6.pdf), page 2 drawing dated 2024-05-18, identifies F as lower contact. The recommended flex is **0.30 ±0.01 mm** thick, with 0.50 mm pitch, 0.35 ±0.03 mm contact width and at least 3.0 mm exposed contact length. For 24 contacts the outer flex width is **12.50 ±0.05 mm**, and the first-to-last contact-center span is **11.50 ±0.03 mm**. The same document's mechanical test section uses a 0.3 mm mating FFC. AFC01 uses a flip latch; the named Amphenol mate uses a slider. They are not PCB-footprint substitutes.
+Sources: [Amphenol exact-part page](https://www.amphenol-cs.com/product/f32r1a7h111024.html), [Amphenol customer drawing A-S0201, revision C, 2019-01-28](https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/f32r-f32j.pdf), [Amphenol specification IS.EQC.001, revision D, page 1](https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/f31q-f32r-f52q-f52r_prodspec.pdf), and [JUSHUO AFC01 drawing, revision A, 2024-05-18, PDF page 2](https://datasheet.lcsc.com/datasheet/pdf/97e3ba016a78286ffa6cfbc591e2beb6.pdf). These were visually inspected; dimensions below refer to the recommended mating **FPC**, not the PCB solder lands.
 
-For this board, J2 remains AFC01-S24FCA-00 (C262669), on **top**, with its mouth facing the right/east edge. Insert the flex from the right with exposed gold contacts **down toward the PCB**, stiffener away from the contacts. JUSHUO's circuit-1 drawing and the imported pad numbering place board pin 1 at the **south/bottom end** after the 90° rotation; pin 24 is at the north/top end. Align the camera's numbered contact 1 to board pin 1. Lens-facing direction alone is not sufficient to determine this.
+| Mating feature | F32R-1A7H1-11024 | AFC01-S24FCA-00 / C262669 | Assessment |
+|---|---|---|---|
+| Positions / contact side | 24 / bottom | 24 / lower (F) | Match |
+| Tail pitch | 0.50 ±0.03 mm | 0.50 ±0.03 mm | Match |
+| Reinforced tail thickness | **0.30 ±0.03 mm** | **0.30 ±0.01 mm** | AFC01 accepts a narrower specified range |
+| Tail width, 24 positions | 12.50 ±0.05 mm (W = P × (N+1)) | 12.50 ±0.05 mm | Match |
+| First-to-last contact centre span | 11.50 ±0.05 mm (B) | 11.50 ±0.03 mm | AFC01 tolerance is tighter |
+| FPC contact width | 0.35 ±0.03 mm | 0.35 ±0.03 mm | Match; do not use Amphenol's separate 0.30 mm FFC column |
+| Exposed contact length | 3.00 mm minimum | 3.0 mm minimum | Same minimum |
+| Reinforced length callout | 6.00 mm reference | 6.0 mm | Similar nominal geometry; not an exact M0031 measurement |
+| Lead-in corner callout | Two R0.30, FPC only | R0.20 | Different; no measured M0031 corner profile |
+| Actuator | Push/pull slider | Flip latch, illustrated open at 90° | Different actuation and retention geometry |
 
-[Arducam's 24-pin table](https://blog.arducam.com/ov2640-vs-ov7670-detailed-comparisons-and-resources/) identifies pin 2 as AGND, pin 4 as analog supply, pin 10 as core supply, pin 11 as I/O supply and pin 15 as DGND. The hardware contract checks these board-side connections, including pin 10 to CAM_1V3.
+The F32R accepts 0.27–0.33 mm tail thickness, while the AFC01 drawing recommends 0.29–0.31 mm. A tail satisfying F32R's limits can fall outside AFC01's limits. This **does not prove that the actual M0031 is incompatible**; it proves that the named-mate evidence alone does not guarantee AFC01 compatibility. The centre-span tolerance also narrows from ±0.05 to ±0.03 mm.
 
-Before ordering, obtain the actual M0031 revision/lot drawing or a physical sample and record: reinforced-tail thickness 0.29–0.31 mm; flex width/contact length within the AFC01 drawing; exposed-contact side and numbered pin-1 mapping; full insertion and latch retention without force; camera/flex bend and enclosure clearances. No exact M0031 tail drawing or sample measurement was available in this task, so full mechanical interchangeability is **not certified**. Keep the hold until these items are signed off. After assembly, verify rail limits and the camera capture tests in `bring-up.md` before production.
+Both drawings require at least 3 mm exposed contact length. That is not a universal 3 mm insertion-depth instruction: the internal contact/stop/actuator datums differ. Do not interpret unrelated housing dimensions or a photograph's pixels as insertion depth. Full seating, contact overlap and latch retention still need an exact tail drawing or a fit record. The connectors are not PCB-footprint substitutes (for example, the 24-position body-width dimensions are 16.80 mm for F32R and 16.40 mm for AFC01).
 
-## First-prototype review clarification
+## Numbering and insertion orientation
 
-On 2026-10-04 the user confirmed that no exact M0031 revision drawing or physical tail measurements are available. Public documentation is the evidence boundary. Do not mark physical compatibility as verified from a product photograph, the overall 12.5 mm module width, or the shared nominal 0.30 mm cable specification. The 12.50 ±0.05 mm tail width and 0.29–0.31 mm thickness above are **AFC01 acceptance requirements**, not measured M0031 dimensions.
+Current board facts from the imported footprint and released circuit: J2 is on **top**, rotated 90°, mouth facing east/right, signal solder row west of the body. Board pad 1 is at the south end, **(21.1999, −7.2498) mm**; pad 24 is north. For a bottom-contact connector, insert from east toward west with exposed contacts **down toward the PCB**. “Bottom contact” does not mean bottom-side component assembly.
 
-| Item | Result | Evidence / outstanding qualification |
-|---|---|---|
-| 24 contacts | Supported | Exact M0031 product specification and exact J2 part |
-| 0.50 mm pitch | Nominal match supported | Arducam-named F32R-1A7H1-11024 and AFC01 drawings |
-| 0.30 mm reinforced tail | Nominal match only | Exact tail thickness/tolerance not published in the reviewed M0031 page |
-| Bottom contacts | Intended mating orientation supported | Both named F32R and J2 contact below the flex |
-| Board pin 1 | Checked | South end, (21.1999, −7.2498) mm; pin 24 north; camera contact 1 identification on the exact flex remains open |
-| Insertion | Board-side instruction established | From east/right toward west/left, gold contacts toward PCB; confirm actual insertion depth on sample |
-| Latch fit / retention | **Not verified** | AFC01 flip latch differs from the named F32R slider; exact tail and sample fit record required |
+The user's Screenshot 2026-10-04 at 18.29.46.png shows the tail tip downward, with **24 on the left and 01 on the right**. This identifies the numbered edges in that photograph. It does not establish tail thickness, lot/revision, whether the photograph is mirrored, or physically verified latch fit.
 
-Use the complete J2 signal map in `hardware-contract.json`; do not reverse the flex to make a lens point in a preferred direction. Pins 1, 23 and 24 are intentionally unconnected; grounds are 2 and 15, analog is 4, core is 10, and I/O supply is 11. Camera pin numbers come from Arducam's published interface table; correlating those numbers to a particular exposed tail edge remains part of the mechanical qualification.
+**Do not sign off one-to-one camera/connector numbering from the labels alone.** JUSHUO's recommended-tail drawing has the insertion tip upward and circuit 1 on the right; rotated to a tip-down view, circuit 1 is on the left. If the supplied M0031 photograph is an unmirrored view of the exposed-contact face, rotating/flipping that tail into the required east-to-west, contacts-down orientation places its **01 edge north**, opposite current board pad 1 south. This is a **possible reversed pin mapping**, not a confirmed physical measurement. Resolve the photographed face and numbered-edge correlation using an exact Arducam tail/pin drawing or an unpowered sample continuity/fit record. Do not reverse the live flex, infer orientation from the lens, or silently renumber the board based only on a product photograph.
+
+[Arducam's interface table](https://blog.arducam.com/ov2640-vs-ov7670-detailed-comparisons-and-resources/) gives camera pin 2 AGND, 4 analog, 10 core, 11 I/O and 15 DGND. The current hardware contract connects identically numbered J2 pads to these signals, with pins 1, 23 and 24 unused. Automated contract checks verify those **declared board connections**; they do not independently prove which camera contact physically touches each pad. If reverse mating is confirmed, correct the connector-to-camera mapping and rerun routing, contract, firmware-pin and complete release checks before ordering.
+
+## Exact remaining qualification
+
+The user confirmed that no exact M0031 revision drawing or physical sample measurements are available. Keep M0031_J2_MATING open until evidence establishes:
+
+1. Actual reinforced tail within **0.29–0.31 mm**, with width, pitch, centre span, contact length and lead-in geometry acceptable to AFC01.
+2. Exposed face and camera contact numbers correlated to **physical J2 pads**, explicitly resolving the photo's possible reversal; include unpowered checks of grounds and supply contacts.
+3. Full seating, sufficient contact overlap, closed-latch retention without force, and flex/enclosure clearance.
+
+No PCB, component, supply, routing or CPL changes were made for this evidence review. USB-C remains 5 V only; VDD_IO ≈3.192 V, CAM_2V8 =2.8 V and CAM_1V3 ≈1.296 V. JLC's authenticated placement preview is a separate open pre-order item. Rail and capture measurements after assembly remain in bring-up.md.

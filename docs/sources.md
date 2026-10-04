@@ -14,6 +14,8 @@ Checked 2026-10-04. JLC evidence includes exact fetch timestamps and URLs in `so
 - Exact Arducam M0031 product/core/mating connector: https://www.arducam.com/arducam-ov2640-camera-module-2mp-mini-ccm-compact-camera-modules-compatible-with-arduino_m0031esp32-esp8266-development-board-with-dvp-24-pin-interface_.html
 - Amphenol F32R recommended mate: https://www.amphenol-cs.com/product/f32r1a7h111024.html
 - Amphenol F32R bottom-contact/0.30 mm interface: https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/datasheet/flex/ffc_fpc_050mm_f32r_f32q.pdf
+- Amphenol F32R/F32J dimensioned drawing A-S0201 rev C, visually inspected: https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/f32r-f32j.pdf (SHA-256 `ccb80cfe928b3ab5cb602e74da5e3fe788bbf19c41fc63e2e992ffa461303bb0`)
+- Amphenol F32R thickness tolerance, specification IS.EQC.001 rev D: https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/f31q-f32r-f52q-f52r_prodspec.pdf (manufacturer PDF downloaded via https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6256/f31q-f32r-f52q-f52r_prodspec.pdf ; SHA-256 `c78407cb7ef80c4142c3566afae8f0222eef4fee88663f247b355b14d4eee4a7`)
 - JUSHUO AFC01 drawing/specification, C262669: https://datasheet.lcsc.com/datasheet/pdf/97e3ba016a78286ffa6cfbc591e2beb6.pdf
 - M0031/pinout: https://blog.arducam.com/ov2640-vs-ov7670-detailed-comparisons-and-resources/
 - JLCSearch: https://jlcsearch.tscircuit.com/

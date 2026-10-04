@@ -1,14 +1,14 @@
 {
   "reviewedAt": "2026-10-04",
-  "reviewedBaseCommit": "6be1e2bc84674653e416f670b8f63c1af2881fc1",
+  "reviewedBaseCommit": "dcd6bd913efac3da2c5cd4c194e0711c4f1ffb18",
   "scope": "First prototype only; existing electrical design, placement and routing retained",
   "blockers": [
     {
       "id": "M0031_J2_MATING",
       "status": "open",
-      "detail": "Exact Arducam M0031 tail thickness/tolerance, contact-side pin-1 identification and full insertion/flip-latch fit with AFC01-S24FCA-00 are not qualified. Only nominal 24-pin, 0.5 mm, 0.30 mm bottom-contact interface compatibility is supported by the named Amphenol mate.",
+      "detail": "AFC01 requires 0.29–0.31 mm tail thickness and a tighter contact-span tolerance than the Arducam-named F32R mate (0.27–0.33 mm). Exact M0031 seating/flip-latch fit remains unqualified. The supplied numbered-tail photo also raises a possible reversed camera-to-J2 mapping if it shows the unmirrored exposed-contact face; one-to-one pad numbering is not physically signed off.",
       "evidence": "docs/camera-mating.md",
-      "closure": "Exact module-revision drawing or sample inspection/fit record identifying tail dimensions, numbered contact side and AFC01 latch retention. The user confirmed no exact drawing or physical measurements are available."
+      "closure": "Exact M0031 tail/pin drawing or sample dimension, unpowered contact-mapping and fit record: meet AFC01 tail limits, resolve the photographed face/pin-1 reversal, and confirm full seating/latch retention. If reversed mating is confirmed, fix the camera-to-pad mapping and rerun the complete routing/verification/release pipeline. No exact revision drawing or physical measurements are available."
     },
     {
       "id": "JLC_PLACEMENT_PREVIEW",

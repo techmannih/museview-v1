@@ -22,6 +22,8 @@ The regulator/module pin arrangements were compared with the manufacturer top-vi
 
 ## Pending JLC preview
 
+The J2 row above describes the existing board footprint, not a qualified camera-to-pad mapping. The numbered M0031 tail photograph raises a possible reversal after accounting for the exposed face and insertion direction; see [camera mating review](camera-mating.md). A correctly placed J2 model in JLC's preview cannot by itself close that separate mapping/fit hold.
+
 Upload the current `museview-v1-gerbers.zip`, `jlc-bom.csv` and `jlc-cpl.csv` from the same release. Select top assembly only, retain all 49 fitted parts and exclude the 11 bare test pads and external M0031 camera. Verify exact C-numbers and available assembly quantities. Compare every critical part above to the actual supplier model/mark and land pattern, including centres on asymmetric USB/FPC/module bodies. Check the rest of the placements for offset or 90° errors as well. Record any supplier-specific correction and regenerate the CPL/report before release; do not rotate the board footprint or reroute copper to compensate for a supplier angle convention.
 
 [JLC's own FAQ](https://jlcpcb.com/help/article/pcb-assembly-faqs-part-2) explains that CAD and supplier zero-angle conventions can differ and that its red dot is not necessarily electrical pin 1. Use actual package features/polarity and the pin/net landmarks above, not a dot alone. Do not silently add a generic 90°/180° offset. The native exporter reports missing supplier pin-1-location metadata, so none of these CPL angles is claimed supplier-approved.

@@ -23,9 +23,9 @@ The handoff exporter verifies five KiCad schematic files (root plus four childre
 
 First-prototype blockers:
 
-1. **Exact M0031-to-J2 mating qualification** — public documents establish the nominal interface, but not the exact supplied tail tolerance, numbered contact side or AFC01 flip-latch fit. See `camera-mating.md`.
+1. **Exact M0031-to-J2 mating qualification** — AFC01 requires a tighter 0.29–0.31 mm tail than F32R’s 0.27–0.33 mm range. Exact seating/latch fit remains unqualified. The numbered-tail photo also raises a possible reversed camera-to-J2 mapping after accounting for contact face and insertion direction; the current one-to-one numbering is not physically signed off. See `camera-mating.md`.
 2. **JLC assembly placement approval** — the exported rotations are CAD angles. Verify U1/J1/J2/D1/LED1/U2/U3/U4/U5 alignment and centroids in the authenticated JLC preview, using `placement-review.md` and the generated `release/placement-review.json`. The Gerber upload was recognized as 4 layers, 50 × 35 mm. No order/payment was submitted.
 
 After assembly: no physical PCB has been tested in this task. Source-current/inrush, rails/ripple/thermal behavior, USB enumeration and camera capture are prototype bring-up work before production. They are not circular prerequisites for ordering the first prototype. Manufacturing stackup and assembly eligibility must still match the actual quote; automated checks do not replace manufacturer review.
 
-The 1.197 V camera-core revision is superseded. R8 = 25.5 kΩ and CAM_1V3 are mandatory. See `camera-mating.md`: contact side and nominal thickness match the Arducam-specified mating interface, but no physical module lot has been measured or signed off.
+The 1.197 V camera-core revision is superseded. R8 = 25.5 kΩ and CAM_1V3 are mandatory. Electrical checks validate the declared board nets, including J2 pin 10 to CAM_1V3; they cannot prove the camera-to-connector contact mapping. See `camera-mating.md` for the tolerance comparison and possible numbering reversal. Neither exact tail qualification nor the numbered physical mating has been signed off.
