@@ -53,7 +53,7 @@ These rail choices retain the corrected 1.296 V camera core and avoid a marginal
 
 ## Repository
 
-The source organization follows [techmannih/trellis-core](https://github.com/techmannih/trellis-core): an explicit JSX board entrypoint, local component and CAD imports, Bun lockfile, automated checks and schematic/PCB/3D snapshots. MuseView has its own electrical design and PCB layout.
+The repository contains the MuseView board entrypoint, local component and CAD imports, a Bun lockfile, automated checks and schematic/PCB/3D snapshots.
 
 ```text
 index.circuit.tsx             board, four schematic sheets, placement and copper

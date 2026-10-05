@@ -1,9 +1,7 @@
-# Source and provenance
+# Component sources and datasheets
 
 Checked 2026-10-04. JLC evidence includes exact fetch timestamps and URLs in `sourcing/stock-snapshot.json`. Stock is a cached search snapshot, not a reserved quantity. The source bundle was supplied by the user; its older stock quantities were not treated as current.
 
-- Repository conventions: https://github.com/techmannih/trellis-core
-- Camera architecture/pin study: https://tscircuit.com/0hmX/esp32-s3-usb-webcam-ov2640 (v1.0.7). No wholesale reference board source or route cache is incorporated.
 - ESP32 module: https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf
 - ESP32 hardware guidance: https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/pcb-layout-design.html
 - TLV62569: https://www.ti.com/lit/ds/symlink/tlv62569.pdf

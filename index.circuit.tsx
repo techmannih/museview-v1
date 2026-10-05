@@ -16,8 +16,7 @@ import { C, R } from "./imports/passives"
 import { boardRouter } from "./scripts/board-router"
 
 /** MuseView V1. Standard USB-C 5 V sink, no USB-PD controller.
- * Electrical values and pin assignments are independently implemented from
- * manufacturer documents. Repository conventions follow techmannih/trellis-core.
+ * Electrical values and pin assignments follow the component datasheets.
  * VDD_IO is intentionally 3.192 V nominal: a common ESP32/camera I/O domain.
  */
 export const MuseViewV1 = () => (
