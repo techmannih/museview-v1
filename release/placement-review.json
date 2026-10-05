@@ -1,5 +1,5 @@
 {
-  "circuitSha256": "514f4e162dc1eb1452879eddfb129754177a7f1478e37944b048b0381f3b93e8",
+  "circuitSha256": "7bc291740e37ca4a280be9031bc62bd5df7fd015a36a79f4fd6f9684ccdd7156",
   "cplSha256": "cfe2052b694abdf84171229b4aab8be2fd9b3af1adfe06a9c2f676d45324aa2d",
   "view": "top; +X east/right, +Y north/up; millimetres; board-centre origin",
   "status": "Board-side pin/polarity landmarks recorded. JLC rotation and centroid calibration are NOT approved.",

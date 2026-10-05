@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-05T01:42:18.680Z",
-  "circuitSha256": "514f4e162dc1eb1452879eddfb129754177a7f1478e37944b048b0381f3b93e8",
+  "generatedAt": "2026-10-05T02:05:28.261Z",
+  "circuitSha256": "7bc291740e37ca4a280be9031bc62bd5df7fd015a36a79f4fd6f9684ccdd7156",
   "routingFingerprint": "23261100-7517b7e4-1060840",
   "tscircuitVersion": "0.0.2687",
   "circuitErrors": 0,
@@ -18,8 +18,8 @@
   "assembledGlbComponents": 49,
   "assembledStepArchive": {
     "file": "museview-v1-step.zip",
-    "uncompressedBytes": 23312026,
-    "sha256": "7b7b4252895a051606cefd0da93d182fd61f68953e68cf99b45edb5b5ba9f662"
+    "uncompressedBytes": 23312024,
+    "sha256": "1ef5376b7aa2c6cc63ec522910b6f9e13a81fd9bf37095e37db44fc53237f0d6"
   },
   "kicadSchematics": 5,
   "kicadModelFiles": 16,
@@ -30,7 +30,7 @@
   "localVerification": {
     "command": "bun run verify",
     "result": "passed",
-    "regressionTestsPassed": 21,
+    "regressionTestsPassed": 24,
     "gerberShorts": 0,
     "snapshots2d": "matched",
     "snapshots3d": "matched"

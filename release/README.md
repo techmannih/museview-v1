@@ -12,4 +12,6 @@
 - `camera-supply.json`: divider identities, tolerances, calculated DC/temperature bounds and 1.24–1.36 V limits.
 - `verification.json`, `sha256.json`: verification evidence and artifact checksums.
 
+J1 uses the supplied USB-C CAD origin correction: local Y = -2.3500289000000517 mm. The browser preview, GLB, KiCad model offset and assembled STEP all use this origin. The pinned STEP exporter otherwise recentres the model and ignores its explicit origin, so `scripts/align-usb-step.mjs` corrects only J1's mapped placement after export; handoff validation checks that placement. The footprint, BOM/CPL and routed copper are unchanged.
+
 USB-C is 5 V only. Use the assembly, electrical review and bring-up documents in `../docs/`. Physical power/startup/USB/camera tests and manufacturer stackup/impedance review remain open. This package is an engineering prototype handoff, not a claim of measured production qualification.

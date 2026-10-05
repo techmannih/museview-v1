@@ -6,6 +6,7 @@ import {unzipSync,zipSync,strToU8} from "fflate"
 import {checkAssembly} from "./check-assembly.mjs"
 import {cameraSupplyReport} from "./check-camera-supply.mjs"
 import {schematicStyleReport} from "./check-schematic-style.mjs"
+import {alignUsbStep} from "./align-usb-step.mjs"
 
 // Run verify first. This exports the exact verified circuit without rerouting.
 const run=(args)=>{const r=spawnSync("bun",args,{stdio:"inherit"});if(r.status!==0)throw Error(`Failed: bun ${args.join(" ")}`)}
@@ -36,6 +37,7 @@ run(["x","tsci","export",exportInput,"-f","pcb-svg","--layer","bottom","-o",reso
 mkdirSync("dist/release",{recursive:true})
 const assembledStep="dist/release/museview-v1.step"
 run(["x","tsci","export",exportInput,"-f","step","-o",resolve(assembledStep)])
+writeFileSync(assembledStep,alignUsbStep(readFileSync(assembledStep,"utf8"),circuit))
 writeFileSync("release/museview-v1-step.zip",zipSync({"museview-v1.step":readFileSync(assembledStep)}))
 unlinkSync(exportInput)
 run(["scripts/export-cad.mjs"])

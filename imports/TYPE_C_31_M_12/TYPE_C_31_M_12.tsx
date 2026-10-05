@@ -61,7 +61,7 @@ export const TYPE_C_31_M_12 = (props: ConnectorProps) => {
         objUrl: objPath,
         stepUrl: stepPath,
         pcbRotationOffset: 180,
-        modelOriginPosition: { x: 0, y: -2.7500289000000517, z: 0.000010999999999872223 },
+        modelOriginPosition: { x: 0, y: -2.3500289000000517, z: 0.000010999999999872223 },
       }}
       {...props}
     />

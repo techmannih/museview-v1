@@ -41546,7 +41546,7 @@
     "anchor_alignment": "center_of_component_on_board_surface",
     "model_origin_position": {
       "x": 0,
-      "y": -2.7500289000000517,
+      "y": -2.350028900000052,
       "z": 0.000010999999999872223
     }
   },
@@ -94899,6 +94899,6 @@
   },
   {
     "type": "source_project_metadata",
-    "source_filesystem_md5_hash": "89545c0e02af44ad73fc8a1d7da77ecb"
+    "source_filesystem_md5_hash": "0da9d6a66d94bc4f0f9f42de394164ea"
   }
 ]
