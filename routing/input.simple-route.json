@@ -64,7 +64,7 @@
       "circuitJsonMetadata": {
         "pcb_smtpad_id": "pcb_smtpad_2",
         "pcb_port_id": "pcb_port_6",
-        "source_port_name": "DN2"
+        "source_port_name": "DM2"
       },
       "componentId": "pcb_component_0",
       "type": "rect",
@@ -140,7 +140,7 @@
       "circuitJsonMetadata": {
         "pcb_smtpad_id": "pcb_smtpad_4",
         "pcb_port_id": "pcb_port_8",
-        "source_port_name": "DN1"
+        "source_port_name": "DM1"
       },
       "componentId": "pcb_component_0",
       "type": "rect",
@@ -23658,7 +23658,7 @@
       "circuitJsonMetadata": {
         "pcb_plated_hole_id": "pcb_plated_hole_0",
         "pcb_port_id": "pcb_port_1",
-        "source_port_name": "EH1"
+        "source_port_name": "S1"
       },
       "componentId": "pcb_component_0",
       "type": "rect",
@@ -23708,7 +23708,7 @@
       "circuitJsonMetadata": {
         "pcb_plated_hole_id": "pcb_plated_hole_1",
         "pcb_port_id": "pcb_port_0",
-        "source_port_name": "EH2"
+        "source_port_name": "S2"
       },
       "componentId": "pcb_component_0",
       "type": "rect",
@@ -23758,7 +23758,7 @@
       "circuitJsonMetadata": {
         "pcb_plated_hole_id": "pcb_plated_hole_2",
         "pcb_port_id": "pcb_port_3",
-        "source_port_name": "EH3"
+        "source_port_name": "S3"
       },
       "componentId": "pcb_component_0",
       "type": "rect",
@@ -23808,7 +23808,7 @@
       "circuitJsonMetadata": {
         "pcb_plated_hole_id": "pcb_plated_hole_3",
         "pcb_port_id": "pcb_port_2",
-        "source_port_name": "EH4"
+        "source_port_name": "S4"
       },
       "componentId": "pcb_component_0",
       "type": "rect",
@@ -24323,8 +24323,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -24683,8 +24683,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -25043,8 +25043,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -25403,8 +25403,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -25763,8 +25763,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -26123,8 +26123,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -26143,8 +26143,8 @@
         "bottom"
       ],
       "center": {
-        "x": -11.7,
-        "y": 10.8
+        "x": -13,
+        "y": 10.1
       },
       "connectedTo": [
         "pcb_via_6",
@@ -26483,8 +26483,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -26843,8 +26843,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -27203,8 +27203,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -27563,8 +27563,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -27923,8 +27923,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -28283,8 +28283,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -28643,8 +28643,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -29003,8 +29003,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -29363,8 +29363,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -29723,8 +29723,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -30083,8 +30083,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -30443,8 +30443,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -30803,8 +30803,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -31163,8 +31163,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -31523,8 +31523,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -31883,8 +31883,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -32243,8 +32243,8 @@
         "pcb_smtpad_199",
         "pcb_port_211"
       ],
-      "width": 0.45,
-      "height": 0.45,
+      "width": 0.6,
+      "height": 0.6,
       "netIsAssignable": true,
       "offBoardConnectsTo": [
         "source_component_internal_connection_2"
@@ -32289,8 +32289,8 @@
         "pcb_smtpad_179",
         "pcb_port_191"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32331,8 +32331,8 @@
         "pcb_smtpad_181",
         "pcb_port_193"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32373,8 +32373,8 @@
         "pcb_smtpad_182",
         "pcb_port_194"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32411,8 +32411,8 @@
         "pcb_smtpad_171",
         "pcb_port_170"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32453,8 +32453,8 @@
         "pcb_smtpad_185",
         "pcb_port_197"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32491,8 +32491,8 @@
         "pcb_smtpad_169",
         "pcb_port_172"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32529,8 +32529,8 @@
         "pcb_smtpad_166",
         "pcb_port_175"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32567,8 +32567,8 @@
         "pcb_smtpad_165",
         "pcb_port_176"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32605,8 +32605,8 @@
         "pcb_smtpad_164",
         "pcb_port_177"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32643,8 +32643,8 @@
         "pcb_smtpad_162",
         "pcb_port_179"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32681,8 +32681,8 @@
         "pcb_smtpad_161",
         "pcb_port_180"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32719,8 +32719,8 @@
         "pcb_smtpad_160",
         "pcb_port_181"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32757,8 +32757,8 @@
         "pcb_smtpad_159",
         "pcb_port_182"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32795,8 +32795,8 @@
         "pcb_smtpad_158",
         "pcb_port_183"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32833,8 +32833,8 @@
         "pcb_smtpad_157",
         "pcb_port_184"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "circuitJsonMetadata": {
@@ -32871,8 +32871,8 @@
         "pcb_smtpad_156",
         "pcb_port_185"
       ],
-      "width": 0.45,
-      "height": 0.45
+      "width": 0.6,
+      "height": 0.6
     },
     {
       "type": "rect",
@@ -65355,8 +65355,8 @@
           "pcb_port_id": "pcb_port_221"
         },
         {
-          "x": -11.7,
-          "y": 10.8,
+          "x": -13,
+          "y": 10.1,
           "layer": "top",
           "pointId": "pcb_port_223",
           "pcb_port_id": "pcb_port_223"
@@ -67468,8 +67468,8 @@
         },
         {
           "route_type": "wire",
-          "x": -11.7,
-          "y": 10.8,
+          "x": -13,
+          "y": 10.1,
           "width": 0.2,
           "layer": "top"
         }
@@ -68311,11 +68311,11 @@
   "layerCount": 4,
   "allowBlindAndBuriedVias": false,
   "minTraceWidth": 0.15,
-  "minViaDiameter": 0.45,
-  "minViaHoleDiameter": 0.2,
-  "minViaPadDiameter": 0.45,
-  "min_via_hole_diameter": 0.2,
-  "min_via_pad_diameter": 0.45,
+  "minViaDiameter": 0.6,
+  "minViaHoleDiameter": 0.3,
+  "minViaPadDiameter": 0.6,
+  "min_via_hole_diameter": 0.3,
+  "min_via_pad_diameter": 0.6,
   "minTraceToPadEdgeClearance": 0.1,
   "minTraceToHoleEdgeClearance": 0.23,
   "minViaEdgeToPadEdgeClearance": 0.15,

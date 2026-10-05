@@ -20,5 +20,9 @@ const algorithmFn=async input=>{
 const board=MuseViewV1()
 circuit.add(cloneElement(board,{autorouter:{...board.props.autorouter,algorithmFn}}))
 await circuit.renderUntilSettled()
-if(!captured)throw Error("Native routing input was not captured")
+if(!captured) {
+  const errors=circuit.getCircuitJson().filter(e=>e.type.endsWith("_error"))
+  for(const error of errors) console.error(JSON.stringify(error))
+  throw Error("Native routing input was not captured; resolve prerouting errors first")
+}
 console.log("Captured fresh routing input and fixed geometry; regenerate and verify before export")

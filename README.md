@@ -41,6 +41,7 @@ Start the viewer with `bun run dev` (optionally `--port 3020`) after installing 
 ## Design
 
 - 50 × 35 mm, 1.6 mm FR4, four copper layers, black solder mask, **all 49 fitted components on top; no bottom assembly**.
+- Through vias: **0.30 mm drill / 0.60 mm pad**, with 0.15 mm annular rings.
 - L1 components/signals, L2 ground reference, L3 common MCU/camera I/O power, L4 signals. Antenna keepout on all copper layers.
 - USB-C USB 2.0 device: independent 5.1 kΩ CC pull-downs, USBLC6-2SC6, 33 Ω data resistors, 750 mA PTC, SMF5.0A input TVS.
 - TLV62569: **3.192 V nominal** shared ESP32/camera I/O, using 432 kΩ/100 kΩ, both **0.1%**.

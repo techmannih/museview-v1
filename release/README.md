@@ -2,7 +2,7 @@
 
 **ORDER HOLD:** this package corrects the camera core to CAM_1V3, 1.296 V nominal (R8 25.5 kΩ / R9 40.2 kΩ). The previous 1.197 V package is superseded. Exact M0031 flex qualification and physical bring-up remain open; see `../docs/camera-mating.md`.
 
-- `museview-v1-gerbers.zip`: four copper layers, solder masks/paste, silkscreen, outline, plated L1–L4 drills and nonplated drills. Generic exporter BOM/CPL are removed to avoid competing assembly files.
+- `museview-v1-gerbers.zip`: four copper layers, solder masks/paste, silkscreen, outline, plated L1–L4 drills (all vias 0.30 mm drill / 0.60 mm pad) and nonplated drills. Generic exporter BOM/CPL are removed to avoid competing assembly files.
 - `jlc-bom.csv` and `jlc-cpl.csv`: the authoritative 49-component **top-only** assembly pair. No bottom-side components. Board-center origin matches the Gerbers. Validate polarized-part rotations in JLC's placement preview.
 - `schematic-usb.svg`, `schematic-power.svg`, `schematic-mcu.svg`, `schematic-camera.svg`: four readable vector schematic sheets.
 - `pcb-top.svg`, `pcb-bottom.svg`, `pcb-top.png`: copper/placement views.

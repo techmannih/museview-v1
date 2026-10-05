@@ -8,10 +8,13 @@ import {checkAssembly} from "./check-assembly.mjs"
 import {cameraSupplyReport} from "./check-camera-supply.mjs"
 import {schematicStyleReport} from "./check-schematic-style.mjs"
 import {alignUsbStep} from "./align-usb-step.mjs"
+import {checkRouting} from "./check-routing.mjs"
 
 // Run verify first. This exports the exact verified circuit without rerouting.
 const run=(args)=>{const r=spawnSync("bun",args,{stdio:"inherit"});if(r.status!==0)throw Error(`Failed: bun ${args.join(" ")}`)}
 const circuit=JSON.parse(readFileSync("dist/index/circuit.json","utf8"))
+const routingErrors=checkRouting(circuit)
+if(routingErrors.length) throw Error(routingErrors.join("\n"))
 const assemblyErrors=checkAssembly(circuit)
 if(assemblyErrors.length) throw Error(assemblyErrors.join("\n"))
 const cameraSupply=cameraSupplyReport(circuit)

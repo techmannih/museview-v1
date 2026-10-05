@@ -23,8 +23,8 @@ export const MuseViewV1 = () => (
   <board name="MUSEVIEW_V1" title="MuseView V1 · USB-C 5 V camera"
     width="50mm" height="35mm" borderRadius="2.5mm" layers={4} thickness="1.6mm"
     solderMaskColor="#181e22" minTraceWidth="0.15mm" defaultTraceWidth="0.2mm"
-    minViaHoleDiameter="0.2mm" minViaPadDiameter="0.45mm" minViaEdgeToPadEdgeClearance="0.15mm" minBoardEdgeClearance="0.25mm" minTraceToHoleEdgeClearance="0.23mm"
-    pcbStyle={{ viaPadDiameter: 0.45, viaHoleDiameter: 0.2 }}
+    minViaHoleDiameter="0.3mm" minViaPadDiameter="0.6mm" minViaEdgeToPadEdgeClearance="0.15mm" minBoardEdgeClearance="0.25mm" minTraceToHoleEdgeClearance="0.23mm"
+    pcbStyle={{ viaPadDiameter: 0.6, viaHoleDiameter: 0.3 }}
     autorouterVersion="beta_pipeline9" autorouter={{algorithmFn:boardRouter,local:true,allowViaInPad:false,traceClearance:0.18}} autorouterEffortLevel="5x"
     schAutoLayoutEnabled schTraceAutoLabelEnabled schMaxTraceDistance="1.2mm">
 
@@ -87,7 +87,7 @@ export const MuseViewV1 = () => (
 
     <TYPE_C_31_M_12 name="J1" displayName="J1 · USB-C 5 V" layer="top" noConnect={["SBU1", "SBU2"]}
       pcbX={-20.85} pcbY={3} pcbRotation={-90}
-      schX={-10} schY={2} schWidth={2.05} schHeight={1.8} schSheetName="usb" schSectionName="usb-port"
+      schX={-10} schY={2} schWidth={1.2} schHeight={3.6} schSheetName="usb" schSectionName="usb-port"
       connections={{ EH1:"net.USB_SHIELD", EH2:"net.USB_SHIELD", EH3:"net.USB_SHIELD", EH4:"net.USB_SHIELD",
         CC1:"net.CC1", CC2:"net.CC2", DN1:"net.USB_DM_PORT", DN2:"net.USB_DM_PORT", DP1:"net.USB_DP_PORT", DP2:"net.USB_DP_PORT",
         GND1:"net.GND", GND2:"net.GND", VBUS1:"net.USB_RAW_5V", VBUS2:"net.USB_RAW_5V" }} />
@@ -219,7 +219,7 @@ export const MuseViewV1 = () => (
       outline={[{x:1.15,y:-.05},{x:4.85,y:-.05},{x:4.85,y:3.75},{x:1.15,y:3.75}]} clearance="0.15mm" />
     {([2.299852,3.6999] as const).flatMap(x => [1.12485,2.5249].map(y =>
       <Fragment key={`epad-${x}-${y}`}><via name={`EPAD_${x}_${y}`} pcbX={x} pcbY={y} connectsTo="net.GND"
-        fromLayer="top" toLayer="bottom" holeDiameter="0.2mm" outerDiameter="0.45mm" /></Fragment>
+        fromLayer="top" toLayer="bottom" holeDiameter="0.3mm" outerDiameter="0.6mm" /></Fragment>
     ))}
 
     <AFC01_S24FCA_00 name="J2" displayName="J2 · M0031" pcbX={22.6} pcbY={-1.5} layer="top" noConnect={["pin1", "pin23", "pin24"]} pcbRotation={90}
@@ -286,7 +286,7 @@ export const MuseViewV1 = () => (
     {([
       ["C2",-11.95,-11.1],
       ["C3",-11.95,-6.9],
-      ["C4",-11.7,10.8],
+      ["C4",-13,10.1],
       ["C6",-24.3,-7.4],
       ["C7",-15,-6.5],
       ["C8",-12.8,-10.7],
@@ -301,24 +301,24 @@ export const MuseViewV1 = () => (
       ["C17",15.6,5.425],
       ["C18",-16.925,1.9],
     ] as const).map(([cap,x,y]) => <Fragment key={`return-${cap}`}>
-      <via name={`GND_${cap}`} pcbX={x} pcbY={y} fromLayer="top" toLayer="bottom" connectsTo="net.GND" outerDiameter="0.45mm" holeDiameter="0.2mm" />
+      <via name={`GND_${cap}`} pcbX={x} pcbY={y} fromLayer="top" toLayer="bottom" connectsTo="net.GND" outerDiameter="0.6mm" holeDiameter="0.3mm" />
       <trace name={`RETURN_${cap}`} from={`.${cap} > .pin2`} to={`.GND_${cap} > .top`} pcbStraightLine thickness="0.2mm" maxLength="1.6mm" />
     </Fragment>)}
-    <via name="GND_U3" pcbX={-11} pcbY={-1.05} fromLayer="top" toLayer="bottom" connectsTo="net.GND" outerDiameter="0.45mm" holeDiameter="0.2mm" />
+    <via name="GND_U3" pcbX={-11} pcbY={-1.05} fromLayer="top" toLayer="bottom" connectsTo="net.GND" outerDiameter="0.6mm" holeDiameter="0.3mm" />
     <trace from=".U3 > .GND" to=".GND_U3 > .top" pcbStraightLine thickness="0.2mm" />
-    <via name="GND_U4" pcbX={-18.3} pcbY={-8.3} fromLayer="top" toLayer="bottom" connectsTo="net.GND" outerDiameter="0.45mm" holeDiameter="0.2mm" />
+    <via name="GND_U4" pcbX={-18.3} pcbY={-8.3} fromLayer="top" toLayer="bottom" connectsTo="net.GND" outerDiameter="0.6mm" holeDiameter="0.3mm" />
     <trace from=".U4 > .VSS" to=".GND_U4 > .top" pcbStraightLine thickness="0.2mm" />
-    <via name="GND_U5" pcbX={-16.15} pcbY={-10.5} fromLayer="top" toLayer="bottom" connectsTo="net.GND" outerDiameter="0.45mm" holeDiameter="0.2mm" />
+    <via name="GND_U5" pcbX={-16.15} pcbY={-10.5} fromLayer="top" toLayer="bottom" connectsTo="net.GND" outerDiameter="0.6mm" holeDiameter="0.3mm" />
     <trace from=".U5 > .GND" to=".GND_U5 > .top" pcbStraightLine thickness="0.2mm" />
 
-    {/* Staggered 0.2 mm through-vias escape the 0.5 mm FPC pitch. */}
+    {/* Staggered 0.3 mm through-vias escape the 0.5 mm FPC pitch. */}
     {([
       [3,"CAM_SDA"],[5,"CAM_SCL"],[6,"CAM_RESET"],[7,"CAM_VSYNC"],[8,"CAM_PWDN"],[9,"CAM_HREF"],
       [12,"CAM_D9"],[13,"CAM_XCLK"],[14,"CAM_D8"],[16,"CAM_D7"],[17,"CAM_PCLK"],[18,"CAM_D6"],
       [19,"CAM_D2"],[20,"CAM_D5"],[21,"CAM_D3"],[22,"CAM_D4"],
     ] as const).map(([pin,net]) => <Fragment key={`camera-escape-${pin}`}>
       <via name={`CAM_ESCAPE_${pin}`} pcbX={pin%2 ? 19.4 : 18.6} pcbY={-1.5-5.75+(pin-1)*0.5}
-        fromLayer="top" toLayer="bottom" outerDiameter="0.45mm" holeDiameter="0.2mm" connectsTo={`net.${net}`} />
+        fromLayer="top" toLayer="bottom" outerDiameter="0.6mm" holeDiameter="0.3mm" connectsTo={`net.${net}`} />
       <trace name={`ESCAPE_J2_${pin}`} from={`.J2 > .pin${pin}`} to={`.CAM_ESCAPE_${pin} > .top`} pcbStraightLine thickness="0.15mm" />
     </Fragment>)}
 

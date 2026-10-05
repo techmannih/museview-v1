@@ -9,6 +9,16 @@ import stock from "../sourcing/stock-snapshot.json" with {type:"json"}
 const original=readCircuit("dist/index/circuit.json")
 const clone=()=>structuredClone(original)
 describe("Generated hardware regressions",()=>{
+ it("rejects undersized via drills and annular rings",()=>{
+  const small=clone();small.find(e=>e.type==="pcb_via").hole_diameter=0.2
+  expect(checkRouting(small).some(e=>e.includes("via drill below 0.30 mm"))).toBe(true)
+  const thin=clone();thin.find(e=>e.type==="pcb_via").outer_diameter=0.45
+  expect(checkRouting(thin).some(e=>e.includes("annular ring"))).toBe(true)
+ })
+ it("preserves physical USB pad numbering with the standard schematic",()=>{
+  const c=clone(),m=model(c);m.port("J1","DN1").pin_number=8
+  expect(checkContract(c).some(e=>e.includes("J1.DN1: C165948 requires physical pin 9"))).toBe(true)
+ })
  it("rejects TVS supplier pin polarity mismatch even if semantic nets match",()=>{const c=clone(),d=c.find(e=>e.type==='source_component'&&e.name==='D1');for(const p of c.filter(e=>e.type==='source_port'&&e.source_component_id===d.source_component_id))p.pin_number=3-p.pin_number;expect(checkContract(c).some(e=>e.includes('C193402 requires pin'))).toBe(true);const reversed=clone(),m=model(reversed),a=reversed.find(e=>e.type==='schematic_port'&&e.source_port_id===m.port('D1','anode').source_port_id),k=reversed.find(e=>e.type==='schematic_port'&&e.source_port_id===m.port('D1','cathode').source_port_id);[a.center,k.center]=[k.center,a.center];expect(checkContract(reversed).some(e=>e.includes('schematic cathode'))).toBe(true)})
  it("rejects the obsolete 20.5k camera core divider",()=>{const c=clone();c.find(e=>e.type==='source_component'&&e.name==='R8').resistance=20500;expect(checkCameraSupply(c).some(e=>e.includes('1.30 V'))).toBe(true)})
  it("rejects a legacy camera supply net name",()=>{const c=clone();c.find(e=>e.type==='source_net'&&e.name==='CAM_1V3').name='CAM_1V2';expect(checkCameraSupply(c).some(e=>e.includes('Legacy'))).toBe(true)})

@@ -10,6 +10,8 @@ V1.1 is 50 × 35 mm, with USB left, camera connector right and ASK / RESET / BOO
 - U3/U4/U5: compare pin-1 and package rotations with manufacturer drawings, not only rendered bodies. The 3D asset is a visualization and is not a substitute for a land-pattern drawing. The current angles and actual board pin/polarity landmarks for all critical parts are recorded in [placement-review.md](placement-review.md); JLC preview approval remains pending.
 - R6/R7: 432 kΩ and 100 kΩ, **0.1%**, mandatory. R8: 25.5 kΩ, 1%, C22920; R9: 40.2 kΩ, 1%, C2933218. The previous 20.5 kΩ R8 must not be fitted.
 
+All signal and power vias use 0.30 mm plated through drills and 0.60 mm pads across the four-layer stack. No blind or buried vias are specified. See `routing.md` for the decision to retain the active ground and supply planes.
+
 Four corner holes are 2.7 mm nonplated, intended for M2.5 hardware. Use nylon fasteners/standoffs, especially the northeast hole inside the antenna exclusion; no metal screw or enclosure insert is permitted in that RF region. Check screw-head/enclosure clearances. The external camera needs mechanical support; its outline is an assembly note outside the PCB, not fabricated board area.
 
 Imports were downloaded using `tsci import C<number> --jlcpcb --download --use-exact-footprint`. Primitive selection, pin attributes and connectivity aliases were reviewed after import. Standard passives use native tscircuit footprints with explicit supplier identities. R8 uses the native 0603 footprint with the verified C22920 identity; the older 0402 25.5 kΩ candidate is not used.

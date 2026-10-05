@@ -1,12 +1,21 @@
 {
-  "generatedAt": "2026-10-05T05:04:03.702Z",
-  "circuitSha256": "df6140660b77baa65b16421a5645c88cfcb1626bb538b1c70631a44d645a835f",
-  "routingFingerprint": "23261100-7517b7e4-1060840",
+  "generatedAt": "2026-10-05T09:17:55.052Z",
+  "circuitSha256": "df9828a173197b44acf58cea63bf3229c31942ec13fbad5dda152a0438abfc99",
+  "routingFingerprint": "2143fa89-8cf8fd75-1060753",
   "tscircuitVersion": "0.0.2687",
   "circuitErrors": 0,
   "retainedNativeWidthWarnings": 6,
   "routedTraces": 191,
-  "throughVias": 167,
+  "throughVias": 176,
+  "viaRulesMm": {
+    "minimumHole": 0.3,
+    "minimumPad": 0.6,
+    "minimumAnnularRing": 0.15
+  },
+  "platedDrillToolsMm": [
+    0.799998,
+    0.3
+  ],
   "fittedComponents": 49,
   "topComponents": 49,
   "bottomComponents": 0,
@@ -24,13 +33,13 @@
   "kicadSchematics": 5,
   "kicadModelFiles": 16,
   "drillHits": {
-    "drill-L1-L4.drl": 171,
+    "drill-L1-L4.drl": 180,
     "drill_npth.drl": 6
   },
   "localVerification": {
     "command": "bun run verify",
     "result": "passed",
-    "regressionTestsPassed": 27,
+    "regressionTestsPassed": 29,
     "gerberShorts": 0,
     "snapshots2d": "matched",
     "snapshots3d": "matched"

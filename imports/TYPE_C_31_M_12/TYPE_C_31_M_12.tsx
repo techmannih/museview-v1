@@ -3,15 +3,15 @@ import stepPath from "./TYPE_C_31_M_12.step"
 import type { ConnectorProps } from "@tscircuit/props"
 
 const pinLabels = {
-  pin1: ["EH2"],
-  pin2: ["EH1"],
-  pin3: ["EH4"],
-  pin4: ["EH3"],
+  pin1: ["S2","SHELL2","EH2"],
+  pin2: ["S1","SHELL1","EH1"],
+  pin3: ["S4","SHELL4","EH4"],
+  pin4: ["S3","SHELL3","EH3"],
   pin5: ["SBU2","B8"],
   pin6: ["CC1","A5"],
-  pin7: ["DN2","B7"],
+  pin7: ["DM2","DN2","B7"],
   pin8: ["DP1","A6"],
-  pin9: ["DN1","A7"],
+  pin9: ["DM1","DN1","A7"],
   pin10: ["DP2","B6"],
   pin11: ["SBU1","A8"],
   pin12: ["CC2","B5"],
@@ -24,6 +24,7 @@ const pinLabels = {
 export const TYPE_C_31_M_12 = (props: ConnectorProps) => {
   return (
     <connector
+      standard="usb_c"
       pinLabels={pinLabels}
       supplierPartNumbers={{
   "jlcpcb": [

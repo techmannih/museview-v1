@@ -4,6 +4,10 @@ import contract from "../hardware-contract.json" with { type:"json" }
 import { checkTvsSymbol } from "./check-schematic-render.mjs"
 export function checkContract(circuit) {
  const m=model(circuit), errors=[]
+ if(m.component("J1")?.standard!=="usb_c") errors.push("J1: use the standard USB-C schematic")
+ for(const [pin,number] of Object.entries({EH2:1,EH1:2,EH4:3,EH3:4,SBU2:5,CC1:6,DN2:7,DP1:8,DN1:9,DP2:10,SBU1:11,CC2:12,GND1:13,GND2:14,VBUS1:15,VBUS2:16})) {
+  if(m.port("J1",pin)?.pin_number!==number) errors.push(`J1.${pin}: C165948 requires physical pin ${number}`)
+ }
  for (const [polarity,pin] of [["cathode",1],["anode",2]]) if (m.port("D1",polarity)?.pin_number!==pin) errors.push(`D1.${polarity}: supplier C193402 requires pin ${pin}`)
  errors.push(...checkTvsSymbol(circuit))
  for (const [ref,pins] of Object.entries(contract.nets)) for (const [pin,net] of Object.entries(pins)) if (!m.on(ref,pin,net)) errors.push(`${ref}.${pin}: expected ${net}`)
