@@ -8,6 +8,7 @@
     "checks/**",
     "dist/**",
     "build/**",
+    "release/**",
     "*.log"
   ],
   "build": {

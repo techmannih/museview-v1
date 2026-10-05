@@ -7,7 +7,7 @@
 - `schematic-usb.svg`, `schematic-power.svg`, `schematic-mcu.svg`, `schematic-camera.svg`: four readable vector schematic sheets.
 - `pcb-top.svg`, `pcb-bottom.svg`, `pcb-top.png`: copper/placement views.
 - `museview-v1-kicad.zip`: PCB, project, root plus four schematic sheets and 16 model files. Extract the whole archive; retain its `3dmodels/` tree.
-- `museview-v1.step`, `museview-v1.glb`, `3d.png`: assembled mechanical model, portable textured 3D model and preview. Camera is an external assembly item.
+- `museview-v1-step.zip` (extract `museview-v1.step`), `museview-v1.glb`, `3d.png`: assembled mechanical model, portable textured 3D model and preview. Camera is an external assembly item. The STEP is zipped because the cloud importer exceeds its 32 MiB RPC limit when copying the loose assembled model; component STEP/OBJ files are retained for rendering.
 - `circuit.json`: exact verified tscircuit interchange/netlist/geometry; CAD URLs resolve relative to repository root.
 - `camera-supply.json`: divider identities, tolerances, calculated DC/temperature bounds and 1.24–1.36 V limits.
 - `verification.json`, `sha256.json`: verification evidence and artifact checksums.

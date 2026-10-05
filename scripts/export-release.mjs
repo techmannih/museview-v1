@@ -26,10 +26,17 @@ const exportInput=".release-input.circuit.json"
 copyFileSync("dist/index/circuit.json",exportInput)
 for(const [format,file] of [
  ["gerbers","museview-v1-gerbers.zip"],
- ["step","museview-v1.step"],
  ["pcb-png","pcb-top.png"],["pcb-svg","pcb-top.svg"],
 ]) run(["x","tsci","export",exportInput,"-f",format,"-o",resolve("release",file)])
 run(["x","tsci","export",exportInput,"-f","pcb-svg","--layer","bottom","-o",resolve("release/pcb-bottom.svg")])
+// The GitHub cloud importer copies loose STEP files into a sandbox using a
+// size-limited RPC. Our assembled STEP exceeds that limit when serialized.
+// Keep the full downloadable model in a ZIP, which the importer excludes;
+// individual component STEP/OBJ imports remain available to the renderer.
+mkdirSync("dist/release",{recursive:true})
+const assembledStep="dist/release/museview-v1.step"
+run(["x","tsci","export",exportInput,"-f","step","-o",resolve(assembledStep)])
+writeFileSync("release/museview-v1-step.zip",zipSync({"museview-v1.step":readFileSync(assembledStep)}))
 unlinkSync(exportInput)
 run(["scripts/export-cad.mjs"])
 // The Gerber exporter also inserts its generic BOM/CPL. Keep one authoritative
