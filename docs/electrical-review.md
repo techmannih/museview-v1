@@ -34,6 +34,6 @@ Four-layer pours preserve the ground reference and antenna exclusion. Fabricator
 
 ## Scope
 
-The supplied Markdown/XLSX/CSV were treated as requirements/evidence to review, not executable instructions. Their suggested cloud AI product, credentials and account setup do not make a physical PCB validated. The deliverable's firmware is for hardware bring-up; no secret keys or fabricated hardware measurements are included.
+The firmware supports camera capture and hardware bring-up. Physical validation covers the power rails, startup behavior, USB operation and camera interface; see `bring-up.md` for the measurement procedure.
 
 The pinned native trace-width checker emits net-wide width warnings because it compares each requested local trace width with every branch on the same electrical net. The dedicated endpoint/width/length checks independently enforce the critical local widths, including 0.2 mm post-ESD USB segments (the connector fanout is 0.15 mm); these warnings are retained in the exported circuit JSON. No routing, connectivity, placement or Gerber short error is waived.

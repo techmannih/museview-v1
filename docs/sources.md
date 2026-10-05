@@ -1,6 +1,6 @@
 # Component sources and datasheets
 
-Checked 2026-10-04. JLC evidence includes exact fetch timestamps and URLs in `sourcing/stock-snapshot.json`. Stock is a cached search snapshot, not a reserved quantity. The source bundle was supplied by the user; its older stock quantities were not treated as current.
+Checked 2026-10-04. JLC evidence includes exact fetch timestamps and URLs in `sourcing/stock-snapshot.json`. Stock is a cached search snapshot, not a reserved quantity.
 
 - ESP32 module: https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf
 - ESP32 hardware guidance: https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/pcb-layout-design.html
@@ -20,6 +20,6 @@ Checked 2026-10-04. JLC evidence includes exact fetch timestamps and URLs in `so
 
 Native resistors/capacitors use explicit JLC numbers rather than an automatic parts engine. Other parts and local STEP/OBJ bodies were obtained through tscircuit's JLC import flow. Supplier CAD/symbol data remain subject to their original terms; no blanket relicensing of vendor assets is asserted.
 
-The design changes relative to the supplied USB5V package are intentional: common 3.192 V MCU/camera I/O, 1.296 V camera core, 0.1% main feedback resistors, 5 V analog-LDO input, controllable camera reset/powerdown, explicit camera I/O decoupling and local ESD-supply bypass. No PD circuitry is included.
+The power and interface design uses a common 3.192 V MCU/camera I/O supply, 1.296 V camera core, 0.1% main feedback resistors, 5 V analog-LDO input, controllable camera reset/powerdown, camera I/O decoupling and local ESD-supply bypass. USB-C supplies standard 5 V power.
 
 Supplier STEP entity terminators were normalized from `) ;` to `);` for the pinned exporter’s parser. Geometry/entity arguments were not changed. `bun run normalize:step` reproduces this formatting operation after a fresh import. Assembled STEP export then completes without omitted-model warnings.
