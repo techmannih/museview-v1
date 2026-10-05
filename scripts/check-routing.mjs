@@ -8,7 +8,7 @@ export function checkRouting(circuit) {
  if(traces.length<50) errors.push("Incomplete PCB: too few routed copper traces")
  const b=m.of("pcb_board")[0]
  if(b?.num_layers!==4 && b?.layers?.length!==4) errors.push("Expected four copper layers")
- if(b?.min_via_hole_diameter!==0.3 || b?.min_via_pad_diameter!==0.6) errors.push("Board via rules must specify 0.30 mm drill / 0.60 mm pad")
+ if(b?.min_via_hole_diameter!==0.3 || b?.min_via_pad_diameter!==0.45) errors.push("Board via minima must specify 0.30 mm hole / 0.45 mm pad")
  for(const via of m.of("pcb_via")) {
   if(via.hole_diameter<0.3-1e-7) errors.push(`${via.pcb_via_id}: via drill below 0.30 mm`)
   if(via.outer_diameter<0.6-1e-7 || (via.outer_diameter-via.hole_diameter)/2<0.15-1e-7) errors.push(`${via.pcb_via_id}: via pad must retain at least 0.15 mm annular ring`)

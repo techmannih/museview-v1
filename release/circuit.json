@@ -23369,7 +23369,7 @@
     "solder_mask_color": "#181e22",
     "min_trace_width": 0.15,
     "min_via_hole_diameter": 0.3,
-    "min_via_pad_diameter": 0.6,
+    "min_via_pad_diameter": 0.45,
     "min_via_hole_edge_to_via_hole_edge_clearance": 0.1,
     "min_via_edge_to_pad_edge_clearance": 0.15,
     "min_trace_to_hole_edge_clearance": 0.23,
@@ -100607,6 +100607,6 @@
   },
   {
     "type": "source_project_metadata",
-    "source_filesystem_md5_hash": "a2859495ffade71c041c20cb469a3628"
+    "source_filesystem_md5_hash": "fec49d0d2bd2e48e7895694c3de96c45"
   }
 ]

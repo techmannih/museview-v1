@@ -8,7 +8,10 @@ parser.add_argument("--geometry",type=Path,default=R/"routing/geometry.json")
 parser.add_argument("--output",type=Path,required=True)
 args=parser.parse_args()
 I=json.load(open(args.input)); C=json.load(open(args.geometry))
-VIA_PAD=float(I['minViaPadDiameter']); VIA_HOLE=float(I['minViaHoleDiameter']); VIA_RADIUS=VIA_PAD/2
+VIA_HOLE=float(I['minViaHoleDiameter'])
+# The board's minimum pad is a floor, not the requested actual via diameter.
+# Retain 0.15 mm annular copper around the 0.30 mm through drill.
+VIA_PAD=max(float(I['minViaPadDiameter']),VIA_HOLE+.3); VIA_RADIUS=VIA_PAD/2
 if VIA_PAD-VIA_HOLE < .3-1e-9: raise ValueError('Vias require at least 0.15 mm annular ring')
 STEP=.05; X0=-25.;Y0=-17.5;NX=1001;NY=701;N=NX*NY
 xs=X0+np.arange(NX)*STEP;ys=Y0+np.arange(NY)*STEP

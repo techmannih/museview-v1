@@ -9,8 +9,8 @@ import {routeFingerprint} from "./route-fingerprint"
 // obstacle shapes or weakening the fingerprint for any other input.
 // Re-capture and review compatibility if either runtime or routing changes.
 const reviewedRendererInput = {
-  referenceFingerprint: "2143fa89-8cf8fd75-1060753",
-  boundingRectangleFingerprint: "a0bc121d-ba645161-1060753",
+  referenceFingerprint: "c6bc715a-6984f1ee-1060756",
+  boundingRectangleFingerprint: "904ff28e-139073e2-1060756",
 }
 
 /** Replay this board's independently generated, locally corrected routing.

@@ -20,7 +20,7 @@ function hostedInput() {
 it("replays identical reviewed copper for the two captured renderer inputs",async()=>{
   expect(routeFingerprint(input)).toBe(saved.fingerprint)
   const hosted=hostedInput()
-  expect(routeFingerprint(hosted)).toBe("a0bc121d-ba645161-1060753")
+  expect(routeFingerprint(hosted)).toBe("904ff28e-139073e2-1060756")
   for(const capture of [input,hosted]) {
     const router=await boardRouter(capture)
     let traces

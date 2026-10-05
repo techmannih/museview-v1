@@ -23,7 +23,7 @@ export const MuseViewV1 = () => (
   <board name="MUSEVIEW_V1" title="MuseView V1 · USB-C 5 V camera"
     width="50mm" height="35mm" borderRadius="2.5mm" layers={4} thickness="1.6mm"
     solderMaskColor="#181e22" minTraceWidth="0.15mm" defaultTraceWidth="0.2mm"
-    minViaHoleDiameter="0.3mm" minViaPadDiameter="0.6mm" minViaEdgeToPadEdgeClearance="0.15mm" minBoardEdgeClearance="0.25mm" minTraceToHoleEdgeClearance="0.23mm"
+    minViaHoleDiameter={0.3} minViaPadDiameter={0.45} minViaEdgeToPadEdgeClearance="0.15mm" minBoardEdgeClearance="0.25mm" minTraceToHoleEdgeClearance="0.23mm"
     pcbStyle={{ viaPadDiameter: 0.6, viaHoleDiameter: 0.3 }}
     autorouterVersion="beta_pipeline9" autorouter={{algorithmFn:boardRouter,local:true,allowViaInPad:false,traceClearance:0.18}} autorouterEffortLevel="5x"
     schAutoLayoutEnabled schTraceAutoLabelEnabled schMaxTraceDistance="1.2mm">
