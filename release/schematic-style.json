@@ -1,0 +1,7 @@
+{
+  "analyzer": "@tscircuit/circuit-json-schematic-placement-analysis",
+  "analyzerVersion": "0.0.39",
+  "sheetsChecked": 4,
+  "issueCount": 0,
+  "issues": []
+}

@@ -21,7 +21,7 @@
     "check:routing": "bun scripts/check-routing.mjs",
     "export:assembly": "bun scripts/export-assembly.mjs",
     "render:sheets": "bun scripts/render-sheets.mjs",
-    "verify": "bun run typecheck && bun run check:firmware-pins && bunx tsci check netlist && bunx tsci check schematic-placement && bunx tsci check placement && bunx tsci check routing-difficulty && bun run build && bun run check:contract && bun run check:camera-supply && bun run check:routing && bun run check:decoupling && bun run check:assembly && bun test scripts/*.test.mjs && bunx tsci check shorts dist/index/circuit.json",
+    "verify": "bun run typecheck && bun run check:firmware-pins && bunx tsci check netlist && bunx tsci check schematic-placement && bunx tsci check placement && bunx tsci check routing-difficulty && bun run build && bun run check:schematic-style && bun run check:contract && bun run check:camera-supply && bun run check:routing && bun run check:decoupling && bun run check:assembly && bun test scripts/*.test.mjs && bunx tsci check shorts dist/index/circuit.json",
     "check": "bun run verify",
     "generate:firmware-pins": "bun scripts/generate-firmware-pins.mjs",
     "check:firmware-pins": "bun scripts/generate-firmware-pins.mjs --check",
@@ -29,12 +29,22 @@
     "normalize:step": "bun scripts/normalize-step.mjs",
     "regenerate:routing": "bun scripts/regenerate-routing.mjs",
     "capture:routing": "bun scripts/capture-routing-input.mjs",
-    "check:camera-supply": "bun scripts/check-camera-supply.mjs"
+    "check:camera-supply": "bun scripts/check-camera-supply.mjs",
+    "check:schematic-style": "bun scripts/check-schematic-style.mjs"
   },
   "devDependencies": {
+    "@tscircuit/circuit-json-schematic-placement-analysis": "https://jscdn.tscircuit.com/@tscircuit/circuit-json-schematic-placement-analysis/0.0.39.tgz",
+    "@tscircuit/circuit-json-util": "0.0.116",
+    "@tscircuit/math-utils": "0.0.36",
+    "@tscircuit/solver-utils": "0.0.16",
     "@types/react": "19.2.18",
+    "calculate-elbow": "0.0.12",
+    "circuit-json-to-connectivity-map": "0.0.32",
     "circuit-json-to-kicad": "0.0.230",
+    "circuit-to-svg": "0.0.433",
+    "graphics-debug": "0.0.95",
     "polygon-clipping": "0.15.7",
+    "schematic-symbols": "0.0.248",
     "tscircuit": "0.0.2687",
     "typescript": "5.9.3"
   }

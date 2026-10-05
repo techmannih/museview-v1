@@ -6,7 +6,7 @@ export function checkContract(circuit) {
  for (const [polarity,pin] of [["cathode",1],["anode",2]]) if (m.port("D1",polarity)?.pin_number!==pin) errors.push(`D1.${polarity}: supplier C193402 requires pin ${pin}`)
  const diodeSymbol=m.of("schematic_component").find(e=>e.source_component_id===m.component("D1")?.source_component_id)
  const diodeSchPort=polarity=>m.of("schematic_port").find(e=>e.source_port_id===m.port("D1",polarity)?.source_port_id)
- if (diodeSymbol?.symbol_name!=="avalanche_diode_sm_right" || !(diodeSchPort("cathode")?.center.x>diodeSchPort("anode")?.center.x)) errors.push("D1: schematic cathode must meet the right-hand bar of the reviewed avalanche symbol")
+ if (diodeSymbol?.symbol_name!=="avalanche_diode_sm_up" || !(diodeSchPort("cathode")?.center.y>diodeSchPort("anode")?.center.y)) errors.push("D1: schematic cathode must meet the upper bar of the reviewed avalanche symbol")
  for (const [ref,pins] of Object.entries(contract.nets)) for (const [pin,net] of Object.entries(pins)) if (!m.on(ref,pin,net)) errors.push(`${ref}.${pin}: expected ${net}`)
  for (const [ref,value] of Object.entries(contract.resistors)) if (m.component(ref)?.resistance !== value) errors.push(`${ref}: expected ${value} ohms`)
  for (const [ref,lcsc] of Object.entries(contract.fixedParts)) if (!m.component(ref)?.supplier_part_numbers?.jlcpcb?.includes(lcsc)) errors.push(`${ref}: wrong JLC part, expected ${lcsc}`)

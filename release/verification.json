@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-04T16:50:56.698Z",
-  "circuitSha256": "42616da80cd5e2cd87806c2c498e7fb313b42f9c3ce7891111ac77d4106c864d",
+  "generatedAt": "2026-10-05T01:28:43.405Z",
+  "circuitSha256": "ebe549541c1538b3582e2e45a114533c887ac1a12320cf17753a276e920302da",
   "routingFingerprint": "23261100-7517b7e4-1060840",
   "tscircuitVersion": "0.0.2687",
   "circuitErrors": 0,
@@ -25,7 +25,7 @@
   "localVerification": {
     "command": "bun run verify",
     "result": "passed",
-    "regressionTestsPassed": 19,
+    "regressionTestsPassed": 21,
     "gerberShorts": 0,
     "snapshots2d": "matched",
     "snapshots3d": "matched"
@@ -37,6 +37,13 @@
       "min": 1.2483674206515427,
       "max": 1.3449476323309808
     }
+  },
+  "schematicStyle": {
+    "analyzer": "@tscircuit/circuit-json-schematic-placement-analysis",
+    "analyzerVersion": "0.0.39",
+    "sheetsChecked": 4,
+    "issueCount": 0,
+    "issues": []
   },
   "orderStatus": "NOT READY",
   "firstPrototypeBlockers": [

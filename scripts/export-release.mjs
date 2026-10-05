@@ -5,6 +5,7 @@ import {createHash} from "node:crypto"
 import {unzipSync,zipSync,strToU8} from "fflate"
 import {checkAssembly} from "./check-assembly.mjs"
 import {cameraSupplyReport} from "./check-camera-supply.mjs"
+import {schematicStyleReport} from "./check-schematic-style.mjs"
 
 // Run verify first. This exports the exact verified circuit without rerouting.
 const run=(args)=>{const r=spawnSync("bun",args,{stdio:"inherit"});if(r.status!==0)throw Error(`Failed: bun ${args.join(" ")}`)}
@@ -13,7 +14,10 @@ const assemblyErrors=checkAssembly(circuit)
 if(assemblyErrors.length) throw Error(assemblyErrors.join("\n"))
 const cameraSupply=cameraSupplyReport(circuit)
 if(cameraSupply.errors.length) throw Error(cameraSupply.errors.join("\n"))
+const schematicStyle=schematicStyleReport(circuit)
+if(schematicStyle.issueCount) throw Error(`Schematic Style Analysis: ${schematicStyle.issueCount} issues`)
 mkdirSync("release",{recursive:true})
+writeFileSync("release/schematic-style.json",JSON.stringify(schematicStyle,null,2)+"\n")
 writeFileSync("release/camera-supply.json",JSON.stringify(cameraSupply,null,2)+"\n")
 run(["run","export:assembly"])
 run(["run","render:sheets"])

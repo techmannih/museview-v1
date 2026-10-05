@@ -117,26 +117,26 @@ export const MuseViewV1 = () => (
       schX={4} schY={0} schSheetName="usb" schSectionName="usb-data"
       connections={{pin1:"net.USB_DP_ESD",pin2:"net.USB_DP_MCU"}} />
     <BSMD0603_075_6V name="F1" displayName="F1 · 750 mA PTC" pcbX={-17} pcbY={10.3} pcbRotation={0}
-      schX={-10} schY={7.5} schSheetName="usb" schSectionName="usb-port"
+      schX={-10} schY={7.5} schRotation={-90} schSheetName="usb" schSectionName="usb-port"
       connections={{pin1:"net.USB_RAW_5V",pin2:"net.VBUS_5V"}} />
     <SMF5_0A name="D1" displayName="D1 · SMF5.0A" pcbX={-21} pcbY={9.7} pcbRotation={0}
-      schX={-3} schY={7.5} schSheetName="usb" schSectionName="usb-port"
+      schX={-3} schY={7.5} schRotation={90} schSheetName="usb" schSectionName="usb-port"
       connections={{cathode:"net.VBUS_5V",anode:"net.GND"}} />
 
     <TLV62569DBVR name="U3" pcbX={-11} pcbY={-1.5} layer="top" pcbRotation={90}
-      schX={-7} schY={5} schWidth={1.7} schHeight={2} schSheetName="power" schSectionName="buck"
+      schX={-7} schY={5} schWidth={1.65} schHeight={0.6} schSheetName="power" schSectionName="buck"
       schPinArrangement={{leftSide:{pins:["VIN","EN"],direction:"top-to-bottom"},rightSide:{pins:["SW","FB"],direction:"top-to-bottom"},bottomSide:{pins:["GND"],direction:"left-to-right"}}} connections={{VIN:"net.VBUS_5V",EN:"net.VBUS_5V",GND:"net.GND",SW:"net.BUCK_SW",FB:"net.BUCK_FB"}} />
     <WPN4020H2R2MT name="L1" pcbX={-11.95} pcbY={4.35} pcbRotation={90}
       schX={-2} schY={6} schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.BUCK_SW",pin2:"net.VDD_IO"}} />
     <C name="C2" part="c4u7" pcbX={-11.95} pcbY={-9.3} pcbRotation={270}
-      schX={-12} schY={4} schOrientation="vertical" schSheetName="power" schSectionName="buck"
+      schX={-14.4} schY={0} schOrientation="vertical" schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.VBUS_5V",pin2:"net.GND"}} />
     <C name="C3" part="c100n" pcbX={-11.95} pcbY={-5.3} pcbRotation={270}
       schX={-12} schY={0} schOrientation="vertical" schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.VBUS_5V",pin2:"net.GND"}} />
     <C name="C4" part="c10u" pcbX={-11.7} pcbY={9.1} pcbRotation={90}
-      schX={6} schY={5} schOrientation="vertical" schSheetName="power" schSectionName="buck"
+      schX={6} schY={1} schOrientation="vertical" schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.VDD_IO",pin2:"net.GND"}} />
     <R name="R6" part="r432k" pcbX={-7.8} pcbY={-3} pcbRotation={90}
       schX={0} schY={2.5} schOrientation="vertical" schSheetName="power" schSectionName="buck"
@@ -152,25 +152,25 @@ export const MuseViewV1 = () => (
       schX={-8} schY={-6} schWidth={1.8} schHeight={1.5} schSheetName="power" schSectionName="camera-regulators"
       schPinArrangement={{leftSide:{pins:["VIN"],direction:"top-to-bottom"},rightSide:{pins:["VOUT"],direction:"top-to-bottom"},bottomSide:{pins:["VSS"],direction:"left-to-right"}}} connections={{VSS:"net.GND",VIN:"net.VBUS_5V",VOUT:"net.CAM_2V8"}} />
     <C name="C6" part="c1u" pcbX={-23.4} pcbY={-6.5} pcbRotation={180}
-      schX={-12} schY={-6} schOrientation="vertical" schSheetName="power" schSectionName="camera-regulators"
+      schX={-9.6} schY={0} schOrientation="vertical" schSheetName="power" schSectionName="camera-regulators"
       connections={{pin1:"net.VBUS_5V",pin2:"net.GND"}} />
     <C name="C7" part="c1u" pcbX={-16.6} pcbY={-6.5} pcbRotation={0}
       schX={-3} schY={-6} schOrientation="vertical" schSheetName="power" schSectionName="camera-regulators"
       connections={{pin1:"net.CAM_2V8",pin2:"net.GND"}} />
     <SGM2059_ADJXN5G_TR name="U5" pcbX={-18} pcbY={-10.7} layer="top" pcbRotation={0}
-      schX={7} schY={-6} schWidth={1.7} schHeight={2} schSheetName="power" schSectionName="camera-regulators"
+      schX={7} schY={-3} schWidth={1.65} schHeight={0.6} schSheetName="power" schSectionName="camera-regulators"
       schPinArrangement={{leftSide:{pins:["IN","EN"],direction:"top-to-bottom"},rightSide:{pins:["OUT","FB"],direction:"top-to-bottom"},bottomSide:{pins:["GND"],direction:"left-to-right"}}} connections={{IN:"net.VDD_IO",EN:"net.VDD_IO",GND:"net.GND",OUT:"net.CAM_1V3",FB:"net.CAM_FB"}} />
     <C name="C8" part="c1u" pcbX={-14.4} pcbY={-10.7} pcbRotation={0}
-      schX={3} schY={-6} schOrientation="vertical" schSheetName="power" schSectionName="camera-regulators"
+      schX={4} schY={-2} schOrientation="vertical" schSheetName="power" schSectionName="camera-regulators"
       connections={{pin1:"net.VDD_IO",pin2:"net.GND"}} />
     <C name="C9" part="c1u" pcbX={-18.6} pcbY={-14.2} pcbRotation={270}
-      schX={12} schY={-6} schOrientation="vertical" schSheetName="power" schSectionName="camera-regulators"
+      schX={12} schY={-3} schOrientation="vertical" schSheetName="power" schSectionName="camera-regulators"
       connections={{pin1:"net.CAM_1V3",pin2:"net.GND"}} />
     <R name="R8" part="r25k5" pcbX={-14.8} pcbY={-8.2} pcbRotation={0}
-      schX={7} schY={-10.5} schSheetName="power" schSectionName="camera-regulators"
+      schX={7} schY={-7} schSheetName="power" schSectionName="camera-regulators"
       schOrientation="vertical" connections={{pin1:"net.CAM_1V3",pin2:"net.CAM_FB"}} />
     <R name="R9" part="r40k2" pcbX={-22.2} pcbY={-9.5} pcbRotation={180}
-      schX={12} schY={-10.5} schSheetName="power" schSectionName="camera-regulators"
+      schX={12} schY={-7} schSheetName="power" schSectionName="camera-regulators"
       schOrientation="vertical" connections={{pin1:"net.CAM_FB",pin2:"net.GND"}} />
 
     <ESP32_S3_WROOM_1_N16R8 name="U1" layer="top" pcbX={4.5} pcbY={0.5} pcbRotation={0}

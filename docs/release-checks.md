@@ -2,7 +2,9 @@
 
 Status: **NOT READY** for the first prototype. Only the two pre-order items below remain open; post-assembly measurements are listed separately. The machine-readable [`verification.json`](../release/verification.json) records the exact circuit hash and check outcomes. Manufacturing exports are versioned in `release/`, with SHA-256 hashes.
 
-Local verification completed on 2026-10-04: source netlist, schematic placement, PCB placement, routing difficulty, board build, electrical contract, actual copper continuity, local bypasses, exact M0031 supply bounds, assembly/stock checks and separate Gerber short analysis passed. Nineteen regression tests passed, including supplier TVS pin polarity and the two captured renderer inputs. Native 2D and 3D snapshot regeneration/compare runs matched. The GitHub workflow repeats the circuit checks and 2D snapshots and compiles the matching ESP-IDF 5.4.2 firmware.
+Local verification completed on 2026-10-05: source netlist, schematic placement, strict all-sheet Style Analysis, PCB placement, routing difficulty, board build, electrical contract, actual copper continuity, local bypasses, exact M0031 supply bounds, assembly/stock checks and separate Gerber short analysis passed. Twenty-one regression tests passed, including supplier TVS pin polarity, the two captured renderer inputs and rejection of schematic style regressions. Native 2D and 3D snapshot regeneration/compare runs matched. The GitHub workflow repeats the circuit checks and 2D snapshots and compiles the matching ESP-IDF 5.4.2 firmware.
+
+The eight reported schematic style issues were corrected by tightening U3/U5 symbol boxes, grouping same-rail bypass symbols and drawing F1/D1 vertically with their input/power pins up. D1’s cathode remains the upper bar of the reviewed small avalanche symbol. These are schematic-only edits: electrical records, PCB geometry and CAD records match the preceding release; the routing fingerprint is unchanged. The pinned analyzer version and all-sheet results are recorded in `release/schematic-style.json`. No issue filters or disabled checks are used.
 
 Exact trace/via counts are recorded in `verification.json`. There are zero build/routing errors and zero detected Gerber shorts. The retained native width warnings are explained in `electrical-review.md`; critical local widths are checked against their exact endpoints. All 28 selected assembly part numbers had positive JLCSearch stock in the dated evidence. This is availability evidence, not a PCBA order acceptance.
 
@@ -13,7 +15,7 @@ The handoff exporter verifies five KiCad schematic files (root plus four childre
 | Electrical contract | `bun run check:contract`, matches generated netlist |
 | Stock | `sourcing/bom-with-stock.csv`, timestamped JLCSearch URLs |
 | Type and source netlist | `bun run typecheck`, `tsci check netlist` |
-| Placement and schematic | Native checks plus reviewed four-sheet renders |
+| Placement and schematic | Native checks, strict `check:schematic-style` with zero issues, plus reviewed four-sheet renders |
 | PCB | Zero build errors, connectivity checks, zero Gerber shorts |
 | Bypass loops | `bun run check:decoupling`, actual local copper length |
 | Assembly | Exact part identities, all fitted parts top, FPC pitch, JLC placement review |
