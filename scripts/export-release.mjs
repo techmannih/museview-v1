@@ -1,3 +1,4 @@
+import {checkSchematicRender} from "./check-schematic-render.mjs"
 import {mkdirSync,readFileSync,writeFileSync,copyFileSync,readdirSync,unlinkSync} from "node:fs"
 import {resolve} from "node:path"
 import {spawnSync} from "node:child_process"
@@ -15,6 +16,8 @@ const assemblyErrors=checkAssembly(circuit)
 if(assemblyErrors.length) throw Error(assemblyErrors.join("\n"))
 const cameraSupply=cameraSupplyReport(circuit)
 if(cameraSupply.errors.length) throw Error(cameraSupply.errors.join("\n"))
+const renderErrors=checkSchematicRender(circuit)
+if(renderErrors.length)throw Error(renderErrors.join("\n"))
 const schematicStyle=schematicStyleReport(circuit)
 if(schematicStyle.issueCount) throw Error(`Schematic Style Analysis: ${schematicStyle.issueCount} issues`)
 mkdirSync("release",{recursive:true})

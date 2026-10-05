@@ -1,6 +1,7 @@
 import objPath from "./SMF5_0A.obj"
 import stepPath from "./SMF5_0A.step"
 import type { DiodeProps } from "@tscircuit/props"
+import { TVSSymbol } from "./TVSSymbol"
 
 const pinLabels = {
   pin1: ["cathode", "C", "neg"],
@@ -11,9 +12,7 @@ export const SMF5_0A = (props: DiodeProps) => {
   return (
     <diode
       variant="avalanche"
-      // The pinned full-size avalanche glyph reverses pos/neg aliases. Its
-      // native small glyph has correct semantic anode/cathode port labels.
-      schSize="sm"
+      symbol={<TVSSymbol />}
       pinLabels={pinLabels}
       supplierPartNumbers={{
   "jlcpcb": [

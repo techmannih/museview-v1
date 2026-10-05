@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-05T02:05:28.261Z",
-  "circuitSha256": "7bc291740e37ca4a280be9031bc62bd5df7fd015a36a79f4fd6f9684ccdd7156",
+  "generatedAt": "2026-10-05T05:04:03.702Z",
+  "circuitSha256": "df6140660b77baa65b16421a5645c88cfcb1626bb538b1c70631a44d645a835f",
   "routingFingerprint": "23261100-7517b7e4-1060840",
   "tscircuitVersion": "0.0.2687",
   "circuitErrors": 0,
@@ -30,7 +30,7 @@
   "localVerification": {
     "command": "bun run verify",
     "result": "passed",
-    "regressionTestsPassed": 24,
+    "regressionTestsPassed": 27,
     "gerberShorts": 0,
     "snapshots2d": "matched",
     "snapshots3d": "matched"

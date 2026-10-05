@@ -119,7 +119,7 @@ export const MuseViewV1 = () => (
       schX={-10} schY={7.5} schRotation={-90} schSheetName="usb" schSectionName="usb-port"
       connections={{pin1:"net.USB_RAW_5V",pin2:"net.VBUS_5V"}} />
     <SMF5_0A name="D1" displayName="D1 · SMF5.0A" pcbX={-21} pcbY={9.7} pcbRotation={0}
-      schX={-3} schY={7.5} schRotation={90} schSheetName="usb" schSectionName="usb-port"
+      schX={-3} schY={7.5} schRotation={0} schSheetName="usb" schSectionName="usb-port"
       connections={{cathode:"net.VBUS_5V",anode:"net.GND"}} />
 
     <TLV62569DBVR name="U3" pcbX={-11} pcbY={-1.5} layer="top" pcbRotation={90}
