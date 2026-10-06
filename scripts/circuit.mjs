@@ -3,7 +3,10 @@ export const readCircuit = (path = process.argv[2] ?? "dist/index/circuit.json")
 export function model(circuit) {
   const of = type => circuit.filter(e => e.type === type)
   const component = ref => of("source_component").find(e => e.name === ref)
-  const port = (ref,pin) => of("source_port").find(e => e.source_component_id === component(ref)?.source_component_id && (e.port_hints?.includes(String(pin)) || e.pin_number === pin))
+  const port = (ref,pin) => {
+    const componentId = component(ref)?.source_component_id
+    return of("source_port").find(e => e.source_component_id === componentId && (e.port_hints?.includes(String(pin)) || e.pin_number === pin))
+  }
   // Recompute connectivity from the source graph; do not trust cached net keys.
   const parent = new Map()
   const find = x => { if (!parent.has(x)) parent.set(x,x); if (parent.get(x)!==x) parent.set(x,find(parent.get(x))); return parent.get(x) }

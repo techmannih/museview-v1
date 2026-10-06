@@ -29,7 +29,10 @@ export function checkDecoupling(circuit) {
  check("BUCK_SWITCH",3);check("BUCK_OUTPUT",3)
  // Connector-local HF bypasses: check the actual endpoint pair, not every
  // distribution branch on the rail (the upstream checker groups by net).
- const pcbPort=(ref,pin)=>m.of("pcb_port").find(p=>p.source_port_id===m.port(ref,pin)?.source_port_id)
+ const pcbPort=(ref,pin)=>{
+  const sourcePortId=m.port(ref,pin)?.source_port_id
+  return m.of("pcb_port").find(p=>p.source_port_id===sourcePortId)
+ }
  for(const [cap,pin,maxVias] of [["C13","pin4",0],["C14","pin10",0]]) {
   const a=pcbPort(cap,"pin1"),b=pcbPort("J2",pin)
   const routes=m.of("pcb_trace").filter(t=>{
