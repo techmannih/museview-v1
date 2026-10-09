@@ -1,0 +1,14 @@
+{
+  "purpose": "One existing public photograph replayed to exercise transport and UI. Not a print sequence, not MuseView footage, not an optical validation.",
+  "images": [{
+    "file": "reference-benchy.jpg",
+    "label": "3DBenchy reference comparison photograph (CC BY 2.0); repeated replay, not a live print",
+    "author": "3DBenchy",
+    "source": "https://commons.wikimedia.org/wiki/File:-3DBenchy_boat_print_PLA_fixed_printer_(17769501683).jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/1/1c/-3DBenchy_boat_print_PLA_fixed_printer_%2817769501683%29.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "modifications": "None. Original JPEG bytes retained.",
+    "retrievedAt": "2026-10-09"
+  }]
+}

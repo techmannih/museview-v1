@@ -1,0 +1,2 @@
+# Compile-only CI configuration; no real credentials.
+CONFIG_MUSEVIEW_WIFI_STA=n

@@ -1,0 +1,11 @@
+{
+  "name": "museview-monitor-prototype",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bun server.mjs",
+    "test": "bun test tests/",
+    "validate": "bun validate.mjs"
+  },
+  "dependencies": { "jpeg-js": "0.4.4" }
+}

@@ -1,0 +1,145 @@
+{
+  "startedAt": "2026-10-09T09:40:38.421Z",
+  "finishedAt": "2026-10-09T09:40:40.046Z",
+  "hardwareBaselineCommit": "d8bd91ff042b64b5c5cbeeaea4a164596c285392",
+  "environment": {
+    "runtime": "Bun 1.3.14",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "command": "bun monitor/validate.mjs",
+  "verdict": "SOFTWARE CHECKS PASS",
+  "automatedTests": {
+    "exitCode": 0,
+    "passed": 21,
+    "failed": 0,
+    "log": "validation-tests.log"
+  },
+  "scenarios": {
+    "scheduledReplay": {
+      "passed": true,
+      "retainedFrames": 10,
+      "intervalMs": 60,
+      "note": "Accelerated local reference replay. No inference about camera frame rate or board timing."
+    },
+    "offlinePreservesLastImage": {
+      "passed": true
+    },
+    "recoveryWithoutSessionRestart": {
+      "passed": true
+    },
+    "malformedImageRejected": {
+      "passed": true
+    }
+  },
+  "evidenceScope": "Software state/HTTP regression tests and licensed single-photo replay only. Photo was not captured by MuseView. No physical scene or user task was tested.",
+  "hardwareOperation": "NOT RUN: user confirmed no camera board or printer available",
+  "customerNeed": "NOT VALIDATED: no user interviews or comparative task observations",
+  "automaticFailureDetection": "NOT IMPLEMENTED; visual inspection only",
+  "manufacturingStatus": "NOT READY: existing camera mating/pin mapping and JLC placement approval remain open",
+  "sourceHashes": {
+    "core.mjs": "489af193dfc7b2c2719cbdbe099c904068e46a62c1a7d41dd466c5b6d44c8f6f",
+    "server.mjs": "a7e7f83e83d8cac101369f62f5eeb227230fc20ab9e3ce1f0588a9aa0e17c4a7",
+    "validate.mjs": "b58a70f79a22a9a663f8667d3d194c4c7240379bd2338e0b55e58e9d0151f182",
+    "package.json": "153755bb5ab086e2c44b8424df4cbc75db7e0b3103600bcde1684faf79a00806",
+    "bun.lock": "908b160d5186b9e792e65498c417e96463615cc34e351798ed4b83142509f8d1",
+    "public/index.html": "ac6d482a753be958937c066f0d0b2c9baa7d2cb1d1d6b56c3193da637daa8f5d",
+    "public/app.js": "194f794a21cf257b03fa5ca9bd72d1b6df925e176d6ad17ecd21d78ee695e526",
+    "public/styles.css": "4c3abec47e1bf6a0e3a454ecd770f688d8b38b99a31bb450a70ceac35f894c5a",
+    "tests/monitor.test.mjs": "3f49e08f1fb8859eaa4278bc3b49a86b6a641b1d2642f79bad0eb9881e8650dd",
+    "fixtures/reference-benchy.jpg": "7f1a922ca79a190a0a60f94f101c6dc2fa4be346ef709d9be0dbd1eea7af3e05",
+    "fixtures/references.json": "850ab6bff9642d38002a6f7ea55f86e2c5f11f4f2d5c67a1001bd68c2869e253"
+  },
+  "replayEvents": [
+    {
+      "at": "2026-10-09T09:40:40.043Z",
+      "kind": "error",
+      "message": "Camera did not return a complete JPEG."
+    },
+    {
+      "at": "2026-10-09T09:40:40.043Z",
+      "kind": "demo",
+      "message": "Injected transport condition: malformed. This does not describe a printer fault."
+    },
+    {
+      "at": "2026-10-09T09:40:40.043Z",
+      "kind": "recovered",
+      "message": "Reference frame replayed (1280 × 720)."
+    },
+    {
+      "at": "2026-10-09T09:40:40.021Z",
+      "kind": "demo",
+      "message": "Injected transport condition: normal. This does not describe a printer fault."
+    },
+    {
+      "at": "2026-10-09T09:40:40.021Z",
+      "kind": "offline",
+      "message": "Injected offline condition (demo only)."
+    },
+    {
+      "at": "2026-10-09T09:40:40.021Z",
+      "kind": "demo",
+      "message": "Injected transport condition: offline. This does not describe a printer fault."
+    },
+    {
+      "at": "2026-10-09T09:40:40.021Z",
+      "kind": "session",
+      "message": "Automatic capture paused. Existing images will age."
+    },
+    {
+      "at": "2026-10-09T09:40:40.021Z",
+      "kind": "capture",
+      "message": "Reference frame replayed (1280 × 720)."
+    },
+    {
+      "at": "2026-10-09T09:40:39.930Z",
+      "kind": "capture",
+      "message": "Reference frame replayed (1280 × 720)."
+    },
+    {
+      "at": "2026-10-09T09:40:39.839Z",
+      "kind": "capture",
+      "message": "Reference frame replayed (1280 × 720)."
+    },
+    {
+      "at": "2026-10-09T09:40:39.750Z",
+      "kind": "capture",
+      "message": "Reference frame replayed (1280 × 720)."
+    },
+    {
+      "at": "2026-10-09T09:40:39.664Z",
+      "kind": "capture",
+      "message": "Reference frame replayed (1280 × 720)."
+    },
+    {
+      "at": "2026-10-09T09:40:39.581Z",
+      "kind": "capture",
+      "message": "Reference frame replayed (1280 × 720)."
+    },
+    {
+      "at": "2026-10-09T09:40:39.500Z",
+      "kind": "capture",
+      "message": "Reference frame replayed (1280 × 720)."
+    },
+    {
+      "at": "2026-10-09T09:40:39.411Z",
+      "kind": "capture",
+      "message": "Reference frame replayed (1280 × 720)."
+    },
+    {
+      "at": "2026-10-09T09:40:39.326Z",
+      "kind": "capture",
+      "message": "Reference frame replayed (1280 × 720)."
+    },
+    {
+      "at": "2026-10-09T09:40:39.242Z",
+      "kind": "capture",
+      "message": "Reference frame replayed (1280 × 720)."
+    },
+    {
+      "at": "2026-10-09T09:40:39.138Z",
+      "kind": "session",
+      "message": "Reference replay session started. Frames are kept in bounded memory."
+    }
+  ]
+}

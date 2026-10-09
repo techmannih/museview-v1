@@ -1,5 +1,25 @@
 menu "MuseView bring-up"
+config MUSEVIEW_WIFI_STA
+    bool "Join an existing Wi-Fi LAN instead of starting a bring-up AP"
+    default n
+    help
+        Enable for the fixed-camera collector. Only a trusted local WPA2/WPA3
+        network is supported. Configure the SSID, password and bearer token
+        below. There is no automatic switch to an unauthenticated fallback AP.
+config MUSEVIEW_STA_SSID
+    string "LAN Wi-Fi SSID"
+    default ""
+config MUSEVIEW_STA_PASSWORD
+    string "LAN Wi-Fi password (8-63 characters)"
+    default ""
+config MUSEVIEW_CAMERA_TOKEN
+    string "LAN camera bearer token (16-128 URL-safe characters)"
+    default ""
+    help
+        Use a unique random token. HTTP camera/status access is denied in STA
+        mode when this value is missing or invalid. Do not commit sdkconfig or
+        firmware binaries built with private credentials.
 config MUSEVIEW_AP_PASSWORD
-    string "Local setup Wi-Fi password (at least 8 characters)"
+    string "Local bring-up Wi-Fi password (8-63 characters)"
     default "museview-setup"
 endmenu

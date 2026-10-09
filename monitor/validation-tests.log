@@ -1,0 +1,29 @@
+bun test v1.3.14 (d1632b29)
+
+tests/monitor.test.mjs:
+(pass) image acquisition and freshness > decodes a real reference JPEG and rejects truncated, mislabeled and oversized payloads [41.17ms]
+(pass) image acquisition and freshness > identical image content with increasing capture metadata remains valid for a static scene [38.15ms]
+(pass) image acquisition and freshness > repeated frame metadata is stale and cannot replace the last valid image [31.94ms]
+(pass) image acquisition and freshness > offline/malformed responses retain the last frame and recovery clears the error [31.78ms]
+(pass) image acquisition and freshness > paused history ages to stale, retention is bounded, and no absolute capture time is invented [45.74ms]
+(pass) image acquisition and freshness > clock corrections and browser clock skew cannot make old frames fresh [16.75ms]
+(pass) image acquisition and freshness > a device reboot starts a new sequence; an out-of-order frame within the boot is rejected [47.44ms]
+(pass) image acquisition and freshness > concurrent requests share no mutable camera transaction [15.65ms]
+(pass) image acquisition and freshness > scheduler really acquires periodically and stops when paused [292.09ms]
+(pass) real HTTP camera transport > cached and arbitrary endpoints cannot be configured as fresh capture sources [2.26ms]
+(pass) real HTTP camera transport > sends authentication only to configured source and consumes fresh-frame headers [43.73ms]
+(pass) real HTTP camera transport > rejects camera redirects without forwarding the bearer token [1.41ms]
+(pass) real HTTP camera transport > missing metadata never becomes an apparently fresh camera frame [0.84ms]
+(pass) real HTTP camera transport > rejects authentication errors, non-JPEG content, and oversized streaming responses [1.37ms]
+(pass) real HTTP camera transport > request timeout terminates an unresponsive source [21.46ms]
+(pass) dashboard access and HTTP integration > unauthenticated LAN binding is refused [0.12ms]
+(pass) dashboard access and HTTP integration > login protects state, frames and export; secrets never appear in state [26.25ms]
+(pass) dashboard access and HTTP integration > cross-origin mutation and loopback DNS rebinding are rejected [0.26ms]
+(pass) dashboard access and HTTP integration > capture, bounded frame fetch, pause and export operate over HTTP [35.50ms]
+(pass) dashboard access and HTTP integration > test injection cannot be enabled for a live camera session [0.14ms]
+(pass) dashboard access and HTTP integration > oversized JSON payloads are rejected before processing [0.49ms]
+
+ 21 pass
+ 0 fail
+ 70 expect() calls
+Ran 21 tests across 1 file. [707.00ms]
