@@ -1,0 +1,5 @@
+# Compile-only CI configuration; do not flash as a deployed configuration.
+CONFIG_MUSEVIEW_WIFI_STA=y
+CONFIG_MUSEVIEW_STA_SSID="CI-NOT-A-REAL-NETWORK"
+CONFIG_MUSEVIEW_STA_PASSWORD="ci-placeholder-password"
+CONFIG_MUSEVIEW_CAMERA_TOKEN="ci-placeholder-token-32-chars"

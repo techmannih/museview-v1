@@ -2,7 +2,7 @@
 
 MuseView V1 is a compact Wi-Fi camera controller powered by standard **5 V USB-C**. It connects an **Arducam M0031 OV2640 camera** to an **ESP32-S3-WROOM-1-N16R8**, with dedicated camera power supplies, USB programming, an ASK/CAPTURE button and a status LED on a 50 × 35 mm board.
 
-![Assembled MuseView PCB](https://raw.githubusercontent.com/techmannih/museview-v1/main/__snapshots__/index.circuit-3d.snap.png)
+![CAD rendering of the MuseView PCB](https://raw.githubusercontent.com/techmannih/museview-v1/main/__snapshots__/index.circuit-3d.snap.png)
 
 ## Overview
 
@@ -10,12 +10,14 @@ MuseView brings the camera interface, power regulation and controls onto one boa
 
 The included ESP-IDF firmware provides a local photo-capture page. A phone or computer joins the board's Wi-Fi network and opens the page in a browser. Photos can be taken from that page or with the physical ASK button, making the board a starting point for embedded camera projects and image-capture applications.
 
+A [fixed printer-view experiment](docs/product-validation.md) now adds optional authenticated LAN firmware and a [snapshot dashboard](monitor/README.md). Run the dashboard with a clearly labeled reference-photo replay to inspect scheduling, history and connection failures without hardware. Software results are in [monitor/validation-results.json](monitor/validation-results.json). No physical camera/printer session or customer validation has been performed; automatic AI failure detection is not implemented.
+
 ## How it works
 
 1. **Power the board.** USB-C supplies 5 V through the input protection circuit. The regulators generate the shared 3.192 V MCU/camera I/O supply, 2.8 V camera analog supply and 1.296 V camera core supply.
 2. **Initialize the camera.** After startup, the ESP32 releases the camera's power-down/reset controls, configures the OV2640 and receives image data over its 8-bit DVP interface. The supplied firmware captures JPEG images at SVGA resolution using PSRAM-backed camera buffers.
 3. **Connect over Wi-Fi.** With the firmware flashed, join `MuseView-XXXXXX` using the configured Wi-Fi password, then open `http://192.168.4.1/`. The ESP32 serves the capture page directly to the connected device.
-4. **Take a photo.** Click **Capture** in the browser or press **ASK/CAPTURE** on the board. The LED lights during capture. **Last ASK capture** displays the most recently cached image; the latest JPEG is kept in RAM and replaced by the next capture. Images stay on the local connection and are not stored permanently.
+4. **Take a photo.** Click **Capture** in the browser or press **ASK/CAPTURE** on the board. The LED lights during capture. **Last capture** displays the most recently cached image; the latest JPEG is kept in RAM and replaced by the next capture. Images stay on the local connection and are not stored permanently.
 5. **Program or recover.** USB supports firmware flashing and serial debugging. RESET restarts the board; holding BOOT while pressing RESET enters the ESP32 ROM download mode.
 
 See the [firmware setup guide](https://github.com/techmannih/museview-v1/blob/main/firmware/README.md) for Wi-Fi configuration, flashing and the browser interface.

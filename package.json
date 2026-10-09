@@ -5,6 +5,8 @@
   "description": "MuseView V1 ESP32-S3 camera board with standard 5 V USB-C power",
   "main": "index.circuit.tsx",
   "scripts": {
+    "monitor": "bun monitor/server.mjs",
+    "test:monitor": "bun monitor/validate.mjs",
     "dev": "bun scripts/dev.mjs",
     "start": "bun scripts/dev.mjs",
     "typecheck": "tsc --noEmit",
