@@ -129,29 +129,29 @@ export const MuseViewV1 = () => (
       schX={-2} schY={6} schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.BUCK_SW",pin2:"net.VDD_IO"}} />
     <C name="C2" part="c4u7" pcbX={-11.95} pcbY={-9.3} pcbRotation={270}
-      schX={-14.4} schY={0} schOrientation="vertical" schSheetName="power" schSectionName="buck"
+      schX={-13.2} schY={0} schOrientation="vertical" schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.VBUS_5V",pin2:"net.GND"}} />
     <C name="C3" part="c100n" pcbX={-11.95} pcbY={-5.3} pcbRotation={270}
       schX={-12} schY={0} schOrientation="vertical" schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.VBUS_5V",pin2:"net.GND"}} />
     <C name="C4" part="c10u" pcbX={-11.7} pcbY={9.1} pcbRotation={90}
-      schX={6} schY={1} schOrientation="vertical" schSheetName="power" schSectionName="buck"
+      schX={2.8} schY={-2} schOrientation="vertical" schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.VDD_IO",pin2:"net.GND"}} />
     <R name="R6" part="r432k" pcbX={-7.8} pcbY={-3} pcbRotation={90}
       schX={0} schY={2.5} schOrientation="vertical" schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.VDD_IO",pin2:"net.BUCK_FB"}} />
     <R name="R7" part="r100k" pcbX={-7.8} pcbY={0.05} pcbRotation={270}
-      schX={0} schY={-1.5} schOrientation="vertical" schSheetName="power" schSectionName="buck"
+      schX={0} schY={-4.5} schOrientation="vertical" schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.BUCK_FB",pin2:"net.GND"}} />
     <C name="C5" part="c6p8" pcbX={-9.4} pcbY={-7.8} pcbRotation={270}
-      schX={3.5} schY={2.5} schOrientation="vertical" schSheetName="power" schSectionName="buck"
+      schX={1.6} schY={-2} schOrientation="vertical" schSheetName="power" schSectionName="buck"
       connections={{pin1:"net.VDD_IO",pin2:"net.BUCK_FB"}} />
 
     <XC6206P282MR name="U4" pcbX={-20} pcbY={-6.5} layer="top" pcbRotation={0}
       schX={-8} schY={-6} schWidth={1.8} schHeight={1.5} schSheetName="power" schSectionName="camera-regulators"
       schPinArrangement={{leftSide:{pins:["VIN"],direction:"top-to-bottom"},rightSide:{pins:["VOUT"],direction:"top-to-bottom"},bottomSide:{pins:["VSS"],direction:"left-to-right"}}} connections={{VSS:"net.GND",VIN:"net.VBUS_5V",VOUT:"net.CAM_2V8"}} />
     <C name="C6" part="c1u" pcbX={-23.4} pcbY={-6.5} pcbRotation={180}
-      schX={-9.6} schY={0} schOrientation="vertical" schSheetName="power" schSectionName="camera-regulators"
+      schX={-10.8} schY={0} schOrientation="vertical" schSheetName="power" schSectionName="camera-regulators"
       connections={{pin1:"net.VBUS_5V",pin2:"net.GND"}} />
     <C name="C7" part="c1u" pcbX={-16.6} pcbY={-6.5} pcbRotation={0}
       schX={-3} schY={-6} schOrientation="vertical" schSheetName="power" schSectionName="camera-regulators"
@@ -180,13 +180,13 @@ export const MuseViewV1 = () => (
         IO16:"net.ASK",IO17:"net.LED_DRIVE",IO18:"net.CAM_RESET",IO8:"net.CAM_PWDN",IO19:"net.USB_DM_MCU",IO20:"net.USB_DP_MCU",
         RXD0:"net.UART_RX",TXD0:"net.UART_TX",IO39:"net.JTAG_TCK",IO40:"net.JTAG_TDO",IO41:"net.JTAG_TDI",IO42:"net.JTAG_TMS"}} />
     <C name="C10" part="c100n" pcbX={-7.5} pcbY={8.275} pcbRotation={180}
-      schX={-10} schY={6} schOrientation="vertical" schSheetName="mcu" schSectionName="processor"
+      schX={-11.2} schY={2} schOrientation="vertical" schSheetName="mcu" schSectionName="processor"
       connections={{pin1:"net.VDD_IO",pin2:"net.GND"}} />
     <C name="C11" part="c10u" pcbX={-8.5} pcbY={10} pcbRotation={180}
       schX={-10} schY={2} schOrientation="vertical" schSheetName="mcu" schSectionName="processor"
       connections={{pin1:"net.VDD_IO",pin2:"net.GND"}} />
     <R name="R10" part="r10k" pcbX={-7.5} pcbY={6.4} pcbRotation={0}
-      schX={7} schY={7.5} schSheetName="mcu" schSectionName="controls"
+      schX={5} schY={2} schSheetName="mcu" schSectionName="controls"
       schOrientation="vertical" connections={{pin1:"net.VDD_IO",pin2:"net.ESP_EN"}} />
     <C name="C12" part="c1u" pcbX={-8} pcbY={4.5} pcbRotation={0}
       schX={11} schY={6} schOrientation="vertical" schSheetName="mcu" schSectionName="controls"
@@ -238,10 +238,10 @@ export const MuseViewV1 = () => (
       schX={-6} schY={-10} schOrientation="vertical" schSheetName="camera" schSectionName="camera-interface"
       connections={{pin1:"net.VDD_IO",pin2:"net.CAM_PWDN"}} />
     <C name="C13" part="c100n" pcbX={16.5} pcbY={-4.924928} pcbRotation={90}
-      schX={-10} schY={5} schOrientation="vertical" schSheetName="camera" schSectionName="camera-interface"
+      schX={-7.2} schY={5} schOrientation="vertical" schSheetName="camera" schSectionName="camera-interface"
       connections={{pin1:"net.CAM_2V8",pin2:"net.GND"}} />
     <C name="C14" part="c100n" pcbX={16.5} pcbY={-1.924934} pcbRotation={90}
-      schX={-10} schY={1} schOrientation="vertical" schSheetName="camera" schSectionName="camera-interface"
+      schX={-7.2} schY={1} schOrientation="vertical" schSheetName="camera" schSectionName="camera-interface"
       connections={{pin1:"net.CAM_1V3",pin2:"net.GND"}} />
     <C name="C15" part="c100n" pcbX={16.5} pcbY={1.2} pcbRotation={90}
       schX={-10} schY={-2.5} schOrientation="vertical" schSheetName="camera" schSectionName="camera-interface"
